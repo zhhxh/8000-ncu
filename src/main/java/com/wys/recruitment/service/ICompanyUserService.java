@@ -1,0 +1,11 @@
+package com.wys.recruitment.service;
+
+import com.wys.recruitment.pojo.CompanyUser;
+
+public interface ICompanyUserService {
+	public int saveCompanyUser(CompanyUser companyUser);
+	
+	public CompanyUser findByUid(int uid);
+	
+	public int updateData(CompanyUser companyUser);
+}

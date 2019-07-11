@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wys.recruitment.mapper.CompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Company" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="companyname" property="companyname" jdbcType="VARCHAR" />
+    <result column="simplename" property="simplename" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="minpeople" property="minpeople" jdbcType="INTEGER" />
+    <result column="maxpeople" property="maxpeople" jdbcType="INTEGER" />
+    <result column="companyurl" property="companyurl" jdbcType="VARCHAR" />
+    <result column="companyimage" property="companyimage" jdbcType="VARCHAR" />
+    <result column="development" property="development" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="logo" property="logo" jdbcType="VARCHAR" />
+    <result column="isallow" property="isallow" jdbcType="VARCHAR" />
+    <result column="releasednumber" property="releasednumber" jdbcType="INTEGER" />
+    <result column="registertime" property="registertime" jdbcType="TIMESTAMP" />
+    <result column="money" property="money" jdbcType="DOUBLE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="product" property="product" jdbcType="VARCHAR" />
+    <result column="jianjie" property="jianjie" jdbcType="VARCHAR" />
+    <result column="idcardimage" property="idcardimage" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.wys.recruitment.pojo.Company" extends="BaseResultMap" >
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, companyname, simplename, industry, minpeople, maxpeople, companyurl, companyimage, 
+    development, province, city, area, address, logo, isallow, releasednumber, registertime, 
+    money, remark, uid, product, jianjie, idcardimage
+  </sql>
+  <sql id="Blob_Column_List" >
+    description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from company
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from company
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wys.recruitment.pojo.Company" >
+    insert into company (id, companyname, simplename, 
+      industry, minpeople, maxpeople, 
+      companyurl, companyimage, development, 
+      province, city, area, 
+      address, logo, isallow, 
+      releasednumber, registertime, money, 
+      remark, uid, product, 
+      jianjie, idcardimage, description
+      )
+    values (#{id,jdbcType=INTEGER}, #{companyname,jdbcType=VARCHAR}, #{simplename,jdbcType=VARCHAR}, 
+      #{industry,jdbcType=VARCHAR}, #{minpeople,jdbcType=INTEGER}, #{maxpeople,jdbcType=INTEGER}, 
+      #{companyurl,jdbcType=VARCHAR}, #{companyimage,jdbcType=VARCHAR}, #{development,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{logo,jdbcType=VARCHAR}, #{isallow,jdbcType=VARCHAR}, 
+      #{releasednumber,jdbcType=INTEGER}, #{registertime,jdbcType=TIMESTAMP}, #{money,jdbcType=DOUBLE}, 
+      #{remark,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER}, #{product,jdbcType=VARCHAR}, 
+      #{jianjie,jdbcType=VARCHAR}, #{idcardimage,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Company" >
+    insert into company
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="companyname != null" >
+        companyname,
+      </if>
+      <if test="simplename != null" >
+        simplename,
+      </if>
+      <if test="industry != null" >
+        industry,
+      </if>
+      <if test="minpeople != null" >
+        minpeople,
+      </if>
+      <if test="maxpeople != null" >
+        maxpeople,
+      </if>
+      <if test="companyurl != null" >
+        companyurl,
+      </if>
+      <if test="companyimage != null" >
+        companyimage,
+      </if>
+      <if test="development != null" >
+        development,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="logo != null" >
+        logo,
+      </if>
+      <if test="isallow != null" >
+        isallow,
+      </if>
+      <if test="releasednumber != null" >
+        releasednumber,
+      </if>
+      <if test="registertime != null" >
+        registertime,
+      </if>
+      <if test="money != null" >
+        money,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="product != null" >
+        product,
+      </if>
+      <if test="jianjie != null" >
+        jianjie,
+      </if>
+      <if test="idcardimage != null" >
+        idcardimage,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="companyname != null" >
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="simplename != null" >
+        #{simplename,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null" >
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="minpeople != null" >
+        #{minpeople,jdbcType=INTEGER},
+      </if>
+      <if test="maxpeople != null" >
+        #{maxpeople,jdbcType=INTEGER},
+      </if>
+      <if test="companyurl != null" >
+        #{companyurl,jdbcType=VARCHAR},
+      </if>
+      <if test="companyimage != null" >
+        #{companyimage,jdbcType=VARCHAR},
+      </if>
+      <if test="development != null" >
+        #{development,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null" >
+        #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="isallow != null" >
+        #{isallow,jdbcType=VARCHAR},
+      </if>
+      <if test="releasednumber != null" >
+        #{releasednumber,jdbcType=INTEGER},
+      </if>
+      <if test="registertime != null" >
+        #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="product != null" >
+        #{product,jdbcType=VARCHAR},
+      </if>
+      <if test="jianjie != null" >
+        #{jianjie,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimage != null" >
+        #{idcardimage,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Company" >
+    update company
+    <set >
+      <if test="companyname != null" >
+        companyname = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="simplename != null" >
+        simplename = #{simplename,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null" >
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="minpeople != null" >
+        minpeople = #{minpeople,jdbcType=INTEGER},
+      </if>
+      <if test="maxpeople != null" >
+        maxpeople = #{maxpeople,jdbcType=INTEGER},
+      </if>
+      <if test="companyurl != null" >
+        companyurl = #{companyurl,jdbcType=VARCHAR},
+      </if>
+      <if test="companyimage != null" >
+        companyimage = #{companyimage,jdbcType=VARCHAR},
+      </if>
+      <if test="development != null" >
+        development = #{development,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null" >
+        logo = #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="isallow != null" >
+        isallow = #{isallow,jdbcType=VARCHAR},
+      </if>
+      <if test="releasednumber != null" >
+        releasednumber = #{releasednumber,jdbcType=INTEGER},
+      </if>
+      <if test="registertime != null" >
+        registertime = #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="money != null" >
+        money = #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="product != null" >
+        product = #{product,jdbcType=VARCHAR},
+      </if>
+      <if test="jianjie != null" >
+        jianjie = #{jianjie,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimage != null" >
+        idcardimage = #{idcardimage,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.wys.recruitment.pojo.Company" >
+    update company
+    set companyname = #{companyname,jdbcType=VARCHAR},
+      simplename = #{simplename,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      minpeople = #{minpeople,jdbcType=INTEGER},
+      maxpeople = #{maxpeople,jdbcType=INTEGER},
+      companyurl = #{companyurl,jdbcType=VARCHAR},
+      companyimage = #{companyimage,jdbcType=VARCHAR},
+      development = #{development,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      logo = #{logo,jdbcType=VARCHAR},
+      isallow = #{isallow,jdbcType=VARCHAR},
+      releasednumber = #{releasednumber,jdbcType=INTEGER},
+      registertime = #{registertime,jdbcType=TIMESTAMP},
+      money = #{money,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      uid = #{uid,jdbcType=INTEGER},
+      product = #{product,jdbcType=VARCHAR},
+      jianjie = #{jianjie,jdbcType=VARCHAR},
+      idcardimage = #{idcardimage,jdbcType=VARCHAR},
+      description = #{description,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Company" >
+    update company
+    set companyname = #{companyname,jdbcType=VARCHAR},
+      simplename = #{simplename,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      minpeople = #{minpeople,jdbcType=INTEGER},
+      maxpeople = #{maxpeople,jdbcType=INTEGER},
+      companyurl = #{companyurl,jdbcType=VARCHAR},
+      companyimage = #{companyimage,jdbcType=VARCHAR},
+      development = #{development,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      logo = #{logo,jdbcType=VARCHAR},
+      isallow = #{isallow,jdbcType=VARCHAR},
+      releasednumber = #{releasednumber,jdbcType=INTEGER},
+      registertime = #{registertime,jdbcType=TIMESTAMP},
+      money = #{money,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      uid = #{uid,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      product = #{product,jdbcType=VARCHAR},
+      jianjie = #{jianjie,jdbcType=VARCHAR},
+      idcardimage = #{idcardimage,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <!-- 以下是自己写的sql语句 -->
+   <select id="selectLastestCompany" resultType="com.wys.recruitment.pojo.Company" parameterType="java.lang.Integer">
+    SELECT * FROM company c 
+	WHERE c.id IN (
+		SELECT m.cid FROM myrecruitment m GROUP BY m.cid
+	)
+	AND c.isallow = "1"
+	ORDER BY c.registertime DESC
+	LIMIT  #{_parameter}
+  </select>
+  
+  <!-- 查找出公司详细信息，包括了HR的信息 连表查询 -->
+   <select id="selectCompanyDetail" resultType="java.util.Map" parameterType="java.lang.Integer">
+   		SELECT c.id,c.companyname,c.industry,c.minpeople,c.maxpeople,c.companyurl,c.development,c.address,c.logo,c.description,c.product,c.jianjie,c.remark,u.simplename,u.email FROM `company`  c 
+		LEFT JOIN companyuser u 
+		ON c.uid = u.uid
+		WHERE c.id = #{_parameter} 
+  </select>
+  
+   <select id="listAll" resultType="java.util.Map" parameterType="java.util.Map">
+   		SELECT c.id,c.companyname,c.industry,c.minpeople,c.maxpeople,c.companyurl,c.development,c.address,c.logo,c.description,c.product,c.jianjie,c.remark,c.isallow,c.registertime
+   		FROM company c 
+		<where>
+			    <if test="companyname!=null and companyname!=''">
+			       	 
+			        and c.companyname like CONCAT('%', #{companyname}, '%') 
+			    </if>
+			    <if test="isallow!=null and isallow!=''">
+			        and c.isallow = #{isallow}
+			    </if>
+   	   </where>
+   	   order by c.registertime desc
+  </select>
+ 
+    
+   <select id="findEmail" resultType="java.lang.String" parameterType="java.lang.Integer">
+ 		SELECT u.email FROM company c LEFT JOIN companyuser u ON c.uid = u.uid WHERE c.id = #{id}
+  </select>
+</mapper>
