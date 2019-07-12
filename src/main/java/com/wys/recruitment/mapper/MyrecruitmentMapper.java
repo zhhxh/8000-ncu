@@ -3,6 +3,7 @@ package com.wys.recruitment.mapper;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -21,17 +22,19 @@ public interface MyrecruitmentMapper {
     int updateByPrimaryKeySelective(Myrecruitment record);
 
     int updateByPrimaryKey(Myrecruitment record);
-    @Select("select * from myrecruitment m where m.cid = #{0} and m.position = #{1} order by m.publictime desc")
-	List<Myrecruitment> selectAllByCid(int cid, String string);
 
-	List<Map<String, Object>> selectLatest(String type);
+    @Select("select * from myrecruitment m where m.cid = #{cid} and m.position = #{s} order by m.publictime desc")
+    List<Myrecruitment> selectAllByCid(@Param("cid") int cid, @Param("s")String s);
 
-	List<Map<String,Object>> selectByMoreCondition(MoreCondition moreCondition);
+    List<Map<String, Object>> selectLatest(String type);
 
-	int countNumber(MoreCondition moreCondition);
+    List<Map<String, Object>> selectByMoreCondition(MoreCondition moreCondition);
 
-	List<Map<String, Object>> findJobnameByUid(Map<String, Object> map);
-	@Update("delete from myrecruitment  where cid = #{0}")
-	void deleteByUid(Integer uid);
+    int countNumber(MoreCondition moreCondition);
+
+    List<Map<String, Object>> findJobnameByUid(Map<String, Object> map);
+
+    @Update("delete from myrecruitment  where cid = #{uid}")
+    void deleteByUid(Integer uid);
 
 }

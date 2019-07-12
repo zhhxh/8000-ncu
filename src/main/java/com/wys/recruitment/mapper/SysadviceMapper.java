@@ -1,9 +1,9 @@
 package com.wys.recruitment.mapper;
 
+import com.wys.recruitment.pojo.Sysadvice;
+
 import java.util.List;
 import java.util.Map;
-
-import com.wys.recruitment.pojo.Sysadvice;
 
 public interface SysadviceMapper {
     int deleteByPrimaryKey(Integer id);
@@ -18,5 +18,5 @@ public interface SysadviceMapper {
 
     int updateByPrimaryKey(Sysadvice record);
 
-	List<Map<String, Object>> listAll(String string);
+    List<Map<String, Object>> listAll(String string);
 }

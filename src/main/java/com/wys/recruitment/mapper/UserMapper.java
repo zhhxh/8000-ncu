@@ -31,8 +31,8 @@ public interface UserMapper {
     List<Map<String, Object>> listAllByCondition(UserCondition userCondition);
 
     @Update("update user u set u.isaudit = #{i} where u.id = #{id}")
-    int tingyong(Integer id, int i);
+    int tingyong(@Param("id") Integer id, @Param("i") int i);
 
     @Update("update user u set u.isaudit = #{i} where u.password = #{baseString}")
-    void updateByBaseString(int i, String baseString);
+    void updateByBaseString(@Param("i") int i, @Param("baseString") String baseString);
 }

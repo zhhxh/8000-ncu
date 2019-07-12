@@ -154,12 +154,7 @@ public class ApplayServiceImpl implements IApplayService {
         news.setTitle("邀请面试通知");
         news.setUid(applay.getUid());
         int i = newsMapper.insert(news);
-        if (i > 0) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return i > 0;
     }
 
     /**
@@ -182,7 +177,6 @@ public class ApplayServiceImpl implements IApplayService {
         news.setMid(applay.getMid());
         news.setState(1);
         news.setCreatetime(new Date());
-        ;
         news.setTitle("不合适通知");
         news.setUid(applay.getUid());
         int i = newsMapper.insert(news);
@@ -206,7 +200,6 @@ public class ApplayServiceImpl implements IApplayService {
     @Override
     public HSSFWorkbook export(Integer id, String jobname, String state) {
         List<Map<String, Object>> lists = this.selectByCid(id, jobname, state);
-
 
         HSSFWorkbook wb = new HSSFWorkbook();
         HSSFSheet sheet = wb.createSheet("人力资源数据");

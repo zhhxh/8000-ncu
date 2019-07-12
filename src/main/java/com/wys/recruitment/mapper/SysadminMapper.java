@@ -1,8 +1,8 @@
 package com.wys.recruitment.mapper;
 
-import org.apache.ibatis.annotations.Select;
-
 import com.wys.recruitment.pojo.Sysadmin;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 public interface SysadminMapper {
     int deleteByPrimaryKey(Integer id);
@@ -16,9 +16,9 @@ public interface SysadminMapper {
     int updateByPrimaryKeySelective(Sysadmin record);
 
     int updateByPrimaryKey(Sysadmin record);
-    
-    @Select("select * from sysadmin s where s.username = #{0} and s.password = #{1}")
-	Sysadmin selectSysadminByUsernameAndPassword(String username, String basePassword);
 
-	
+    @Select("select * from sysadmin s where s.username = #{username} and s.password = #{basePassword}")
+    Sysadmin selectSysadminByUsernameAndPassword(@Param("username") String username, @Param("basePassword") String basePassword);
+
+
 }

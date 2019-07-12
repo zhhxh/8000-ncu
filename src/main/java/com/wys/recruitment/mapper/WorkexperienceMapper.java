@@ -1,10 +1,9 @@
 package com.wys.recruitment.mapper;
 
-import java.util.List;
-
+import com.wys.recruitment.pojo.Workexperience;
 import org.apache.ibatis.annotations.Select;
 
-import com.wys.recruitment.pojo.Workexperience;
+import java.util.List;
 
 public interface WorkexperienceMapper {
     int deleteByPrimaryKey(Integer id);
@@ -18,6 +17,7 @@ public interface WorkexperienceMapper {
     int updateByPrimaryKeySelective(Workexperience record);
 
     int updateByPrimaryKey(Workexperience record);
-    @Select("select * from workexperience w where w.uid = #{0} order by w.weight DESC,w.writetime DESC")
-	List<Workexperience> selectByUid(int userId);
+
+    @Select("select * from workexperience w where w.uid = #{userId} order by w.weight DESC,w.writetime DESC")
+    List<Workexperience> selectByUid(int userId);
 }
