@@ -105,9 +105,6 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-    <!-- 过滤下载路径的所有内容 -->
-    <mvc:resources mapping="/static/**" location="/static"/>
-
 
     <!-- 开启注解 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
