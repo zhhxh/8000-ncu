@@ -20,10 +20,11 @@ public interface NewsMapper {
 
     int updateByPrimaryKey(News record);
 
-	List<Map<String, Object>> findListByCid(Integer id);
+    List<Map<String, Object>> findListByCid(Integer id);
 
-	List<Map<String, Object>> findListByUid(Integer id);
-	@Update("delete from news where cid = #{0}")
-	void deleteByCid(Integer id);
+    List<Map<String, Object>> findListByUid(Integer id);
+
+    @Update("delete from news where cid = #{id}")
+    void deleteByCid(Integer id);
 
 }

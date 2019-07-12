@@ -17,8 +17,10 @@ public interface CompanyUserMapper {
     int updateByPrimaryKeySelective(CompanyUser record);
 
     int updateByPrimaryKey(CompanyUser record);
-    @Select("select * from companyuser c where c.uid = #{0}")
-	CompanyUser findByUid(int uid);
-    @Update("delete from companyuser where uid = #{0}")
-	void deleteByUid(Integer uid);
+
+    @Select("select * from companyuser c where c.uid = #{uid}")
+    CompanyUser findByUid(int uid);
+
+    @Update("delete from companyuser where uid = #{uid}")
+    void deleteByUid(Integer uid);
 }

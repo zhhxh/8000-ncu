@@ -1,12 +1,12 @@
 package com.wys.recruitment.mapper;
 
-import java.util.List;
-import java.util.Map;
-
+import com.wys.recruitment.pojo.Articles;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.wys.recruitment.pojo.Articles;
+import java.util.List;
+import java.util.Map;
 
 public interface ArticlesMapper {
     int deleteByPrimaryKey(Integer articleid);
@@ -21,13 +21,15 @@ public interface ArticlesMapper {
 
     int updateByPrimaryKey(Articles record);
 
-	List<Map<String, Object>> listAll(Map<String, Object> map);
-	@Update("update articles a set a.isshow = #{1} where a.articleid = #{0}")
-	int pass(Integer id, int i);
+    List<Map<String, Object>> listAll(Map<String, Object> map);
 
-	List<Map<String, Object>> userlistAll(Map<String, Object> map);
+    @Update("update articles a set a.isshow = #{i} where a.articleid = #{id}")
+    int pass(@Param("id") Integer id, @Param("i") int i);
 
-	int countNumber(Map<String, Object> map);
-	@Select("select * from articles a order by a.createtime desc limit 0,4")
-	List<Map<String, Object>> listTwo();
+    List<Map<String, Object>> userlistAll(Map<String, Object> map);
+
+    int countNumber(Map<String, Object> map);
+
+    @Select("select * from articles a order by a.createtime desc limit 0,4")
+    List<Map<String, Object>> listTwo();
 }
