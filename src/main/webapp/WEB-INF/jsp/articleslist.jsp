@@ -176,9 +176,9 @@
       	</div>
 		
 	    <script type="text/javascript">
-	        /* alert("${requestScope.pageAble.currentPage}");
-	        alert("${requestScope.pageAble.numberOfPages}");
-	        alert("${requestScope.pageAble.totalPages}");  */
+	        <%--alert("${requestScope.pageAble.currentPage}");--%>
+	        <%--alert("${requestScope.pageAble.numberOfPages}");--%>
+	        <%--alert("${requestScope.pageAble.totalPages}");  --%>
 	        $(function () {
 	           $("#page").bootstrapPaginator({
 	               bootstrapMajorVersion:3,  //对应的bootstrap版本

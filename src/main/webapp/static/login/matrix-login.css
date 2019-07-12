@@ -14,9 +14,8 @@ a:hover, a:focus {
 .dropdown-menu > li > a{ padding:3px 10px; color:#666; font-size:12px;}
 .dropdown-menu > li > a i{ padding-right:3px;}
 .userphoto img{ width:19px; height:19px;}
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input, .label, .dropdown-menu, .btn, .well, .progress, .table-bordered, .btn-group > .btn:first-child, .btn-group > .btn:last-child, .btn-group > .btn:last-child, .btn-group > .dropdown-toggle, .alert{ border-radius:0px;}
 .btn, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{ box-shadow:none;}
-.progress, .progress-success .bar, .progress .bar-success, .progress-warning .bar, .progress .bar-warning, .progress-danger .bar, .progress .bar-danger, .progress-info .bar, .progress .bar-info, .btn, .btn-primary{background-image:none;}
+.progress, .progress-success .bar, .progress .bar-success, .progress-warning .bar, .progress .bar-warning, .progress-danger .bar, .progress .bar-danger, .progress-info .bar, .progress .bar-info, .btn, .btn-primary{}
 .accordion-heading h5{ width:70%; }
 .form-horizontal .form-actions{ padding-left:20px; }
 #footer{ padding:10px; text-align:center;}
@@ -42,28 +41,32 @@ hr{ border-top-color:#dadada;}
 body {   padding: 0;    margin-top:0px;margin: 0px;} 
 /*body {background-image:url("1.jpg");   padding: 0;    margin-top:10%;} */
 
-#logo, #loginbox {    width: 32%;    margin-left: auto;  margin-right: auto;   position: relative;}
+#logo, #loginbox {    width: 31%;  margin-left: auto;  margin-right: 9%;   position: relative;}
 #logo img {  margin: 0 auto;    display: block;}
 #loginbox { overflow: hidden !important; z-index: 100;  text-align: center;  position: relative; margin-top:10%;}
 
 /* #loginbox form{ width:100%; background:#2E363F; position:relative; top:0; left:0; } */
-#loginbox form{ width:100%; background-color: rgba(0, 0, 0, 0.5);  position:relative; top:0; left:0; }
+#loginbox form{ width:100%; height: 150%; background-color: rgba(0,0,0,0.2); box-shadow: 5px 5px #c4caca; position:relative; top:0; left:0; border-radius:25px; }
 
-#loginbox .form-actions { padding: 14px 20px 15px;}
+#loginbox .form-actions { padding: 10px 15px 20px; margin-top: 50px;position: center}
+#loginbox .form-actions-res{ padding: 20px 15px; margin-top: 14px;position: center}
+#loginbox .form-actions-res .button{ border-radius: 8px; width:120px; height:35px; position: center; border:0; font-size: large}
+#loginbox .form-actions .button{ border-radius: 8px; width:120px; height:35px; position: center; border:0; font-size: large}
 #loginbox .form-actions .pull-left { margin-top:0px;}
 #loginbox form#loginform { z-index: 200; display:block;}
 #loginbox form#recoverform { z-index: 100;     display:none;}
 #loginbox form#recoverform .form-actions {    margin-top: 10px;}
 #loginbox .main_input_box { margin:0 auto; text-align:center; font-size:13px;}
+#loginbox .main_input_box span{text-align:center;  margin-right:2%;font-size: 23px; position: relative; top: 5px; color:#fff;}
 #loginbox .main_input_box .add-on{  padding:9.9px 9px; *line-height:31px; color:#fff;  width:30px; display:inline-block;}
-#loginbox .main_input_box input{ height:30px; border:0px; display:inline-block; width:75%; line-height:28px;  margin-bottom:3px;}
+#loginbox .main_input_box input{ height:36px; border:0px; display:inline-block; width:75%; line-height:28px;  margin-bottom:3px; border-radius: 20px;}
 #loginbox .controls{ padding:0 20px;}
 #loginbox .control-group{ padding:20px 0; margin-bottom:0px;}
-.form-vertical, .form-actions {  margin-bottom: 0; background:none; border-top:1px solid #3f4954; }
+.form-vertical, .form-actions {  margin-bottom: 0; background:none; border-top:0px solid #3f4954; }
 
 /* #loginbox .normal_text{ padding:15px 10px; text-align:center; font-size:14px; line-height:20px; background:#2E363F; color:#fff; } */
 
-#loginbox .normal_text{ padding:15px 10px; text-align:center; font-size:14px; line-height:20px;  color:#fff;}
+#loginbox .normal_text{ padding:30px 10px; text-align:center; font-size:14px; line-height:10px;  color:#fff; }
 
 @media (max-width:800px){
 #logo { width: 60%; }

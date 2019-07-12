@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/login/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/login/matrix-login.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/login/font-awesome.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/boostrap/css/bootstrap.min.css"/>
     <style>
         * {
             margin: 0;
@@ -290,58 +291,49 @@
         };
     </script>
 </head>
-<body>
+<body style="background: url(${pageContext.request.contextPath}/static/login/background.png)">
 
 <!--小键盘承载器-->
-<canvas class="cavs"></canvas>
+<%--<canvas class="cavs"></canvas>--%>
 <div style="width:100%;text-align: center;margin: 0 auto;position: absolute;">
     <!-- 登录 -->
     <div id="windows1">
         <div id="loginbox">
             <form action="" method="post" name="loginForm" id="loginForm">
                 <div class="control-group normal_text">
-                    <h3>
-                        <img src="${pageContext.request.contextPath}/static/login/logo.png" alt="Logo"/>
-                    </h3>
+                    <img src="${pageContext.request.contextPath}/static/login/logo.png" style="height: 40px" alt="Logo"/>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-							<span class="add-on bg_lg">
-							<i><img height="37" src="${pageContext.request.contextPath}/static/login/user.png"/></i>
-							</span><input type="text" name="loginname" id="loginname" value="" placeholder="请输入用户名"/>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input type="text" name="loginname" id="loginname" value="" placeholder="请输入用户名"/>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-							<span class="add-on bg_ly">
-							<i><img height="37" src="${pageContext.request.contextPath}/static/login/suo.png"/></i>
-							</span><input type="password" name="password" id="password" placeholder="请输入密码"
-                                          class="keypad" keypadMode="full" allowKeyboard="true" value=""/>
+                            <span class="glyphicon glyphicon-lock"></span>
+							<input type="password" name="password" id="password" placeholder="请输入密码" keypadMode="full" allowKeyboard="true" value=""/>
                         </div>
                     </div>
                 </div>
                 <div style="float:right;padding-right:10%;">
                     <div style="float: left;margin-top:3px;margin-right:2px;">
-                        <font color="white">记住密码</font>
+                        <font color="white" size="3px">记住密码</font>
                     </div>
                     <div style="float: left;">
                         <input name="form-field-checkbox" id="saveid" type="checkbox"
-                               onclick="savePaw();" style="padding-top:0px;"/>
+                               onclick="savePaw();" style="padding-top:0px; border: 0px;size: 3%"/>
                     </div>
                 </div>
                 <div class="form-actions">
-                    <div style="width:86%;padding-left:8%;">
-
-
+                    <div style="width:100%; position: center">
                         <c:if test="${pd.isZhuce == 'yes' }">
-                            <span class="pull-right" style="padding-right:3%;"><a href="javascript:changepage(1);"
-                                                                                  class="btn btn-success">注册</a></span>
+                            <button type="button" class="btn btn-info button" style="margin-right: 7%" onclick="changepage(1);">注册</button>
                         </c:if>
-                        <span class="pull-right"><a onclick="severCheck();" class="flip-link btn btn-info"
-                                                    id="to-recover">登录</a></span>
+                            <button type="button" class="btn btn-info button" onclick="severCheck();">登录</button>
                     </div>
                 </div>
             </form>
@@ -357,46 +349,37 @@
         <div id="loginbox">
             <form action="" method="post" name="loginForm" id="loginForm">
                 <div class="control-group normal_text">
-                    <h3>
-                        <img src="${pageContext.request.contextPath}/static/login/logo.png" alt="Logo"/>
-                    </h3>
+                    <img src="${pageContext.request.contextPath}/static/login/logo.png" style="height: 40px" alt="Logo"/>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-							<span class="add-on bg_lg">
-							<i>邮箱</i>
-							</span><input type="text" name="USERNAME" id="USERNAME" value="" placeholder="请输入用户名"/>
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <input type="text" name="USERNAME" id="USERNAME" value="" placeholder="请输入用户名"/>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-							<span class="add-on bg_ly">
-							<i>密码</i>
-							</span><input type="password" name="PASSWORD" id="PASSWORD" placeholder="请输入密码"
-                                          class="keypad" keypadMode="full" allowKeyboard="true" value=""/>
+                            <span class="glyphicon glyphicon-tag"></span>
+                            <input type="password" name="PASSWORD" id="PASSWORD" placeholder="请输入密码"
+                                           keypadMode="full" allowKeyboard="true" value=""/>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-							<span class="add-on bg_ly">
-							<i>重输</i>
-							</span><input type="password" name="chkpwd" id="chkpwd" placeholder="请重新输入密码" class="keypad"
+                            <span class="glyphicon glyphicon-tags"></span>
+                            <input type="password" name="chkpwd" id="chkpwd" placeholder="请重新输入密码"
                                           keypadMode="full" allowKeyboard="true" value=""/>
                         </div>
                     </div>
                 </div>
-                <div class="form-actions">
-                    <div style="width:86%;padding-left:8%;">
-                        <span class="pull-right" style="padding-right:3%;"><a href="javascript:changepage(2);"
-                                                                              class="btn btn-success">取消</a></span>
-                        <span class="pull-right"><a onclick="register();" class="flip-link btn btn-info"
-                                                    id="to-recover">提交</a></span>
-                    </div>
+                <div class="form-actions-res">
+                    <button type="button" class="btn btn-info button" style="margin-right: 7%" onclick="changepage(2);">取消</button>
+                    <button type="button" class="btn btn-info button" onclick="register();">提交</button>
                 </div>
             </form>
             <div class="controls">
@@ -407,17 +390,6 @@
         </div>
     </div>
 
-</div>
-<div id="templatemo_banner_slide" class="container_wapper">
-    <div class="camera_wrap camera_emboss" id="camera_slide">
-        <!-- 背景图片 -->
-        <div data-src="${pageContext.request.contextPath}/static/login/images/banner_slide_01.jpg"></div>
-        <div data-src="${pageContext.request.contextPath}/static/login/images/banner_slide_02.jpg"></div>
-        <div data-src="${pageContext.request.contextPath}/static/login/images/banner_slide_03.jpg"></div>
-        <div data-src="${pageContext.request.contextPath}/static/login/images/banner_slide_04.jpg"></div>
-        <div data-src="${pageContext.request.contextPath}/static/login/images/banner_slide_05.jpg"></div>
-    </div>
-    <!-- #camera_wrap_3 -->
 </div>
 
 <script type="text/javascript">
@@ -657,8 +629,8 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.cookie.js"></script>
 
 <!-- 软键盘控件start -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/login/keypad/js/form/keypad.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/login/keypad/js/framework.js"></script>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/login/keypad/js/form/keypad.js"></script>--%>
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/static/login/keypad/js/framework.js"></script>--%>
 <!-- 软键盘控件end -->
 <!-- 弹窗插件 -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/dialog/easydialog.min.js"></script>
