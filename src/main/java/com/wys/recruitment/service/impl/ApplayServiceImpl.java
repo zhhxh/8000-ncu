@@ -70,7 +70,6 @@ public class ApplayServiceImpl implements IApplayService {
      */
     @Override
     public Applay findByUidAndMid(Integer uid, String mid) {
-        // TODO Auto-generated method stub
         return applayMapper.findByUidAndMid(uid, mid);
     }
 
@@ -95,7 +94,7 @@ public class ApplayServiceImpl implements IApplayService {
 
     @Override
     public int countNumber(Integer id, Integer state) {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> map = new HashMap<>();
         map.put("uid", id);
         if (state == 100) {
             map.put("state", null);
@@ -110,7 +109,7 @@ public class ApplayServiceImpl implements IApplayService {
      */
     @Override
     public List<Map<String, Object>> selectByCid(Integer id, String jobname, String state) {
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         map.put("uid", id);
         map.put("jobname", jobname);
         map.put("state", state);
@@ -129,8 +128,6 @@ public class ApplayServiceImpl implements IApplayService {
     /**
      * 邀请面试通知
      */
-
-
     @Override
     public boolean invited(Integer id) {
         //1.0 修改消息状态，将当前的申请记录该修改为
