@@ -58,7 +58,7 @@
     </error-page>
 
     <welcome-file-list>
-        <welcome-file>/system/index</welcome-file>
+        <welcome-file>/system/joblist</welcome-file>
     </welcome-file-list>
 
     <servlet-mapping>
