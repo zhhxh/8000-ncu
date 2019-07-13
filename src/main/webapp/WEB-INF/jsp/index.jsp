@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html style="overflow-x: hidden">
 <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
@@ -326,87 +326,92 @@
 
       </div> 
       <div class="listlinks">
-		  <ul id="ulhotjob">
+          <ul id="ulhotjob">
 
-       <c:forEach items="${latestjob}" var="lastest">
-  	
 
-	   <li style="list-style: none">
-       	 	<!-- 卡片 start -->
-       		
-				<div  class="container">
-					<div  class="row" >
-						<div class="col-md-4 col-sm-6 myCard">
-							<div class="serviceBox">
-								<!-- <div class="service-icon">
-									<i class="fa fa-mobile"></i>
-								</div> -->
-								<div class="service-Content">
-									<div>
-										<span class="title"><a href="${pageContext.request.contextPath}/myrecruitment/detail?id=${lastest.id }" style="font-size:17px;" target="_blank">${lastest.jobname }</a></span>
-										<span class="publiTime">[${lastest.publictime } 发布] </span>
-										<span class="money">${lastest.minwage }-${lastest.maxwage }</span>
-									</div>
-									<div class="secondline">
-										<span class="required">${lastest.workexperience } / ${lastest.xueli } / ${lastest.type } &nbsp;&nbsp;&nbsp;&nbsp;</span>
-										<button type="button" class="btn  btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Hi，对我发布的职位感兴趣吗？用小程序客户端可以直接跟我聊天.'招聘小程序'" style="color:#FA6041">联系我</button>
-										<script type="text/javascript">
-											$(function () {
-											 	 $('[data-toggle="tooltip"]').tooltip()
-											})
-										
-										</script>
-									</div>
-									<div class="thirdline" id="${lastest.id }">
-										<!-- Contextual button for informational alert messages -->
-										<script type="text/javascript">
-											var jobkey = "${lastest.jobkey}";
-											var strs= new Array(); //定义一数组 
-											strs = jobkey.split(" ");
-											
-											var id = "${lastest.id }";
-											for ( var i = 0; i <strs.length; i++){
-												$("#${lastest.id }").append("<button type='button' class='btn btn-info btn-xs'>"+strs[i]+"</button>");
-											}
-											
-										</script>
-										<%-- <button type="button" class="btn btn-info btn-xs">${lastest.jobkey}</button>
-										<button type="button" class="btn btn-info btn-xs">高级</button>
-										<button type="button" class="btn btn-info btn-xs">JAVA</button> --%>
-									</div>
-									<div class="description thirdline">
-										${lastest.attract } 
-											
-									</div>
-									<hr/>
-									<div class="fourline" >
-										<span class="title"><a href="${pageContext.request.contextPath}/company/companyDetail?id=${lastest.cid }" target="_blank" style="font-size:16px;">${lastest.companyname }</a></span>
-									</div>
-									<div class="secondline">
-										<span class="required">${lastest.industry } /${lastest.development }  / ${lastest.address }&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <c:forEach items="${latestjob}" var="lastest">
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			<!-- 卡片  end-->
 
-       	  </c:forEach>
-       	 
-       	
-	   </li>
-        
-      
-       	 <li style="text-align:center;width:100%;list-style: none">
-       	 	<!-- Indicates a successful or positive action -->
-			<a href="${pageContext.request.contextPath}/myrecruitment/joblist"><button type="button" class="btn btn-success" style="background-color: #22cade;border: #22cade">查看更多</button></a>
-       	 
-       	 </li>
-    
+              <li style="list-style: none">
+                  <!-- 卡片 start -->
+                  <div  class="container">
+                      <div  class="row" >
 
-		</ul>
+
+
+
+                                  <div class="col-md-4 col-sm-6 myCard">
+                              <div class="serviceBox">
+                                  <!-- <div class="service-icon">
+                                      <i class="fa fa-mobile"></i>
+                                  </div> -->
+                                  <div class="service-Content">
+                                      <div>
+                                          <span class="title"><a href="${pageContext.request.contextPath}/myrecruitment/detail?id=${lastest.id }" style="font-size:17px;" target="_blank">${lastest.jobname }</a></span>
+                                          <span class="publiTime">[${lastest.publictime } 发布] </span>
+                                          <span class="money">${lastest.minwage }-${lastest.maxwage }</span>
+                                      </div>
+                                      <div class="secondline">
+                                          <span class="required">${lastest.workexperience } / ${lastest.xueli } / ${lastest.type } &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                          <button type="button" class="btn  btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Hi，对我发布的职位感兴趣吗？用小程序客户端可以直接跟我聊天.'招聘小程序'" style="color:#FA6041">联系我</button>
+                                          <script type="text/javascript">
+                                              $(function () {
+                                                  $('[data-toggle="tooltip"]').tooltip()
+                                              })
+
+                                          </script>
+                                      </div>
+                                      <div class="thirdline" id="${lastest.id }">
+                                          <!-- Contextual button for informational alert messages -->
+                                          <script type="text/javascript">
+                                              var jobkey = "${lastest.jobkey}";
+                                              var strs= new Array(); //定义一数组
+                                              strs = jobkey.split(" ");
+
+                                              var id = "${lastest.id }";
+                                              for ( var i = 0; i <strs.length; i++){
+                                                  $("#${lastest.id }").append("<button type='button' class='btn btn-info btn-xs'>"+strs[i]+"</button>");
+                                              }
+
+                                          </script>
+                                              <%-- <button type="button" class="btn btn-info btn-xs">${lastest.jobkey}</button>
+                                              <button type="button" class="btn btn-info btn-xs">高级</button>
+                                              <button type="button" class="btn btn-info btn-xs">JAVA</button> --%>
+                                      </div>
+                                      <div class="description thirdline">
+                                              ${lastest.attract }
+
+                                      </div>
+                                      <hr/>
+                                      <div class="fourline" >
+                                          <span class="title"><a href="${pageContext.request.contextPath}/company/companyDetail?id=${lastest.cid }" target="_blank" style="font-size:16px;">${lastest.companyname }</a></span>
+                                      </div>
+                                      <div class="secondline">
+                                          <span class="required">${lastest.industry } /${lastest.development }  / ${lastest.address }&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                      </div>
+                  </div>
+
+                  <!-- 卡片  end-->
+
+                  </c:forEach>
+
+
+              </li>
+
+
+              <li style="text-align:center;width:100%;list-style: none">
+                  <!-- Indicates a successful or positive action -->
+                  <a href="${pageContext.request.contextPath}/myrecruitment/joblist"><button type="button" class="btn btn-success" style="background-color: #22cade;border: #22cade">查看更多</button></a>
+
+              </li>
+
+
+          </ul>
 
 		  <ul id="ullongjob">
 			  <c:forEach items="${schoolJob }" var="school">
