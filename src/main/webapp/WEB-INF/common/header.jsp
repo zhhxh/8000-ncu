@@ -24,8 +24,8 @@
        <c:choose>
 		   <c:when test="${sessionScope.user.username!=null}">  
 		            <ul class="header-login" style=""> 
-				        <li class="LogoutUrl"><span class="userName" style="float:none;color:black;">${sessionScope.user.username }，欢迎您！</span></li> 
-				        <li class="PortalIndex"><a href="${pageContext.request.contextPath}/user/userInfo"><span style="float:none;color:#5BC0DE;">个人中心</span></a></li> 
+				        <li class="LogoutUrl"><span class="userName" style="float:none;color:black">${sessionScope.user.username }，欢迎您！</span></li>
+						<li class="PortalIndex"><div style="margin-top: -3px"><a href="${pageContext.request.contextPath}/user/userInfo"><span style="float:none;color:#5BC0DE;">个人中心</span></a></div></li>
 				        <li class="LogoutUrl"><span onclick="layout()" style="color:black;">退出</span></li> 
 				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span style="color:#5BC0DE;">进入企业版</span> </a></li>
 				    </ul> 
