@@ -11,11 +11,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title> 登录</title>
-    <%--<link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/global.css">--%>
-	<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/dialog.css">--%>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/global.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/dialog.css">
     <link href="${pageContext.request.contextPath}/static/boostrap/css/bootstrap.min.css" rel="stylesheet">
-    <%--<link href="${pageContext.request.contextPath}/static/boostrap/css/font-awesome.css?v=4.4.0" rel="stylesheet">--%>
-    <%--<link href="${pageContext.request.contextPath}/static/boostrap/css/animate.css" rel="stylesheet">--%>
+    <link href="${pageContext.request.contextPath}/static/boostrap/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/boostrap/css/animate.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/boostrap/css/style.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/boostrap/css/login.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/login/matrix-login.css"/>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="form-actions-adm">
-                <button type="button" class="btn btn-info button btn-block">登录</button>
+                <button type="submit" class="btn btn-info button btn-block">登录</button>
             </div>
         </form>
 
