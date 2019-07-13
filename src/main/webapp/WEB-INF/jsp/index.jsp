@@ -54,7 +54,39 @@
  
   <!-- 动态包含头部导航 -->
   <jsp:include page="../common/header.jsp" flush="true" />
-  
+
+
+
+
+  <div class="jobserch">
+
+	  <form name="searchForm" id="searchForm" action="${pageContext.request.contextPath}/myrecruitment/joblist" method="get">
+		  <div class="serchjob">
+			  <div class="listtitle" style="float: left;width: 25%">
+				  <img src="${pageContext.request.contextPath}/static/window/images/logo.png" alt="index_logo" style="width: 100%">
+			  </div>
+			  <div style="float: right;width: 74%;height: 88px"> <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" style="height:55px;line-heitht:35px;font-size:18px;"/>
+				  <span class="serchbtn">
+	           			  <input type="submit" value="搜索" class="button  subButton" style="width:90px;float:left;background-color:#22cade;height:55px;font-size:16px;color:white;margin-top:10px;">
+	           		</span>
+				  <div style="float: right;width: 200px">
+					  <span style="font-size:12px;color:#22cade;margin-right:5px;margin-top: 30px">扫码下载APP</span>
+					  <img src="${pageContext.request.contextPath}/static/window/images/code.jpg" alt="index_code" style="height: 80px;margin-top: 6px;margin-left: 3px">
+				  </div>
+			  </div>
+		  </div>
+	  </form>
+	  <div class="serchjob">
+		  <div class="listtitle"></div>
+		  <div>
+			  <span style="font-size:15px;color:black;margin-left: 30%;">热门搜索：</span> <span  style="font-size:15px;color:#22cade">java&nbsp;&nbsp; UI设计师&nbsp;&nbsp; PHP&nbsp;&nbsp; 销售经理&nbsp;&nbsp; 产品经理  &nbsp;&nbsp;C++ &nbsp;&nbsp;内容运营</span>
+		  </div>
+	  </div>
+
+  </div>
+
+
+
   <!-- 静态包含 -->
   <%-- <%@include file="../common/nav.jsp"%> --%>
   <!-- 导航栏信息 start -->
@@ -62,21 +94,47 @@
 	   <!--module:menu begin--> 
 	   <div class="bs-module"> 
 	    <div class="menu-simple "> 
-	     <ul id="portalmenu"> 
+	     <ul id="portalmenu" style="">
 	      
-	      <li><a target="_self" href="${pageContext.request.contextPath}/system/index"  class="current">首页</a> </li> 
-	     <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>全部职位</a> </li> 
-	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li> 
-	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>校园招聘</a> </li> 
-	      <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList" class="">系统通告</a> </li> 
-	      <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">公司介绍</a> </li> 
-	      <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a> </li> 
+	      <li><a target="_self" href="${pageContext.request.contextPath}/system/index"  class="current">首页</a> </li>
+	     <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>全部职位</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList" class="">求职资讯</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">公司介绍</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a> </li>
 	     </ul> 
 	    </div> 
 	   </div> 
 	   <!--module:menu end--> 
-   </div> 
-  
+   </div>
+
+
+  <div id="myCarousel" class="carousel slide">
+	  <!-- 轮播（Carousel）指标 -->
+	  <ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+	  <!-- 轮播（Carousel）项目 -->
+	  <div class="carousel-inner">
+		  <div class="item active">
+			  <img src="${pageContext.request.contextPath}/static/window/images/roll_1.jpg" alt="First slide">
+		  </div>
+		  <div class="item">
+			  <img src="${pageContext.request.contextPath}/static/window/images/roll_2.jpg" alt="Second slide">
+		  </div>
+		  <div class="item">
+			  <img src="${pageContext.request.contextPath}/static/window/images/roll_3.jpg" alt="Third slide">
+		  </div>
+	  </div>
+	  <!-- 轮播（Carousel）导航 -->
+	  <a class="carousel-control left" href="#myCarousel"
+		 data-slide="prev"></a>
+	  <a class="carousel-control right" href="#myCarousel"
+		 data-slide="next"></a>
+  </div>
   <!-- 导航栏信息 end -->
   <%-- <div class="nav"> 
 	   <!--module:menu begin--> 
@@ -96,7 +154,7 @@
 	   <!--module:menu end--> 
    </div>  --%>
   
-  <!-- 图片 -->
+  <%-- 图片
   <div class="pictureturn" style="background-color:#FFFFFF;"> 
    <!--module:imageslider begin--> 
    <div class="bs-module"> 
@@ -115,48 +173,24 @@
     </div> 
    </div> 
    <!--module:imageslider end--> 
-  </div> 
-  
+  </div>
+  --%>
   
   <div class="contain clearfix" style=""> 
    <div class="clearfix eheight"> 
     <!--module:positionsearch begin--> 
     <div class="bs-module"> 
-     <div class="positionsearch-smallfresh "> 
+     <div class="positionsearch-smallfresh ">
       <a name="jlt"></a> 
       <div class="zhiweisousuo bodertop"> 
        <div class="parttitleline"></div> 
        <div class="parttitle"> 
         <span class="serchico"></span> 
         <div class="wordtitle" style="color:black;">
-         职位搜索
+         求职技巧
         </div> 
        </div> 
-       <div class="serchcontain"> 
-       
-        <table class="jobserch"> 
-        
-         <tbody>
-     	  <form name="searchForm" id="searchForm" action="${pageContext.request.contextPath}/myrecruitment/joblist" method="get"> 
-	          <tr class="serchjob"> 
-	           <td class="listtitle"></td> 
-	            <td> <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" style="height:35px;line-heitht:35px;font-size:18px;"/>
-	           		<span class="serchbtn">
-	           			  <input type="submit" value="搜索" class="button  subButton" style="width:60px;float:left;background-color:#F6BA2A;height:30px;font-size:16px;color:white;margin-top:10px;"> 
-	           		</span>
-	           	</td> 
-	          </tr>
-          </form>
-          <tr class="serchjob"> 
-          	<td class="listtitle"></td> 
-            <td>
-           		<span style="font-size:15px;color:black;">热门搜索：</span> <span  style="font-size:15px;color:#00B38A">java&nbsp;&nbsp; UI设计师&nbsp;&nbsp; PHP&nbsp;&nbsp; 销售经理&nbsp;&nbsp; 产品经理  &nbsp;&nbsp;C++ &nbsp;&nbsp;内容运营</span>
-           	</td> 
-          </tr>
-          <tr style="height:50px;">
-          </tr>
-         </tbody>
-        </table> 
+       <div class="serchcontain">
        </div> 
       </div> 
       <script type="text/javascript">
@@ -260,7 +294,7 @@
        <div class="parttitle">
         <span class="dongtaiico"></span>
         <div class="wordtitle" style="color:black;">
-         系统公告
+         求职资讯
         </div>
        </div> 
        <a href="${pageContext.request.contextPath}/articles/user/articlesList" class="morelinks">更多&gt;&gt;</a> 
@@ -268,7 +302,7 @@
         <ul> 
        
         <c:forEach items="${returnArticles }" var="article">
-         	<li><a href="${pageContext.request.contextPath}/articles/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li> 
+         	<li><a href="${pageContext.request.contextPath}/articles/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li>
         </c:forEach>
         
         </ul> 
@@ -291,19 +325,17 @@
        
 
       </div> 
-      <div class="listlinks"> 
-      
-       <ul id="ulhotjob"> 
+      <div class="listlinks">
+		  <ul id="ulhotjob">
+
        <c:forEach items="${latestjob}" var="lastest">
   	
-  	
-		
-  	
-       	 <li>	
+
+	   <li style="list-style: none">
        	 	<!-- 卡片 start -->
        		
-				<div class="container">
-					<div class="row" >
+				<div  class="container">
+					<div  class="row" >
 						<div class="col-md-4 col-sm-6 myCard">
 							<div class="serviceBox">
 								<!-- <div class="service-icon">
@@ -350,9 +382,9 @@
 									<div class="fourline" >
 										<span class="title"><a href="${pageContext.request.contextPath}/company/companyDetail?id=${lastest.cid }" target="_blank" style="font-size:16px;">${lastest.companyname }</a></span>
 									</div>
-										<div class="secondline">
+									<div class="secondline">
 										<span class="required">${lastest.industry } /${lastest.development }  / ${lastest.address }&nbsp;&nbsp;&nbsp;&nbsp;</span>
-										
+
 									</div>
 								</div>
 							</div>
@@ -360,84 +392,83 @@
 					</div>
 				</div>
 			<!-- 卡片  end-->
-       	 </li> 
+
        	  </c:forEach>
        	 
        	
-       	 
+	   </li>
         
       
-       	 <li style="text-align:center;width:100%;">	
+       	 <li style="text-align:center;width:100%;list-style: none">
        	 	<!-- Indicates a successful or positive action -->
-			<a href="${pageContext.request.contextPath}/myrecruitment/joblist"><button type="button" class="btn btn-success" >查看更多</button></a>
+			<a href="${pageContext.request.contextPath}/myrecruitment/joblist"><button type="button" class="btn btn-success" style="background-color: #22cade;border: #22cade">查看更多</button></a>
        	 
        	 </li>
     
-       	 
-       </ul> 
-   
-	   
-       <ul id="ullongjob"> 
-       	<c:forEach items="${schoolJob }" var="school">
-		       	 <li>	
-		       	 	<!-- 卡片 -->
-						<div class="container">
-							<div class="row" >
-								<div class="col-md-4 col-sm-6 myCard">
-									<div class="serviceBox">
-										<!-- <div class="service-icon">
-											<i class="fa fa-mobile"></i>
-										</div> -->
-										<div class="service-Content">
-											<div>
-												<span class="title"><a href="${pageContext.request.contextPath}/myrecruitment/detail?id=${school.id }" style="font-size:17px;" target="_blank">${school.jobname }</a></span>
-												<span class="publiTime">[${school.publictime }发布]</span>
-												<span class="money">${school.minwage }-${school.maxwage }</span>
-											</div>
-											<div class="secondline">
-												<span class="required">${school.workexperience }/ ${school.xueli} / ${school.type } &nbsp;&nbsp;&nbsp;&nbsp;</span>
-												<button type="button" class="btn  btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Hi，对我发布的职位感兴趣吗？用小程序客户端可以直接跟我聊天.'招聘小程序'" style="color:#FA6041">联系我</button>
-												<script type="text/javascript">
-													$(function () {
-													 	 $('[data-toggle="tooltip"]').tooltip()
-													})
-												
-												</script>
-											</div>
-											<div class="thirdline">
-												<!-- Contextual button for informational alert messages -->
-												<button type="button" class="btn btn-info btn-xs">${school.jobkey }</button>
-												
-											</div>
-											<div class="description thirdline">
-												${school.attact }
-											</div>
-											<hr/>
-											<div class="fourline" >
-												<span class="title"><a href="${pageContext.request.contextPath}/company/companyDetail?id=${school.cid }" target="_blank" style="font-size:16px;">${school.companyname }</a></span>
-											</div>
-												<div class="secondline">
-												<span class="required"> ${school.industry }/ ${school.development }  /${school.address }&nbsp;&nbsp;&nbsp;&nbsp;</span>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					
-		       	 </li> 
-		  
-       	</c:forEach>
-       	 
-       	 <li style="text-align:center;width:100%;">	
-       	 	<!-- Indicates a successful or positive action -->
-			<a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success" >查看更多</button></a>
-       	 </li>
-       	 
-       </ul> 
-        	 
-  		<style>
+
+		</ul>
+
+		  <ul id="ullongjob">
+			  <c:forEach items="${schoolJob }" var="school">
+				  <li>
+					  <!-- 卡片 -->
+					  <div class="container">
+						  <div class="row" >
+							  <div class="col-md-4 myCard">
+								  <div class="serviceBox">
+									  <!-- <div class="service-icon">
+                                          <i class="fa fa-mobile"></i>
+                                      </div> -->
+									  <div class="service-Content">
+										  <div>
+											  <span class="title"><a href="${pageContext.request.contextPath}/myrecruitment/detail?id=${school.id }" style="font-size:17px;" target="_blank">${school.jobname }</a></span>
+											  <span class="publiTime">[${school.publictime }发布]</span>
+											  <span class="money">${school.minwage }-${school.maxwage }</span>
+										  </div>
+										  <div class="secondline">
+											  <span class="required">${school.workexperience }/ ${school.xueli} / ${school.type } &nbsp;&nbsp;&nbsp;&nbsp;</span>
+											  <button type="button" class="btn  btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Hi，对我发布的职位感兴趣吗？用小程序客户端可以直接跟我聊天.'招聘小程序'" style="color:#FA6041">联系我</button>
+											  <script type="text/javascript">
+                                                  $(function () {
+                                                      $('[data-toggle="tooltip"]').tooltip()
+                                                  })
+
+											  </script>
+										  </div>
+										  <div class="thirdline">
+											  <!-- Contextual button for informational alert messages -->
+											  <button type="button" class="btn btn-info btn-xs">${school.jobkey }</button>
+
+										  </div>
+										  <div class="description thirdline">
+												  ${school.attact }
+										  </div>
+										  <hr/>
+										  <div class="fourline" >
+											  <span class="title"><a href="${pageContext.request.contextPath}/company/companyDetail?id=${school.cid }" target="_blank" style="font-size:16px;">${school.companyname }</a></span>
+										  </div>
+										  <div class="secondline">
+											  <span class="required"> ${school.industry }/ ${school.development }  /${school.address }&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+										  </div>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+
+				  </li>
+
+			  </c:forEach>
+
+			  <li style="text-align:center;width:100%;">
+				  <!-- Indicates a successful or positive action -->
+				  <a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success" >查看更多</button></a>
+			  </li>
+
+		  </ul>
+
+		  <style>
 				.publiTime{
 					color:#999999;
 					font-size:13px;
@@ -561,15 +592,15 @@
        	 
        	 </li>
        	 
-       </ul> 
-        
-      
-      	
-      	
-   
-       	 
-       	 	
-      </div> 
+       </ul>
+
+
+
+
+
+
+
+      </div>
      </div> 
      <script type="text/javascript">
     $(function() {

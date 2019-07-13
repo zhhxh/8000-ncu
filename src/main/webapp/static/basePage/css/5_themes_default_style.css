@@ -80,9 +80,9 @@ a:hover{
 }
 /*头部*/
 .header{
-	background: white;
+	background: #ffffff;
 	width: 100%;
-	height: 70px;
+	height: 50px;
 	min-width: 940px;
         position:relative;
 }
@@ -119,23 +119,23 @@ margin-bottom: 5px;
 .nav{
 	width: 100%;
 	min-width: 940px;
-	background: #008FD1;
+	background: #22cade;
 position: relative;
 }
 .nav ul{
 	width: 940px;
 	margin: 0 auto;
-        background: #008FD1;
+        background: #22cade;
         font-size: 0;
         letter-spacing: -0.31em;
         clear:both;
 }
 .nav ul li a{
-	width: 110px;
+	width: 134px;
 	float: left;
 	text-align:center;
-	height: 43px;
-	line-height: 43px;
+	height: 53px;
+	line-height: 53px;
 	color:#FFF;
 	font-size: 15px;
 letter-spacing: normal;
@@ -143,11 +143,11 @@ word-spacing: normal;
 overflow: hidden;
 }
 .nav ul li a:hover{
-	background: #0074AA;
+	background: #0a6aa1;
 	text-decoration: none;
 }
 .nav ul li a.current{
-	background: #0074AA;
+	background: #0a6aa1;
 	text-decoration: none;
 }
 /*主题模块*/
@@ -163,7 +163,7 @@ overflow: hidden;
 	width: 1440px;
 }
 .contain{
-	width: 940px;
+	width: 100%;
 	min-width: 940px;
 	margin: 15px auto;
 	background: #e0e5e8;
@@ -175,7 +175,7 @@ overflow: hidden;
 .zhaopindongtai{
 	float: left;
 	margin-left: 19px;
-	width: 243px;
+	width: 60%;
 	margin-bottom:-10000px; padding-bottom:10000px;
 	min-height: 210px;
 	background: #f9f9f9 url(../images/5_themes_default_images_fly2.png) no-repeat 82px 100px;
@@ -207,7 +207,8 @@ overflow: hidden;
 /*职位搜索*/
 .zhiweisousuo{
 	float: left;
-	width: 678px;
+	width: 30%;
+	margin-left: 50px;
 	min-height: 210px;
 	background: #f9f9f9;
 	margin-bottom:-10000px; padding-bottom:10000px;
@@ -225,7 +226,7 @@ overflow: hidden;
 .parttitleline{
 	clear: both;
 	width: 121px;
-	border-top:4px solid #FFD233;
+	border-top:4px solid #22cade;
 	margin-top: -4px;
 }
 .parttitle{
@@ -243,7 +244,7 @@ overflow: hidden;
 .listtitle{
 	width: 60px;
 	padding: 2px 5px;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
         margin-right: 7px;
         display: inline-block;
 word-break: break-all;
@@ -280,7 +281,9 @@ margin: 7px 3px 0px 3px;
 	padding: 2px 2px;
 }
 .serchjob{
-	margin-left: 40px;
+	width: 100%;
+	height: 30px;
+	margin-left: 0px;
 	font-size: 12px;
 	clear: both;
 }
@@ -295,24 +298,26 @@ margin: 7px 3px 0px 3px;
 .serchinput{
 	float: left;
 	border:1px solid #C9C9C9;
-        border-right: none;
-	height: 20px;
-	width: 430px;
+	border-right: none;
+	height: 30px;
+	width: 600px;
 	padding: 2px;
 margin-left: 4px;
-margin-top: 7px;
+margin-top: 20px;
 margin-bottom: 10px;
 }
 .serchbtn{
 	float: left;
+	margin-top: 10px;
+
 }
 .serchbtn a{
         display:inline-block;
-	background: #f6ba2a ;
+	background: #22cade ;
 	padding: 0px 15px;
 	font-size: 14px;
 	color: white;
-	height: 26px;
+	height: 30px;
 	line-height: 26px;
 	text-decoration: none;
 	color: white;
@@ -327,7 +332,7 @@ margin-top: 7px;
 }
 .dongtailinks li{
 	list-style:disc;
-	color: #FFD233;
+	color: #22cade;
 	margin: 10px 0;
 	font-size: 14px;
         margin-top:0px;
@@ -625,6 +630,7 @@ text-align: left;
 }
 .jobserch
 {
+	width: 100%;
 table-layout: fixed;
 }
 
