@@ -80,44 +80,35 @@
 
   <div class="contain joblist clearfix"> 
 
-   <div class="clearfix sousuocontain fl" style="width:100%;"> 
+   <div class="clearfix sousuocontain fl" style="width:100%;color: #ffffff">
 
     
-    <div style="height:8px;"/></div>
+    <div style="height:8px; background: #eff0f4"/></div>
 
     
     <!--module:positionlist begin--> 
     <div class="bs-module"> 
      <div class="positionlist-newtemplate "> 
       <div class="clearfix tablecontain"> 
-       <table class="listtable"> 
-      <!--   <thead> 
-         <tr class="tabletitle" > 
-          <th class="tableleft" style="color:black">&nbsp;&nbsp;职位名称</th> 
-          <th class="tableleft" style="color:black" title="招聘区域">招聘区域</th> 
-          <th class="tableleft" style="color:black">工作地点</th> 
-          <th class="tableleft" style="color:black" >发布时间</th> 
+       <table class="articlelisttable">
+       <thead style="height: 40px">
+         <tr class="tabletitle"  >
+          <th class="tableleft" style="color:black"></th>
          </tr> 
-        </thead>  -->
-       <div class="parttitle">
-         <span class="serchico"></span>
-         <div class="wordtitle" style="color:black">
-     		     系统公告
-         </div>
-        </div> 
-        
-        <tbody>
+        </thead>
+
+           <tbody>
  		<c:forEach items="${ articleslist}" var="data"> 
     		<script>
     			
     		</script>
-	         <tr> 
+	         <tr>
 	          <td class="tableleft joblsttitle"> 
 	             
 	          		<!-- 卡片 start -->
-					<div class="container">
+					<div class="container" style="width: 100%">
 						<div class="row" >
-							<div class="col-md-9 col-sm-9 myCard" style="width:79%;">
+							<div class="col-md-12 col-sm-12 myCard" >
 								<div class="serviceBox" style="padding-bottom:15px;">
 								
 									<div class="service-Content" style="overflow: hidden;">
@@ -137,9 +128,12 @@
 					</div>
 				<!-- 卡片  end-->
 	          </td> 
-	         </tr> 
+	         </tr>
+
 	     </c:forEach>
-         
+        <tr style="height: 30px;width: 100%">
+            <td></td>
+        </tr>
          <style>
 	  		#leftJob{
 	  			width: 100%;

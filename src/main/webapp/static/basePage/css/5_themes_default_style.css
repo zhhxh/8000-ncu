@@ -459,8 +459,17 @@ top: 3px;
 	border-spacing: 0px;
 padding: 5px 20px 15px 20px;
 }
+.articlelisttable{
+    background-color: #ffffff;
+    width: 70%;
+    margin-left: 15%;
+    text-align:center;
+    border-spacing: 0px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
 .tablecontain{
-	background: #f9f9f9;
+	background: #eff0f4;
 }
 .listtable .tabletitle{
 
