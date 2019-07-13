@@ -82,22 +82,23 @@
 
   <div class="contain joblist clearfix"> 
 
-   <div class="clearfix sousuocontain fl" style="width:100%;"> 
+   <div class="clearfix sousuocontain fl" style="width:70%;margin-left: 15%">
     <!--module:positionsearch begin--> 
     <div class="bs-module"> 
      <div class="positionsearch-smallfresh "> 
       <a name="jlt"></a> 
       <form name="searchForm" id="searchForm" action="${pageContext.request.contextPath}/myrecruitment/joblist" method="get"> 
-       <div class="zhiweisousuo bodertop selectmod" style="width:100%;"> 
+       <div class="zhiweisousuo bodertop selectmod" style="width:100%;margin-left: 0">
         <div class="parttitleline"></div> 
         <div class="parttitle">
          <span class="serchico"></span>
          <div class="wordtitle" style="color:black">
-          职位搜索
+          条件筛选
          </div>
         </div> 
-        <div class="serchcontain"> 
-          <select class="dropdown" id="address" name="address" tableindex="12" style="margin-left:200px;" >
+        <div class="serchcontain">
+			<div class="d4">
+          <select class="dropdown" id="address" name="address" tableindex="12" style="" >
           		<option value="">工作城市</option> 
           		<option value="广州" ${requestScope.moreCondition.address eq '广州'?"selected=\"selected\"":""} >广州</option> 
           		<option value="深圳" ${requestScope.moreCondition.address eq '深圳'?"selected=\"selected\"":""} >深圳</option> 
@@ -143,8 +144,9 @@
           		
           		<option value="其他" ${requestScope.moreCondition.address eq '其他'?"selected=\"selected\"":""} >其他</option> 
    
-          </select> 
-           
+          </select>
+			</div>
+			<div class="d4">
           <select class="dropdown" id="workexperience" name="workexperience" tableindex="12" style="margin-left:200px;" >
           		<option value="">工作经验</option> 
           		<option value="无经验" ${requestScope.moreCondition.workexperience eq '无经验'?"selected=\"selected\"":""} >无经验</option> 
@@ -152,8 +154,9 @@
           		<option value="3-5年" ${requestScope.moreCondition.workexperience eq '3-5年'?"selected=\"selected\"":""} >3-5年</option> 
           		<option value="5-10年" ${requestScope.moreCondition.workexperience eq '5-10年'?"selected=\"selected\"":""} >5-10年</option> 
           		<option value="10年以上" ${requestScope.moreCondition.workexperience eq '10年以上'?"selected=\"selected\"":""} >10年以上</option> 
-          </select> 
-      
+          </select>
+			</div>
+			<div class="d4">
           <select class="dropdown" id="xueli" name="xueli" tableindex="12" style="margin-left:200px;" >
           		<option value="" >学历要求</option> 
           		<option ${requestScope.moreCondition.xueli eq '大专'?"selected=\"selected\"":""} >大专</option> 
@@ -162,14 +165,16 @@
           		<option ${requestScope.moreCondition.xueli eq '博士'?"selected=\"selected\"":""} >博士</option> 
           		<option ${requestScope.moreCondition.xueli eq '不限要求'?"selected=\"selected\"":""} >不限要求</option> 
           </select> 
-        
+			</div>
+			<div class="d4">
          <select class="dropdown" id="type" name="type" tableindex="12">
           		<option value="" >招聘类别</option> 
           		<option ${requestScope.moreCondition.type eq '社招'?"selected=\"selected\"":""} >社招</option> 
           		<option ${requestScope.moreCondition.type eq '校招'?"selected=\"selected\"":""} >校招</option> 
           		
-          </select> 
-          
+          </select>
+			</div>
+			<div class="d4">
           <select class="dropdown" id="development" name="development" tableindex="12">
         		 <option value="" >融资阶段</option> 
           		 <option ${requestScope.moreCondition.development eq '未融资'?"selected=\"selected\"":""} >未融资</option>
@@ -181,9 +186,10 @@
 				 <option ${requestScope.moreCondition.development eq '上市公司'?"selected=\"selected\"":""} >上市公司</option>
 				 <option >不需要融资</option>
           </select>
-
+			</div>
+			<div class="d4">
           <select class="dropdown" id="moneyrange" name="moneyrange" tableindex="12">
-          		 <option value="" >月薪范围：</option> 
+          		 <option value="" >月薪范围</option>
         		 <option value="1000"  ${requestScope.moreCondition.moneyrange eq '1000'?"selected=\"selected\"":""}  >1000 - 3000</option> 
         		 <option value="3000"  ${requestScope.moreCondition.moneyrange eq '3000'?"selected=\"selected\"":""} >3000 - 5000</option> 
         		 <option value="5000"  ${requestScope.moreCondition.moneyrange eq '5000'?"selected=\"selected\"":""} >5000 - 8000</option> 
@@ -192,9 +198,10 @@
         		 <option value="15000" ${requestScope.moreCondition.moneyrange eq '15000'?"selected=\"selected\"":""}  >15000以上</option>  
         		
           </select>
-          
+			</div>
+			<div class="d4">
           <select class="dropdown" id="minpeople" name="minpeople" tableindex="12">
-          		 <option value="">公司规模：</option> 
+          		 <option value="">公司规模</option>
         		 <option value="10" ${requestScope.moreCondition.minpeople eq '9'?"selected=\"selected\"":""}>不少于10人</option> 
         		 <option value="50" ${requestScope.moreCondition.minpeople eq '49'?"selected=\"selected\"":""}>不少于50人</option> 
         		 <option value="150" ${requestScope.moreCondition.minpeople eq '149'?"selected=\"selected\"":""}>不少于150人</option> 
@@ -202,17 +209,21 @@
         		 <option value="1500" ${requestScope.moreCondition.minpeople eq '1499'?"selected=\"selected\"":""}>不少于1500人</option> 
         		
           </select>
-                        
+			</div>
+			<div class="d4">
           <select class="dropdown" id="datenumber" name="datenumber" tableindex="12">
-          		 <option value="" >发布时间：</option> 
+          		 <option value="" >发布时间</option>
         		 <option value="1" ${requestScope.moreCondition.datenumber eq '1'?"selected=\"selected\"":""}>24小时内</option> 
         		 <option value="3" ${requestScope.moreCondition.datenumber eq '3'?"selected=\"selected\"":""}>近三天</option> 
         		 <option value="7" ${requestScope.moreCondition.datenumber eq '7'?"selected=\"selected\"":""}>近一周</option> 
         		 <option value="30" ${requestScope.moreCondition.datenumber eq '30'?"selected=\"selected\"":""}>近一个月</option> 
         		 <option value="1500" ${requestScope.moreCondition.datenumber eq '1500'?"selected=\"selected\"":""}>不限要求</option> 
           </select>
-          <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" value="${requestScope.datalist }" style="height:35px;line-heitht:35px;font-size:15px;border-right:1px solid #D3D3D3;" placeholder="搜索职位 公司 （多个关键字，建议空格分隔） 例如 java "/>
-          <input type="submit" value="搜索" class="button  subButton" style="width:60px;float:left;background-color:#F6BA2A;height:30px;font-size:16px;color:white;"> 
+			</div>
+			<div style="width: 80%;margin-left: 10%" >
+          <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" value="${requestScope.datalist }" style="height:40px;line-heitht:35px;width:83%;font-size:15px;border-right:1px solid #D3D3D3;" placeholder="搜索职位 公司 （多个关键字，建议空格分隔） 例如 java "/>
+          <input type="submit" value="搜索" class="button  subButton" style="width: 10%;float:left;background-color:#22cade;height:40px;font-size:16px;color:white;margin-left: 0">
+			</div>
         </div>
      
        	   
@@ -246,7 +257,7 @@
 	          		<!-- 卡片 start -->
 					<div class="container">
 						<div class="row" >
-							<div class="col-md-9 col-sm-9 myCard" style="width:79%;">
+							<div class="col-md-10 col-sm-10 myCard" >
 								<div class="serviceBox" style="padding-bottom:15px;">
 								
 									<div class="service-Content" style="overflow: hidden;">
@@ -356,7 +367,7 @@
        </table> 
        
         <!-- 分页列表began -->
-        <div class="container" style="text-align:center;">
+        <div class="container" style="text-align:center;width: 80% ">
 		        <div>
 		            <ul id="page"></ul>
 		        </div>

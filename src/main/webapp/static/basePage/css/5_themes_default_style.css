@@ -224,7 +224,15 @@ overflow: hidden;
 	margin: 20px 5px 0px 15px;
 }
 .serchcontain{
+    width: 100%;
 	padding: 0px 12px 10px 40px;
+}
+.serchcontain .d4{
+    width: 25%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-left: 20px;
 }
 .parttitleline{
 	clear: both;
@@ -394,6 +402,7 @@ top: 3px;
 
 /*职位搜索select*/
 .dropdown{
+    width: 25%;
 	float: left;
 	margin: 10px;
 }
