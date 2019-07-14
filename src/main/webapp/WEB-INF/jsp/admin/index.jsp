@@ -56,10 +56,10 @@
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/userlist"> <i class="fa fa-home"></i>用户管理</a>
                      </li>
                      <li>
-                         <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/digitManage"> <i class="fa fa-home"></i>数据管理</a>
+                         <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/digitManage"> <i class="fa fa-home"></i>数据管理</a>
                      </li>
                     <li>
-                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>通告管理</a>
+                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>资讯推送</a>
                     </li>
                     </li>
                 </ul>

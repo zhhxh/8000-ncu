@@ -155,16 +155,7 @@ public class SysadminController {
 		}
 		return res;
 	}
-	/**
-	 * 数据列表
-	 */
-	@RequestMapping("/digitManage")
-	public 	String digitManage(HttpServletRequest request,UserCondition userCondition) {
-		if (!isLogin(request)) {
-			return "admin/tologin";
-		}
-		return "admin/digitManage";
-	}
+
 	/**
 	 * 用户列表
 	 */
