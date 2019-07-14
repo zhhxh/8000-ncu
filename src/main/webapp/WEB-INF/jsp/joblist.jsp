@@ -237,10 +237,10 @@
 
     
     <!--module:positionlist begin--> 
-    <div class="bs-module"> 
-     <div class="positionlist-newtemplate "> 
-      <div class="clearfix tablecontain"> 
-       <table class="listtable"> 
+    <div class="bs-module" >
+     <div class="positionlist-newtemplate " >
+      <div class="clearfix tablecontain">
+       <table class="listtable" >
       <!--   <thead> 
          <tr class="tabletitle" > 
           <th class="tableleft" style="color:black">&nbsp;&nbsp;职位名称</th> 
@@ -249,15 +249,15 @@
           <th class="tableleft" style="color:black" >发布时间</th> 
          </tr> 
         </thead>  -->
-        <tbody>
+        <tbody >
  		<c:forEach items="${ datalists}" var="data"> 
     
 	         <tr> 
 	          <td class="tableleft joblsttitle"> 
 	          		<!-- 卡片 start -->
-					<div class="container">
-						<div class="row" >
-							<div class="col-md-10 col-sm-10 myCard" >
+					<div class="container" style="width: 100%">
+						<div class="row" style="width: 100%">
+							<div class="col-md-12 col-sm-12 myCard" >
 								<div class="serviceBox" style="padding-bottom:15px;">
 								
 									<div class="service-Content" style="overflow: hidden;">
