@@ -11,9 +11,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
   <link type="text/css" rel="stylesheet" href="<%=path %>css/frontmodule.css" /> 
   <link type="text/css" rel="stylesheet" href="<%=path %>css/5_themes_default_select.css?v=0.0.0.9" front="css" /> 
-  <link type="text/css" rel="stylesheet" href="<%=path %>css/5_themes_default_style.css?v=0.0.0.9" front="css" /> 
-
-  <script type="text/javascript" src="<%=path %>js/5_themes_default_jquery191.js?v=0.0.0.9"></script> 
+  <link type="text/css" rel="stylesheet" href="<%=path %>css/5_themes_default_style.css?v=0.0.0.9" front="css" />
+     <script type="text/javascript" src="<%=path %>js/5_themes_default_jquery191.js?v=0.0.0.9"></script>
   <script type="text/javascript" src="<%=path %>js/5_themes_default_custom.js?v=0.0.0.9"></script> 
   <script type="text/javascript" src="<%=path %>js/5_themes_default_dialog.js?v=0.0.0.9"></script> 
 
@@ -21,7 +20,7 @@
   <script type="text/javascript" src="<%=path %>js/require.js"></script> 
   <title>联系我们</title> 
  </head> 
-<body> 
+<body style="background: #ffffff">
  
   <!-- 动态包含头部导航 -->
   <jsp:include page="../common/header.jsp" flush="true" />
@@ -36,7 +35,7 @@
 			     <ul id="portalmenu">
 
 			      <li><a target="_self" href="${pageContext.request.contextPath}/system/index">首页</a> </li>
-			     <li><a target="_self" hre="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
+			     <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
 	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
 			      <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"  >最新资讯</a> </li>
 			      <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany" class="">求职技巧</a> </li>
@@ -46,13 +45,15 @@
 			    </div> 
 			   </div> 
 			   <!--module:menu end--> 
-		   </div> 
+		   </div>
+
 		  
 		  <!-- 导航栏信息 end -->
  
-  <div class="contain joblist clearfix"> 
-   <div class="containsidebar"> 
-    <div class="zhaopindongtai bodertop nofly minheight"> 
+  <div class="contain joblist clearfix" style="background: #eff0f4">
+      <div style="height:8px; background: #eff0f4"/></div>
+   <div class="containsidebar" >
+    <div class="zhaopindongtai bodertop nofly minheight" style="width: 100%">
      <!--module:menu begin--> 
      <div class="bs-module"> 
       <div class="menu-secondtemplate "> 
@@ -60,64 +61,43 @@
        <div class="titlelinks"> 
         <ul> 
          <ul class="secondarymenu"> 
-          <li class="secondCurrent"><a target="_self" href="contact.html">联系我们</a></li> 
+             <li class="secondCurrent" style="font-size: 16px;list-style: none;margin-top: 20px;margin-bottom: 10px">平台微信</li>
+             <li style="list-style: none"><img src="${pageContext.request.contextPath}/static/window/images/wechatcode.png" alt="wechat" style="width: 80%"></li>
+             <li class="secondCurrent" style="font-size: 16px;list-style: none;margin-top: 20px;margin-bottom: 10px">平台QQ</li>
+             <li style="list-style: none"><img src="${pageContext.request.contextPath}/static/window/images/code.jpg" alt="qq" style="width: 80%"></li>
          </ul> 
         </ul> 
        </div> 
       </div> 
      </div> 
      <!--module:menu end--> 
-    </div> 
-    <div class="zhaopindongtai bodertop"> 
-	     <!--module:newslist begin--> 
-	     <div class="bs-module"> 
-	      <div class="newslist-newsimple "> 
-	       <div class="parttitleline"></div> 
-	       <div class="parttitle">
-	        <span class="dongtaiico"></span>
-	        <div class="wordtitle" style="color:black;">
-	         系统公告
-	        </div>
-	       </div> 
-	       <a href="${pageContext.request.contextPath}/articles/user/articlesList" class="morelinks">更多&gt;&gt;</a> 
-	       <div class="dongtailinks"> 
-	        <ul> 
-	       
-	        <c:forEach items="${returnArticles }" var="article">
-	         	<li><a href="${pageContext.request.contextPath}/articles/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li> 
-	        </c:forEach>
-	        
-	        </ul> 
-	       </div> 
-	      </div> 
-	     </div> 
-	     <!--module:newslist end--> 
-    </div> 
-   </div> 
-   <div class="zhiweisousuo bodertop selectmod zx_aboutus"> 
-    <div class="parttitleline"></div> 
-    <div class="parttitle">
-     <span class="dongtaiico"></span>
-     <div class="wordtitle">
-      联系我们
-     </div>
-    </div> 
-    <div class="s_detail"> 
-     <div class="about adminarea" id="ctlArticleShow"> 
-      <p class="title f_18 f_c m_b10 unreset"><span style="font-size: medium;">联系方式</span></p> 
-      <p class="m_b30 unreset"><span style="font-size: medium;"><img src="<%=path %>images/3.jpg" alt="" /></span></p> 
-      <br/>
-      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>1. 客服电话：</strong>  89704431</span></p>
-      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>2. 公司电话：</strong> 69741507</span></p>
-      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>3. 公司地址：</strong>北京市昌平区昌盛路12号院乐华仕健康产业园6号楼 <span lang="EN-US">14</span>号楼<span lang="EN-US">415</span></span>&nbsp;</span></p>
-      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>4. 官方微博：</strong> 123456@qq.com（新浪微博）</span></p>
-      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>5. 官方微信：</strong> CPRC456</span></p>
-     </div> 
-    </div> 
-   </div> 
-  </div> 
-  
-  
+    </div>
+   </div>
+      <div style="width: 60%;background: #ffffff;margin-right: 20%;float: right;margin-bottom: 30px">
+          <div style="width: 90%;float: left;margin-left: 5%">
+              <h3 style="font-size: 16px;color: #0074AA;margin-top: 15px;margin-bottom: 10px">关于平台</h3>
+              <hr style="background-color: #dddddd;height: 2px;border: 0px;"/>
+              <span style="font-size: 14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offer100平台是一个小型的综合招聘平台，旨在为求职者，尤其是在校的大学生，提供招聘信息和在线的招聘服务。本平台同时也是南昌大学软件学院16级学生参与软酷企业实训的工程项目，项目完全符合实训要求，并完全由16级团队（5人）制作。</span>
+          </div>
+          <div style="width: 90%;float: left;margin-left: 5%">
+              <h3 style="font-size: 16px;color: #0074AA;margin-top: 15px;margin-bottom: 10px">联系地址</h3>
+              <hr style="background-color: #dddddd;height: 2px;border: 0px;"/>
+              <img src="${pageContext.request.contextPath}/static/window/images/location.png" alt="location" style="width: 70%;margin-left:15% ">
+          </div>
+          <div style="width: 90%;float: left;margin-left: 5%">
+              <h3 style="font-size: 16px;color: #0074AA;margin-top: 15px;margin-bottom: 10px">团队信息</h3>
+              <hr style="background-color: #dddddd;height: 2px;border: 0px;"/>
+              <br/>
+              <h3 style="font-size: 16px;text-align: center">祝  杰：8000116169 软件工程166班 </h3><br/>
+              <h3 style="font-size: 16px;text-align: center">张  涵：8000116127 软件工程164班 </h3><br/>
+              <h3 style="font-size: 16px;text-align: center">李  博：8000116065 软件工程163班 </h3><br/>
+              <h3 style="font-size: 16px;text-align: center">张鑫雨：8000116076 软件工程163班 </h3><br/>
+              <h3 style="font-size: 16px;text-align: center">徐钰涵：8000116202 软件工程167班 </h3><br/>
+              <br/>
+          </div>
+      </div>
+  </div>
+
    <!-- 静态包含 -->
   <%@include file="../common/footer.jsp"%> 
 
