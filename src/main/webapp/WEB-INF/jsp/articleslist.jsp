@@ -115,12 +115,7 @@
 										<div id="leftJob">
 											<span class="title">  <a href="${pageContext.request.contextPath}/articles/detail?id=${data.articleid}" style="font-size:17px;" target="_blank">${data.articletitle }</a>   </span>
 											<span class="publiTime">[  ${data.createtime }  发布]</span>
-										
 										</div>
-									
-										  
-										
-										
 									</div>
 								</div>
 							</div>

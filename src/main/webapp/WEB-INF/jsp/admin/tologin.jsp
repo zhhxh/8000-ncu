@@ -44,12 +44,15 @@
                     </div>
                 </div>
             </div>
+            <%--<%request.setAttribute("error", "");%>--%>
+            <p style="color:white; font-size: 17px">${error }</p>
             <div class="form-actions-adm">
                 <button type="submit" class="btn btn-info button btn-block">登录</button>
             </div>
         </form>
 
     </div>
+
 </div>
 <%@include file="../../common/admin/footer.jsp" %>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/dialog/js/dialog.js"></script>

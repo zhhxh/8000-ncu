@@ -88,22 +88,17 @@
 
   <div class="contain zpcontain clearfix" > 
  
-   <div class="zhiweixiangqing fr" style="width:100%;color:black;"> 
+   <div class="zhiweixiangqing fr" style="width:70%;color:black;margin-right: 15%">
     <!--module:positiondetail begin--> 
     <div class="bs-module"> 
-     <div class="positiondetail-simple "> 
-
-   
-
+     <div class="positiondetail-simple ">
       <div class="xiangqingtitle"> 
-       <span style="font-size:20px;">${articles.articletitle } </span> 
+       <span>${articles.articletitle } </span>
       </div> 
       <div class="xiangqingcontain"> 
-       <div class="xiangqingline"></div> 
-        
-        
+       <div class="xiangqingline"></div>
         <ul class="xiangqinglist clearfix"> 
-            <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;">发布时间：</li> 
+            <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;text-align: center">发布时间：</li>
            
 	        <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;" id="publictime1"> </li> 
 	        <script type="text/javascript">
@@ -118,10 +113,6 @@
 		    			 var publictime = year+"-"+month+"-"+date+" " + hours+":"+minutes+":"+seconds; 
 		    			 var jiezi = document.getElementById("publictime1");  //传递的参数是标签里面的id的值
 		    			  jiezi.innerHTML = publictime;
-		    			 
-		    			 
-		    			
-		    			  
 		    </script>
 		    
 		    <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;" >文章关键字:</li> 
@@ -141,18 +132,15 @@
        	  }
     	  
        </script>
+       <%--<ul class="xiangqinglist clearfix"> --%>
+        <%--<div class="xiangqingtext"> --%>
+        <%--&lt;%&ndash;  <p>工作地点: ${myrecruitment.address }</p>  &ndash;%&gt;--%>
+ <%----%>
+       <%--</ul>--%>
        <ul class="xiangqinglist clearfix"> 
-        <div class="xiangqingtext"> 
-        <%--  <p>工作地点: ${myrecruitment.address }</p>  --%>
-        
-         
- 
-       </ul>
-       <ul class="xiangqinglist clearfix"> 
-	        
 
-	     	<textarea rows="70" cols="" style="width:100%;font-size:16px;" readonly="readonly">${articles.articlecontent } </textarea>
- 
+	     	<%--<textarea  rows="30" cols="10" style="width:100%;font-size:16px;" readonly="readonly">${articles.articlecontent } </textarea>--%>
+            <div class="st">${articles.articlecontent }</div>
        </ul>
       </div> 
 

@@ -573,7 +573,13 @@ padding:0px 10px;
 }
 .xiangqingtitle{
 	padding-bottom: 10px;
-	border-bottom:2px solid #C9C9C9; 
+	border-bottom:2px solid #C9C9C9;
+	text-align:center;
+}
+.xiangqingtitle span{
+	font-size:20px;
+	text-align:center;
+	display: block;
 }
 .zhiweixiangqing span{
 	font-size: 16px;
@@ -810,13 +816,25 @@ margin-top: -2px;
 }
 li.ntitle {
 width: 65px;
+	text-align: center;
 }
 li.nvalue {
 width: 80px;
 padding-right: 4px;
 }
 ul.xiangqinglist {
-margin: 10px 0px;
+	margin: 10px 0px;
+	/*text-align: center;*/
+}
+div.st {
+	text-indent:2em;
+	text-align: left;
+	font-size:13px;
+	border-width: 0px;
+	border-style: solid;
+	solid: #6a6a6a;
+	background-color: white;
+	padding: 10px
 }
 .parttitle.height0 {
 height:53px;

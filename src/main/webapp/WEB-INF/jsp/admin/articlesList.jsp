@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>公司信息列表</title>
+<title>公告列表</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/global.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/dialog.css">
  <%@include file="../../common/admin/header.jsp" %>
@@ -75,7 +75,7 @@
     		<script type="text/javascript">
     			//处理当前时间，转化成良好的格式
     			 var isshow;
-		 s		 if(${data.isshow} == 1){
+		 		 if(${data.isshow} == 1){
 					 isshow = "<font color='#3CB7F6'>上线</font>";
 			 	 }else  {
 					 isshow = "<font color='#FC4070'>下线</font>";
@@ -238,7 +238,13 @@
 						 if("-1" == data.code){
 							 $('body').dailog({type:'primary',showBoxShadow:true,animateStyle:'none',bottons:['确定'],discription:data.data})
 						}else if("1" == data.code){
-						
+							 // $("#id").val(data.data.id);
+							 // $("#articletitle").val(data.data.companyname);
+							 // $("#articlekey").val(data.data.simplename);
+							 // $("#createtime").val(data.data.industry);
+							 // $("#datetime").val(data.data.address);
+							 // $("#isshow").val(data.data.companyurl);
+							 // $("#operation").val(data.data.minpeople);
 							window.location.href = '${pageContext.request.contextPath}/articles/articlesList';
 						} 
 						
@@ -248,8 +254,6 @@
 			
 			
 		}
-    
-    	
     	function pass(id,is){
 
     		if(is == "1"){
