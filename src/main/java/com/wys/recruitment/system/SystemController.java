@@ -100,31 +100,6 @@ public class SystemController {
     }
 
     /**
-     * 介绍我们公司页面
-     *
-     * @return
-     */
-    @RequestMapping("/showOurCompany")
-    public String showOurCompany(HttpServletRequest request) {
-        //8.0 检索出当前最近的公告信息
-        List<Map<String, Object>> articlesListTow = articlesService.listTwo();
-        List<Map<String, Object>> returnArticles = new ArrayList<Map<String, Object>>();
-        for (Map<String, Object> aa : articlesListTow) {
-            Map<String, Object> mm = new HashMap<String, Object>();
-            if (aa.get("articletitle").toString().length() > 10) {
-                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 9) + "....");
-            } else {
-                mm.put("articletitle", aa.get("articletitle"));
-            }
-            mm.put("articleid", aa.get("articleid"));
-            returnArticles.add(mm);
-        }
-        request.setAttribute("returnArticles", returnArticles);
-
-        return "showOurCompany";
-    }
-
-    /**
      * 联系我们
      *
      * @return

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -77,8 +77,6 @@
     <title>招聘信息列表</title>
 </head>
 <body>
-
-
 <!-- 动态包含头部导航 -->
 <jsp:include page="../common/header.jsp" flush="true"/>
 
@@ -99,7 +97,7 @@
                 </li>
                 <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"
                        class="current">最新资讯</a></li>
-                <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">求职技巧</a></li>
+                <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany">求职技巧</a></li>
                 <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a></li>
             </ul>
         </div>

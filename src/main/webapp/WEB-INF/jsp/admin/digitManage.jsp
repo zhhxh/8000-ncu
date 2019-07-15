@@ -45,7 +45,7 @@
                                 <div class="ibox-content">
                                     <form role="form" method="get" action="${pageContext.request.contextPath}/sysadmin/companylist" class="form-inline">
                                         <!--              <button  class="btn btn-primary" style="margin-top:10px;margin-left:50px;" onclick="open_d()">发布公告</button> -->
-                                        <a data-toggle='modal' class='btn btn-primary' href='${pageContext.request.contextPath}/admin/articlesList#modal-form' onclick="open_d('no')">发布资讯</a>
+                                        <a data-toggle='modal' class='btn btn-primary' href='${pageContext.request.contextPath}/admin/digitManage#modal-form' onclick="open_d('no')">发布资讯</a>
                                     </form>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
         }else{
             $.ajax({
                 type: "POST",
-                url: '${pageContext.request.contextPath}/articles/articlesDetail',
+                url: '${pageContext.request.contextPath}/skill/skillDetail',
                 data: {
                     id:id
                 },
@@ -163,7 +163,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h3 class="m-t-none m-b">公告信息</h3>
-                        <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data"  action="${pageContext.request.contextPath}/articles/insertArticle" >
+                        <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data"  action="${pageContext.request.contextPath}/skill/insertskill" >
                             <input type="hidden" name="articleid" id="articleid" >
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">文章标题：</label>
@@ -227,7 +227,7 @@
             //发送ajax请求删除数据
             $.ajax({
                 type: "POST",
-                url: '${pageContext.request.contextPath}/articles/nopass',
+                url: '${pageContext.request.contextPath}/skill/nopass',
                 data: {
                     id:id
 
@@ -245,7 +245,7 @@
                         // $("#datetime").val(data.data.address);
                         // $("#isshow").val(data.data.companyurl);
                         // $("#operation").val(data.data.minpeople);
-                        window.location.href = '${pageContext.request.contextPath}/articles/articlesList';
+                        window.location.href = '${pageContext.request.contextPath}/skill/skillList';
                     }
 
                 }
@@ -262,7 +262,7 @@
             //发送ajax请求删除数据
             $.ajax({
                 type: "POST",
-                url: '${pageContext.request.contextPath}/articles/pass',
+                url: '${pageContext.request.contextPath}/skill/pass',
                 data: {
                     id:id
 
@@ -274,7 +274,7 @@
                         $('body').dailog({type:'primary',showBoxShadow:true,animateStyle:'none',bottons:['确定'],discription:data.data})
                     }else if("1" == data.code){
 
-                        window.location.href = '${pageContext.request.contextPath}/articles/articlesList';
+                        window.location.href = '${pageContext.request.contextPath}/skill/skillList';
                     }
 
                 }
@@ -291,7 +291,7 @@
             //发送ajax请求删除数据
             $.ajax({
                 type: "POST",
-                url: '${pageContext.request.contextPath}/articles/delete',
+                url: '${pageContext.request.contextPath}/skill/delete',
                 data: {
                     id:id
 
@@ -303,7 +303,7 @@
                         alert(data.data);
                     }else if("1" == data.code){
                         //alert(data.data);
-                        window.location.href = '${pageContext.request.contextPath}/articles/articlesList';
+                        window.location.href = '${pageContext.request.contextPath}/skill/skillList';
                     }
 
                 }
