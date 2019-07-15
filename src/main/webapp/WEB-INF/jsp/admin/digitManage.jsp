@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>数据信息列表</title>
+    <title>资讯列表</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/global.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/css/dialog.css">
     <%@include file="../../common/admin/header.jsp" %>
@@ -26,7 +26,7 @@
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
 
-                                    <h5>公告</h5>
+                                    <h5>资讯</h5>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -45,7 +45,7 @@
                                 <div class="ibox-content">
                                     <form role="form" method="get" action="${pageContext.request.contextPath}/sysadmin/companylist" class="form-inline">
                                         <!--              <button  class="btn btn-primary" style="margin-top:10px;margin-left:50px;" onclick="open_d()">发布公告</button> -->
-                                        <a data-toggle='modal' class='btn btn-primary' href='${pageContext.request.contextPath}/admin/articlesList#modal-form' onclick="open_d('no')">发布公告</a>
+                                        <a data-toggle='modal' class='btn btn-primary' href='${pageContext.request.contextPath}/admin/articlesList#modal-form' onclick="open_d('no')">发布资讯</a>
                                     </form>
                                 </div>
                             </div>
@@ -75,11 +75,9 @@
     <script type="text/javascript">
         //处理当前时间，转化成良好的格式
         var isshow;
-        if(${data.isshow})
-        {
+        if(${data.isshow} == 1){
             isshow = "<font color='#3CB7F6'>上线</font>";
-        }
-        else  {
+        }else  {
             isshow = "<font color='#FC4070'>下线</font>";
         }
         lists[${status.index}] = {
@@ -101,6 +99,8 @@
 
 <script type="text/javascript">
     function open_d(id){
+
+
         if(id=='no'){
             $("#articleid").val(null);
             $("#articletitle").val(null);
@@ -238,7 +238,13 @@
                     if("-1" == data.code){
                         $('body').dailog({type:'primary',showBoxShadow:true,animateStyle:'none',bottons:['确定'],discription:data.data})
                     }else if("1" == data.code){
-
+                        // $("#id").val(data.data.id);
+                        // $("#articletitle").val(data.data.companyname);
+                        // $("#articlekey").val(data.data.simplename);
+                        // $("#createtime").val(data.data.industry);
+                        // $("#datetime").val(data.data.address);
+                        // $("#isshow").val(data.data.companyurl);
+                        // $("#operation").val(data.data.minpeople);
                         window.location.href = '${pageContext.request.contextPath}/articles/articlesList';
                     }
 
@@ -346,7 +352,7 @@
             shrinkToFit: true,
             rowNum: 10,
             rowList: [10, 20, 30],
-            colNames: ['序号', '文章标题', '关键字', '注册时间', '上线', '操作'],
+            colNames: ['序号', '技巧', '关键字', '注册时间', '上线', '操作'],
             colModel: [
                 {
                     name: 'id',
@@ -388,7 +394,7 @@
             ],
             pager: "#pager_list_2",
             viewrecords: true,
-            caption: "系统公告列表",
+            caption: "求职技巧列表",
             add: true,
             edit: true,
             addtext: 'Add',

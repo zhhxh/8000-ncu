@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.wys.recruitment.pojo.query.UserCondition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +27,20 @@ import com.wys.recruitment.utils.Response;
 public class ArticlesController {
 	@Autowired
 	private IArticlesService articlesService;
-	
+	/**
+	 * 数据列表
+	 */
+	@RequestMapping("/digitManage")
+	public 	String digitManage(HttpServletRequest request, UserCondition userCondition) {
+		if (!isLogin(request)) {
+			return "admin/tologin";
+		}
+		//查看出当前所有的通告记录
+		List<Map<String,Object>> map = articlesService.listAll();
+		request.setAttribute("articleslist", map);
+		return "admin/digitManage";
+	}
+
 	@RequestMapping("/articlesList")
 	public String articlesList(HttpServletRequest request) {
 		if(!isLogin(request)) {

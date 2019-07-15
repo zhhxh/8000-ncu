@@ -33,10 +33,10 @@ body{behavior:url("css/hover_htc.htc");font-family:"Microsoft YaHei",宋体; col
 .r_button:hover{background-position:-138px 0;}
 .f_reg_but{margin:10px 0 0 115px}
 
-.reg{width:800px; font-size:14px;line-height:25px; overflow:hidden;}
+.reg{width:800px; font-size:14px;line-height:25px;}
 .reg dl{padding-left:10px; font-size:14px;}
 .reg dl dt{ margin-top:15px}
-.reg dl dd{padding:3px 0}
+.reg dl dd{padding:10px 0}
 .reg .title{width:100px; display:inline-block; text-align:right; padding-right:10px}
 .reg_input_pic{width:80px;}
 .in_pic_s{margin-left:83px}
@@ -65,15 +65,15 @@ body{behavior:url("css/hover_htc.htc");font-family:"Microsoft YaHei",宋体; col
 
 
   <!-- 引入boostrap的样式 strat -->
-  
-  <link href="${pageContext.request.contextPath}/static/company/css/bootstrap.css" rel="stylesheet"> 
+
+  <link href="${pageContext.request.contextPath}/static/company/css/bootstrap.css" rel="stylesheet">
   <!-- 引入boostrap的样式 end -->
    <!-- 引入弹窗插件 start -->
   	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jQuery.md5.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.tips.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.cookie.js"></script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/easydialog.css" />
-  
+
   <!-- 引入弹窗插件 start -->
 <script type="text/javascript">
 $(document).ready(function(){
@@ -83,7 +83,7 @@ $(document).ready(function(){
 			alert(msg);
 		}
 	});
-	
+
 	//岗位名称
 	$("#iptNickName").formValidator({onshow:"至少2个字符",onfocus:"至少2个字符",oncorrect:"通过"}).inputValidator({min:2,empty:{leftempty:false,rightempty:false,emptyerror:"<font color='red'>输入长度有误</font>"},onerror:"<font color='red'>输入长度有误</font>"});
 	// minwage	最低薪资
@@ -93,20 +93,20 @@ $(document).ready(function(){
 	//Address	工作地点	Varchar(255)	Not null
 	$("#iptAddress").formValidator({onshow:"至少2个字符",onfocus:"至少2个字符",oncorrect:"通过"}).inputValidator({min:2,empty:{leftempty:false,rightempty:false,emptyerror:"<font color='red'>输入长度有误</font>"},onerror:"<font color='red'>输入长度有误</font>"});
 	//workexperience	工作经验	Varchar(255)	Not null
-	
-	
-	 //Number	数量	Int 	Not null	
-	$("#t_number").formValidator({onshow:"纯数字",onfocus:"纯数字",oncorrect:"恭喜你,你输对了",defaultvalue:""}).inputValidator({min:1,max:10,onerror:"<font color='red'>必须纯数字</font>"}).regexValidator({regexp:"(^[0-9]*$)",onerror:"<font color='red'>只能输入数字</font>"});	
-	
+
+
+	 //Number	数量	Int 	Not null
+	$("#t_number").formValidator({onshow:"纯数字",onfocus:"纯数字",oncorrect:"恭喜你,你输对了",defaultvalue:""}).inputValidator({min:1,max:10,onerror:"<font color='red'>必须纯数字</font>"}).regexValidator({regexp:"(^[0-9]*$)",onerror:"<font color='red'>只能输入数字</font>"});
+
 	//key	职位关键字	Varchar(255)	Not null
 	$("#t_key").formValidator({onshow:"空格分隔、检索使用",onfocus:"空格分隔、检索使用",oncorrect:"通过"}).inputValidator({min:0,empty:{leftempty:false,rightempty:false,emptyerror:"<font color='red'>输入长度有误</font>"},onerror:"<font color='red'>输入长度有误</font>"});
 	//attract	职业诱惑	Varchar(255)	Not null
 	$("#t_attract").formValidator({onshow:"简单一句话，描述福利",onfocus:"简单一句话，描述福利",oncorrect:"通过"}).inputValidator({min:0,empty:{leftempty:false,rightempty:false,emptyerror:"<font color='red'>输入长度有误</font>"},onerror:"<font color='red'>输入长度有误</font>"});
-	
-	//Remark	补充说明	Text	null	
+
+	//Remark	补充说明	Text	null
 	$("#t_remark").formValidator({onshow:"补充说明，若无，可不填",onfocus:"补充说明，若无，可不填",oncorrect:"通过"}).inputValidator({min:0,empty:{leftempty:false,rightempty:false,emptyerror:"<font color='red'>输入长度有误</font>"},onerror:"<font color='red'>输入长度有误</font>"});
-	
-	
+
+
 
 });
 function test1(obj)
@@ -121,7 +121,7 @@ function test1(obj)
 		$.formValidator.getInitConfig("1").wideword = true;
 		obj.value = "全角字符当做1个长度";
 	}
-	
+
 }
 
 </script>
@@ -133,7 +133,7 @@ function test1(obj)
     <div class="reg" >
         <form action="${pageContext.request.contextPath}/myrecruitment/saveRecruitment" method="post" name="form1" id="form1"  onsubmit = "return checkUser();" >
             <dl>
-            	
+
     			<!-- 岗位名称 -->
     			<dd  class="mydd" style="margin-top:20px;"><span class="title">岗位名称：</span><input  required class="reg_input myInput" name="jobname" value="${requestScope.myrecruitment.jobname}" id="iptNickName" onblur="checkNickName(this.value)" type="text" /><span id="iptNickNameTip" class="onshow">至少2个字符</span></dd>
                <!--  minwage	最低薪资 -->
@@ -144,7 +144,7 @@ function test1(obj)
             	<dd  class="mydd"><span class="title">工作地点：</span><input required class="reg_input myInput" name="address" value="${requestScope.myrecruitment.address}" id="iptAddress"type="text" /><span id="iptAddressTip" class="onshow showWarn"></span></dd>
             	<!-- workexperience	工作经验	Varchar(255)	Not null -->
             	<dd  class="mydd"><span class="title">工作经验：</span>
-            													
+
             		<select class="form-control reg_input mySelcet" name="workexperience" id="workexperience" >
 					  <option ${requestScope.myrecruitment.workexperience eq '无经验'?"selected=\"selected\"":""}>无经验</option>
 					  <option ${requestScope.myrecruitment.workexperience eq '1-3年'?"selected=\"selected\"":""}>1-3年</option>
@@ -152,7 +152,7 @@ function test1(obj)
 					  <option ${requestScope.myrecruitment.workexperience eq '5-10年'?"selected=\"selected\"":""}>5-10年</option>
 					  <option ${requestScope.myrecruitment.workexperience eq '10年以上'?"selected=\"selected\"":""}>10年以上</option>
 					</select>
-            	
+
            	 	</dd>
            	    <!-- 	worknature	工作性质	Varchar(255)	Not null -->
            	    <dd  class="mydd" style="margin-top:10px;"><span class="title">工作性质：</span>
@@ -164,14 +164,14 @@ function test1(obj)
 					  <option ${requestScope.myrecruitment.worknature eq '市场'?"selected=\"selected\"":""}>市场</option>
 					  <option ${requestScope.myrecruitment.worknature eq '经融'?"selected=\"selected\"":""}>经融</option>
 					</select>
-            	
-           	 	</dd>
-           	 	
 
-        	    <!-- 	xueli	学历要求	Varchar(255)	Not null	 --> 
+           	 	</dd>
+
+
+        	    <!-- 	xueli	学历要求	Varchar(255)	Not null	 -->
                 <dd  class="mydd" style="margin-top:10px;"><span class="title">学历要求：</span>
             		<select class="form-control reg_input mySelcet" name="xueli" id="xueli">
-					  
+
 					  <option ${requestScope.myrecruitment.xueli eq '大专'?"selected=\"selected\"":""}>大专</option>
 					  <option ${requestScope.myrecruitment.xueli eq '本科'?"selected=\"selected\"":""}>本科</option>
 					  <option ${requestScope.myrecruitment.xueli eq '硕士'?"selected=\"selected\"":""}>硕士</option>
@@ -184,53 +184,53 @@ function test1(obj)
             		<select class="form-control reg_input mySelcet" name="type" id="type">
 					  <option ${requestScope.myrecruitment.type eq '社招'?"selected=\"selected\"":""}>社招</option>
 					  <option ${requestScope.myrecruitment.type eq '校招'?"selected=\"selected\"":""}>校招</option>
-					 
+
 					</select>
            	 	</dd>
                 <dd>
-                
+
                 </dd>
                 <!--   Number	数量	Int 	Not null		 -->
               	<dd class="mydd" style="margin-top:10px;"><span class="title">招聘人数：</span><input required class="reg_input myInput" name="number" value="${requestScope.myrecruitment.number}"  type="text" id="t_number" onblur="checknumber(this.value)" required/><span id="t_numberTip" class="onshow showWarn"></span></dd>
-              
+
               	<!-- key	职位关键字	Varchar(255)	Not null	 -->
               	<dd class="mydd" style="margin-top:10px;"><span class="title">关键字：</span><input required class="reg_input myInput" name="jobkey" value="${requestScope.myrecruitment.jobkey}" type="text" id="t_key" onblur="checknumber(this.value)" required/><span id="t_keyTip" class="onshow showWarn"></span></dd>
-              	
+
               	<!-- attract	职业诱惑	Varchar(255)	Not null		 -->
               	<dd class="mydd" style="margin-top:10px;"><span class="title">职业诱惑：</span><input required class="reg_input myInput" name="attract" value="${requestScope.myrecruitment.attract}" type="text" id="t_attract" onblur="checknumber(this.value)" required/><span id="t_attractTip" class="onshow showWarn"></span></dd>
-              	
+
               	<!-- Jobduty	工作职责	Text	Not null		 -->
              	<dd  class="mydd" style="margin-top:10px;"><span class="title">工作职责：</span>
             		<textarea class="form-control jobduty" rows="5" id="jobduty" name="jobduty" >
             			${requestScope.myrecruitment.jobduty}
             		</textarea>
            	 	</dd>
-           	 	
-           	 	<!--   	jobrequired	工作要求	text	Not null -->		
+
+           	 	<!--   	jobrequired	工作要求	text	Not null -->
               	<dd  class="mydd" style="margin-top:10px;"><span class="title">工作要求：</span>
             		<textarea class="form-control jobduty" rows="5" id="jobrequired" name="jobrequired" >
             			${requestScope.myrecruitment.jobrequired}
             		</textarea>
            	 	</dd>
-           	 	
+
            	 	 <!--   Remark	补充说明	Text	null		 -->
               	<dd class="mydd" style="margin-top:10px;"><span class="title">补充说明：</span><input class="reg_input myInput" name="remark" value="${requestScope.myrecruitment.remark}" type="text" id="t_remark" /><span id="t_remarkTip" class="onshow showWarn"></span></dd>
-              	
-              	
-             
-              
+
+
+
+
             </dl>
 
-            
+
              <style>
             	.mydd{
             		margin-left:50px;
             		width:600px;
-            	
+
             	}
             	 .myInput{
             		width:250px;
-            	} 
+            	}
             	.mySelcet{
             		float:right;
             		width:250px;
@@ -241,26 +241,25 @@ function test1(obj)
             	.jobduty{
             		width:400px;
             		text-align:left;
-            	
-            		margin-left:50px;
+            		margin-left:100px;
             	}
-            	
+
             </style>
-         
-    
+
+
 			<div class="f_reg_but">
 			    <!-- <input  type="submit" value="发布招聘" id="releaseResume"  onclick="saveRecruitment()"/> -->
 				<input type="button" value="发布招聘" class="btn2" id="releaseResume" onclick = "saveRecruitment();" />
-			
+
 			</div>
-   			
-   			
-            
-   		
+
+
+
+
    			<script type="text/javascript">
 	   			function saveRecruitment(){
 	   				var jobname = $("#iptNickName").val();
-	   				
+
 	   				if(!isNull(jobname)){
 	           			easyDialog.open({
 	    					container : {
@@ -280,7 +279,7 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 	   				var maxwage =  $("#t_maxwage").val();
 	   				if(!isNull(maxwage)){
 	           			easyDialog.open({
@@ -291,7 +290,7 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 	   				var address =  $("#iptAddress").val();
 	   				if(!isNull(address)){
 	           			easyDialog.open({
@@ -302,9 +301,9 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
-	   			
-	   				
+
+
+
 	   				var number =  $("#t_number").val();
 	   				if(!isNull(number)){
 	           			easyDialog.open({
@@ -315,7 +314,7 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 	   				var jobkey =  $("#t_key").val();
 	   				if(!isNull(jobkey)){
 	           			easyDialog.open({
@@ -326,7 +325,7 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 	   				var attract =  $("#t_attract").val();
 	   				if(!isNull(attract)){
 	           			easyDialog.open({
@@ -337,7 +336,7 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 
 	   				var jobduty1 =  $("#jobduty").val().trim();
 	   				var jobduty =  $("#jobduty").val();
@@ -350,10 +349,10 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	   				
+
 	   				var jobrequired1 =  $("#jobrequired").val().trim();
 	   				var jobrequired =  $("#jobrequired").val();
-	   				
+
 	   				if(!isNull(jobrequired1)){
 	           			easyDialog.open({
 	    					container : {
@@ -363,17 +362,17 @@ function test1(obj)
 	    				});
 	           			return;
 	           		}
-	           	 	//jobname t_minwage  t_maxwage iptAddress workexperience worknature xueli type 
+	           	 	//jobname t_minwage  t_maxwage iptAddress workexperience worknature xueli type
 	           	 	//t_number t_key t_attract jobduty jobrequired t_remark
-	           		
+
 	           	   var workexperience = $("#workexperience").val();
 	           	   var worknature = $("#worknature").val();
 	               var xueli = $("#xueli").val();
 	           	   var type = $("#type").val();
 	           	   var remark = $("#t_remark").val();
-	           	   
-	           	  
-	           	 	
+
+
+
 	   			//然后提交到后台管理系统
 	           		$.ajax({
 	 					type: "POST",
@@ -399,7 +398,7 @@ function test1(obj)
 	 					cache: false,
 	 					success: function(data){
 	 						//alert("保存成功");
-	 						
+
 	 						 if("-1" == data.code){
 	 							easyDialog.open({
 	 								container : {
@@ -411,10 +410,10 @@ function test1(obj)
 	 							//表示注册成功，调到登录页面
 	 							//alert("101111");
 	 							parent.$.XYTipsWindow.removeBox();
-	 						} 
-	 						
+	 						}
+
 	 					}
-	 				}); 
+	 				});
 	   			}
 	   		//验证是否为空
 	           	function isNull(str){
@@ -427,25 +426,23 @@ function test1(obj)
    			</script>
    			<style>
    				#releaseResume{
-   					background-color: #03A9F4;
-   					color:white;
-   					width:80px;
-   					height:30px;
-   					border-radius:2px;
-   					font-weight:bold;
-   					box-shadow: 3px 3px 2px #888888;
-   					font-size:16px;
-   					line-height: 30px;
-   					border:1px solid black;
-   					text-align: center;
+					background-color: #74a7d0;
+					color: white;
+					width: 100px;
+					height: 40px;
+					border-radius: 2px;
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 40px;
+					text-align: center;
    				}
-   			
+
    			</style>
-           
-            
-        </form>                              
+
+
+        </form>
     </div>
-<!--注册结束-->    
+<!--注册结束-->
    <!-- 弹窗插件 -->
    <script type="text/javascript" src="${pageContext.request.contextPath}/static/dialog/easydialog.min.js"></script>
 </body>
