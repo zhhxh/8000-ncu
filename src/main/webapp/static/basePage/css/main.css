@@ -1429,7 +1429,7 @@ body {
   margin: 13px;
   border-radius: 2px;
   display: inline;
-  height: 775px;
+  height: 200px;
   padding: 17px 20px 90px;
   background: white;
 }
@@ -1456,7 +1456,7 @@ body {
   line-height: 30px;
   font-weight: bold;
   color: #656565;
-  border-bottom: 1px solid #3887bc
+  border-bottom: 1px solid #a1c3df
 }
 
 .dl_menulist {
