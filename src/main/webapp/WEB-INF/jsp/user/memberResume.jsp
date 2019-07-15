@@ -152,7 +152,9 @@
      <div class="rightcontent dl_height1 dl_new_error_wrap">
       <h3 class="dl_bigtit"><span class="dl_postit">我的简历</span></h3>
       <div class="dl_importprofile">
-       <a class="import dl_import" href="javascript:void(0)"></a>
+          <button class="edit" onclick="toEdit()" style="background-color: #ffffff;width: 60px;
+              border-radius: 5px;height: 25px;margin-top: -3px;color: #74a7d0;">编辑</button>
+<%--       <a class="import dl_import" href="javascript:void(0)"></a>--%>
        <a id="previewBtn" class="look" target="_self" href="#" style=""></a>
        <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
       </div>
@@ -488,18 +490,35 @@
        </div>
    			<div class="jianliUl">
    				<input type="hidden" name="id" id="id" value="${requestScope.userResume.id}">
-   				<span class="key">姓名：</span><input type="text" id="show_name" value="${requestScope.userResume.name}" readonly="true"><span class="edit" onclick="toEdit()">编辑</span>
-   				<span class="key">邮箱：</span><input type="text" id="show_email" value="${requestScope.userResume.email}" readonly="true">
-   				<span class="key">手机号：</span><input type="text" id="show_phone" value="${requestScope.userResume.phone}" readonly="true">
-   				<span class="key">年龄：</span><input type="text" id="show_age" value="${requestScope.userResume.age}" readonly="true" >
-   				<span class="key">性别：</span><input type="text" id="show_sex" value="${requestScope.userResume.sex}" readonly="true" >
-
-   				<span class="key">现居住地：</span><input type="text" id="show_address" value="${requestScope.userResume.address}" readonly="true" >
-   				<span class="key">最高学历：</span><input type="text" id="show_xueLi" value="${requestScope.userResume.xueli}" readonly="true">
-   				<span class="key">学校：</span><input type="text" id="show_school" value="${requestScope.userResume.school}" readonly="true">
-   				<span class="key">专业：</span><input type="text" id="show_professional" value="${requestScope.userResume.professional}" readonly="true">
-   				<span class="key">自我评价：</span><input type="text" id="show_description" style="" value="${requestScope.userResume.description}" readonly="true" >
-
+                <div class="applyline">
+                <span class="key">姓名：</span><input type="text" id="show_name" value="${requestScope.userResume.name}" readonly="true">
+<%--                    <span class="edit" onclick="toEdit()">编辑</span>--%>
+                </div>
+                <div class="applyline">
+                    <span class="key">邮箱：</span><input type="text" id="show_email" value="${requestScope.userResume.email}" readonly="true">
+                </div>
+                <div class="applyline">
+                    <span class="key">手机号：</span><input type="text" id="show_phone" value="${requestScope.userResume.phone}" readonly="true">
+                </div>
+                <div class="applyline">
+                    <span class="key">年龄：</span><input type="text" id="show_age" value="${requestScope.userResume.age}" readonly="true" >
+                </div>
+                <div class="applyline">
+                    <span class="key">性别：</span><input type="text" id="show_sex" value="${requestScope.userResume.sex}" readonly="true" >
+                </div>
+                <div class="applyline">
+                <span class="key">现居住地：</span><input type="text" id="show_address" value="${requestScope.userResume.address}" readonly="true" >
+                </div>
+                <div class="applyline">
+                <span class="key">最高学历：</span><input type="text" id="show_xueLi" value="${requestScope.userResume.xueli}" readonly="true">
+                </div>
+                <span class="key">学校：</span><input type="text" id="show_school" value="${requestScope.userResume.school}" readonly="true">
+                <div class="applyline">
+                <span class="key">专业：</span><input type="text" id="show_professional" value="${requestScope.userResume.professional}" readonly="true">
+                </div>
+                <div class="applyline">
+                <span class="key">自我评价：</span><input type="text" id="show_description" style="" value="${requestScope.userResume.description}" readonly="true" >
+                </div>
    				<div></div>
    				<div class="saveButton">
 			        <button id="saveButton" class="rkmd-btn btn-lightBlue" onclick="toSave()">保存</button>
@@ -511,12 +530,18 @@
    			<br/>
       </div>
       <style type="text/css">
+
       .btn-lightBlue{
-      	background-color: #03A9F4;
+      	background-color: #a1c3df;
       	border-radius: 1px;
       	box-shadow: 1px 1px 1px #888888;
       	color:white;
       	font-size:16px;
+      }
+
+      .applyline {
+          padding-bottom: 20px;
+          padding-top: 20px;
       }
 
       .edit{
@@ -619,6 +644,15 @@
 	<div class="dl_basicinfo">
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">求职意向</span>
+           <button class="edit" onclick="toEditIntention()" style="
+                   background-color: #74a7d0;
+                   width: 60px;
+                   border-radius: 5px;
+                   height: 21px;
+                   margin-bottom: 3px;
+                   color: #ffffff;
+                   margin-left: 81%;
+           ">编辑</button>
        </div>
        <script type="text/javascript">
 
@@ -779,12 +813,19 @@
         <style type="text/css">
         </style>
      	<div class="jianliUl">
-   				<span class="key">求职工作：</span><input type="text" id="intention_name" value="${requestScope.userResume.jobname}" readonly="true"><span class="edit" onclick="toEditIntention()">编辑</span></li>
-   				<span class="key">现月薪：</span><input type="text" id="intention_money" value="${requestScope.userResume.nowmoney}" readonly="true"></li>
-   				<span class="key">最低薪资：</span><input type="text" id="intention_low_money" value="${requestScope.userResume.lowmoney}" readonly="true">
-   				<span class="key">最高薪资：</span><input type="text" id="intention_high_money" value="${requestScope.userResume.highmoney}" readonly="true" >
-
-   				<div></div>
+                <div class="applyline">
+   				    <span class="key">求职工作：</span><input type="text" id="intention_name" value="${requestScope.userResume.jobname}" readonly="true">
+<%--            <span class="edit" onclick="toEditIntention()">编辑</span></li>--%>
+                </div>
+            <div class="applyline">
+                    <span class="key">现月薪：</span><input type="text" id="intention_money" value="${requestScope.userResume.nowmoney}" readonly="true"></li>
+            </div>
+            <div class="applyline">
+                    <span class="key">最低薪资：</span><input type="text" id="intention_low_money" value="${requestScope.userResume.lowmoney}" readonly="true">
+            </div>
+            <div class="applyline">
+                    <span class="key">最高薪资：</span><input type="text" id="intention_high_money" value="${requestScope.userResume.highmoney}" readonly="true" >
+            </div>
    				<div class="saveButton">
 			        <button id="intentionSaveButton" class="rkmd-btn btn-lightBlue" onclick="toSaveIntention()">保存</button>
 			    </div>
@@ -801,7 +842,7 @@
 	<div class="dl_basicinfo">
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">工作经验</span>
-        <span class="dl_menutit " style="float:right;color:blue;font-size:15px;" onclick="test()">添加工作经验</span>
+        <span class="dl_menutit " style="float:right;color:#a1c3df;font-size:15px;" onclick="test()">添加工作经验</span>
       	<script type="text/javascript">
       		function test(){
 
