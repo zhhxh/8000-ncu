@@ -90,7 +90,6 @@ public class MyRecruitmentServiceImpl implements IMyRecruitmentService {
             //根据当前的cid去mycruitment招聘表里面查找数据
             return myrecruitmentMapper.selectAllByCid(cid, "1");
         } else {
-            //TODO 说明该用户还没有绑定到了自己的公司，这是属于异常的情况，暂时返回null
             return null;
         }
 
@@ -98,7 +97,6 @@ public class MyRecruitmentServiceImpl implements IMyRecruitmentService {
 
     @Override
     public int deleteByPrimaryKey(String id) {
-        // TODO Auto-generated method stub
         Myrecruitment m = myrecruitmentMapper.selectByPrimaryKey(id);
         m.setPosition("2");
         return myrecruitmentMapper.updateByPrimaryKey(m);
@@ -125,25 +123,21 @@ public class MyRecruitmentServiceImpl implements IMyRecruitmentService {
      */
     @Override
     public List<Myrecruitment> selectByCid(int id) {
-        // TODO Auto-generated method stub
         return myrecruitmentMapper.selectAllByCid(id, "1");
     }
 
     @Override
     public List<Map<String, Object>> selectByMoreCondition(MoreCondition moreCondition) {
-        // TODO Auto-generated method stub
         return myrecruitmentMapper.selectByMoreCondition(moreCondition);
     }
 
     public int countNumber(MoreCondition moreCondition) {
-        // TODO Auto-generated method stub
         return myrecruitmentMapper.countNumber(moreCondition);
     }
 
     @Override
     public List<Map<String, Object>> findJobnameByUid(Integer id) {
-        Map<String, Object> map = new HashMap<String, Object>();
-        // TODO Auto-generated method stub
+        Map<String, Object> map = new HashMap<>();
         map.put("uid", id);
         map.put("position", "1");
         return myrecruitmentMapper.findJobnameByUid(map);

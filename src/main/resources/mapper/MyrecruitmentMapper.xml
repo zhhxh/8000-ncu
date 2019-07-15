@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.MyrecruitmentMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Myrecruitment" >
-    <id column="id" property="id" jdbcType="VARCHAR" />
-    <result column="jobname" property="jobname" jdbcType="VARCHAR" />
-    <result column="minwage" property="minwage" jdbcType="DOUBLE" />
-    <result column="maxwage" property="maxwage" jdbcType="DOUBLE" />
-    <result column="address" property="address" jdbcType="VARCHAR" />
-    <result column="workexperience" property="workexperience" jdbcType="VARCHAR" />
-    <result column="xueli" property="xueli" jdbcType="VARCHAR" />
-    <result column="worknature" property="worknature" jdbcType="VARCHAR" />
-    <result column="jobkey" property="jobkey" jdbcType="VARCHAR" />
-    <result column="attract" property="attract" jdbcType="VARCHAR" />
-    <result column="jobduty" property="jobduty" jdbcType="VARCHAR" />
-    <result column="jobrequired" property="jobrequired" jdbcType="VARCHAR" />
-    <result column="publictime" property="publictime" jdbcType="TIMESTAMP" />
-    <result column="cid" property="cid" jdbcType="INTEGER" />
-    <result column="companyname" property="companyname" jdbcType="VARCHAR" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
-    <result column="number" property="number" jdbcType="INTEGER" />
-    <result column="position" property="position" jdbcType="VARCHAR" />
-    <result column="remark" property="remark" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
+<mapper namespace="com.wys.recruitment.mapper.MyrecruitmentMapper">
+    <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Myrecruitment">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="jobname" property="jobname" jdbcType="VARCHAR"/>
+        <result column="minwage" property="minwage" jdbcType="DOUBLE"/>
+        <result column="maxwage" property="maxwage" jdbcType="DOUBLE"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="workexperience" property="workexperience" jdbcType="VARCHAR"/>
+        <result column="xueli" property="xueli" jdbcType="VARCHAR"/>
+        <result column="worknature" property="worknature" jdbcType="VARCHAR"/>
+        <result column="jobkey" property="jobkey" jdbcType="VARCHAR"/>
+        <result column="attract" property="attract" jdbcType="VARCHAR"/>
+        <result column="jobduty" property="jobduty" jdbcType="VARCHAR"/>
+        <result column="jobrequired" property="jobrequired" jdbcType="VARCHAR"/>
+        <result column="publictime" property="publictime" jdbcType="TIMESTAMP"/>
+        <result column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="companyname" property="companyname" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="number" property="number" jdbcType="INTEGER"/>
+        <result column="position" property="position" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, jobname, minwage, maxwage, address, workexperience, xueli, worknature, jobkey, 
     attract, jobduty, jobrequired, publictime, cid, companyname, type, number, position, 
     remark
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
-    <include refid="Base_Column_List" />
-    from myrecruitment
-    where id = #{id,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from myrecruitment
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from myrecruitment
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.Myrecruitment" >
+    <insert id="insert" parameterType="com.wys.recruitment.pojo.Myrecruitment">
     insert into myrecruitment (id, jobname, minwage, 
       maxwage, address, workexperience, 
       xueli, worknature, jobkey, 
@@ -53,188 +53,188 @@
       #{type,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, #{position,jdbcType=VARCHAR}, 
       #{remark,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Myrecruitment" >
-    insert into myrecruitment
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="jobname != null" >
-        jobname,
-      </if>
-      <if test="minwage != null" >
-        minwage,
-      </if>
-      <if test="maxwage != null" >
-        maxwage,
-      </if>
-      <if test="address != null" >
-        address,
-      </if>
-      <if test="workexperience != null" >
-        workexperience,
-      </if>
-      <if test="xueli != null" >
-        xueli,
-      </if>
-      <if test="worknature != null" >
-        worknature,
-      </if>
-      <if test="jobkey != null" >
-        jobkey,
-      </if>
-      <if test="attract != null" >
-        attract,
-      </if>
-      <if test="jobduty != null" >
-        jobduty,
-      </if>
-      <if test="jobrequired != null" >
-        jobrequired,
-      </if>
-      <if test="publictime != null" >
-        publictime,
-      </if>
-      <if test="cid != null" >
-        cid,
-      </if>
-      <if test="companyname != null" >
-        companyname,
-      </if>
-      <if test="type != null" >
-        type,
-      </if>
-      <if test="number != null" >
-        number,
-      </if>
-      <if test="position != null" >
-        position,
-      </if>
-      <if test="remark != null" >
-        remark,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=VARCHAR},
-      </if>
-      <if test="jobname != null" >
-        #{jobname,jdbcType=VARCHAR},
-      </if>
-      <if test="minwage != null" >
-        #{minwage,jdbcType=DOUBLE},
-      </if>
-      <if test="maxwage != null" >
-        #{maxwage,jdbcType=DOUBLE},
-      </if>
-      <if test="address != null" >
-        #{address,jdbcType=VARCHAR},
-      </if>
-      <if test="workexperience != null" >
-        #{workexperience,jdbcType=VARCHAR},
-      </if>
-      <if test="xueli != null" >
-        #{xueli,jdbcType=VARCHAR},
-      </if>
-      <if test="worknature != null" >
-        #{worknature,jdbcType=VARCHAR},
-      </if>
-      <if test="jobkey != null" >
-        #{jobkey,jdbcType=VARCHAR},
-      </if>
-      <if test="attract != null" >
-        #{attract,jdbcType=VARCHAR},
-      </if>
-      <if test="jobduty != null" >
-        #{jobduty,jdbcType=VARCHAR},
-      </if>
-      <if test="jobrequired != null" >
-        #{jobrequired,jdbcType=VARCHAR},
-      </if>
-      <if test="publictime != null" >
-        #{publictime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cid != null" >
-        #{cid,jdbcType=INTEGER},
-      </if>
-      <if test="companyname != null" >
-        #{companyname,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
-      </if>
-      <if test="number != null" >
-        #{number,jdbcType=INTEGER},
-      </if>
-      <if test="position != null" >
-        #{position,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null" >
-        #{remark,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Myrecruitment" >
-    update myrecruitment
-    <set >
-      <if test="jobname != null" >
-        jobname = #{jobname,jdbcType=VARCHAR},
-      </if>
-      <if test="minwage != null" >
-        minwage = #{minwage,jdbcType=DOUBLE},
-      </if>
-      <if test="maxwage != null" >
-        maxwage = #{maxwage,jdbcType=DOUBLE},
-      </if>
-      <if test="address != null" >
-        address = #{address,jdbcType=VARCHAR},
-      </if>
-      <if test="workexperience != null" >
-        workexperience = #{workexperience,jdbcType=VARCHAR},
-      </if>
-      <if test="xueli != null" >
-        xueli = #{xueli,jdbcType=VARCHAR},
-      </if>
-      <if test="worknature != null" >
-        worknature = #{worknature,jdbcType=VARCHAR},
-      </if>
-      <if test="jobkey != null" >
-        jobkey = #{jobkey,jdbcType=VARCHAR},
-      </if>
-      <if test="attract != null" >
-        attract = #{attract,jdbcType=VARCHAR},
-      </if>
-      <if test="jobduty != null" >
-        jobduty = #{jobduty,jdbcType=VARCHAR},
-      </if>
-      <if test="jobrequired != null" >
-        jobrequired = #{jobrequired,jdbcType=VARCHAR},
-      </if>
-      <if test="publictime != null" >
-        publictime = #{publictime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cid != null" >
-        cid = #{cid,jdbcType=INTEGER},
-      </if>
-      <if test="companyname != null" >
-        companyname = #{companyname,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=VARCHAR},
-      </if>
-      <if test="number != null" >
-        number = #{number,jdbcType=INTEGER},
-      </if>
-      <if test="position != null" >
-        position = #{position,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null" >
-        remark = #{remark,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Myrecruitment" >
+    <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Myrecruitment">
+        insert into myrecruitment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="jobname != null">
+                jobname,
+            </if>
+            <if test="minwage != null">
+                minwage,
+            </if>
+            <if test="maxwage != null">
+                maxwage,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="workexperience != null">
+                workexperience,
+            </if>
+            <if test="xueli != null">
+                xueli,
+            </if>
+            <if test="worknature != null">
+                worknature,
+            </if>
+            <if test="jobkey != null">
+                jobkey,
+            </if>
+            <if test="attract != null">
+                attract,
+            </if>
+            <if test="jobduty != null">
+                jobduty,
+            </if>
+            <if test="jobrequired != null">
+                jobrequired,
+            </if>
+            <if test="publictime != null">
+                publictime,
+            </if>
+            <if test="cid != null">
+                cid,
+            </if>
+            <if test="companyname != null">
+                companyname,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="number != null">
+                number,
+            </if>
+            <if test="position != null">
+                position,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="jobname != null">
+                #{jobname,jdbcType=VARCHAR},
+            </if>
+            <if test="minwage != null">
+                #{minwage,jdbcType=DOUBLE},
+            </if>
+            <if test="maxwage != null">
+                #{maxwage,jdbcType=DOUBLE},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="workexperience != null">
+                #{workexperience,jdbcType=VARCHAR},
+            </if>
+            <if test="xueli != null">
+                #{xueli,jdbcType=VARCHAR},
+            </if>
+            <if test="worknature != null">
+                #{worknature,jdbcType=VARCHAR},
+            </if>
+            <if test="jobkey != null">
+                #{jobkey,jdbcType=VARCHAR},
+            </if>
+            <if test="attract != null">
+                #{attract,jdbcType=VARCHAR},
+            </if>
+            <if test="jobduty != null">
+                #{jobduty,jdbcType=VARCHAR},
+            </if>
+            <if test="jobrequired != null">
+                #{jobrequired,jdbcType=VARCHAR},
+            </if>
+            <if test="publictime != null">
+                #{publictime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="cid != null">
+                #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="companyname != null">
+                #{companyname,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="number != null">
+                #{number,jdbcType=INTEGER},
+            </if>
+            <if test="position != null">
+                #{position,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Myrecruitment">
+        update myrecruitment
+        <set>
+            <if test="jobname != null">
+                jobname = #{jobname,jdbcType=VARCHAR},
+            </if>
+            <if test="minwage != null">
+                minwage = #{minwage,jdbcType=DOUBLE},
+            </if>
+            <if test="maxwage != null">
+                maxwage = #{maxwage,jdbcType=DOUBLE},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="workexperience != null">
+                workexperience = #{workexperience,jdbcType=VARCHAR},
+            </if>
+            <if test="xueli != null">
+                xueli = #{xueli,jdbcType=VARCHAR},
+            </if>
+            <if test="worknature != null">
+                worknature = #{worknature,jdbcType=VARCHAR},
+            </if>
+            <if test="jobkey != null">
+                jobkey = #{jobkey,jdbcType=VARCHAR},
+            </if>
+            <if test="attract != null">
+                attract = #{attract,jdbcType=VARCHAR},
+            </if>
+            <if test="jobduty != null">
+                jobduty = #{jobduty,jdbcType=VARCHAR},
+            </if>
+            <if test="jobrequired != null">
+                jobrequired = #{jobrequired,jdbcType=VARCHAR},
+            </if>
+            <if test="publictime != null">
+                publictime = #{publictime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="cid != null">
+                cid = #{cid,jdbcType=INTEGER},
+            </if>
+            <if test="companyname != null">
+                companyname = #{companyname,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="number != null">
+                number = #{number,jdbcType=INTEGER},
+            </if>
+            <if test="position != null">
+                position = #{position,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Myrecruitment">
     update myrecruitment
     set jobname = #{jobname,jdbcType=VARCHAR},
       minwage = #{minwage,jdbcType=DOUBLE},
@@ -256,142 +256,142 @@
       remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  
-  <!-- 以下是我自己写的方法 -->
-   <select id="selectLatest" resultType="java.util.Map" parameterType="java.lang.String">
-    SELECT m.id as id,m.jobname,m.publictime,m.minwage,m.maxwage,m.workexperience,m.xueli,
-    	m.jobkey,m.attract,c.companyname,c.industry,c.industry,m.address,c.id as cid,m.type FROM myrecruitment m
-   	LEFT JOIN company c
-   	ON m.cid = c.id
-   	where m.position = "1"
-   	<if test="_parameter != null" >
-        and type = #{_parameter}
-    </if>
-   	ORDER BY m.publictime DESC
-   	LIMIT 6
-  </select>
-   
-   <!-- 一共是 12个条件  -->
-    <select id="selectByMoreCondition" resultType="java.util.Map" parameterType="com.wys.recruitment.pojo.MoreCondition">
-    SELECT m.id as id,m.jobname,m.publictime,m.minwage,m.maxwage,m.workexperience,m.xueli,
-    	m.jobkey,m.attract,c.companyname,c.industry,c.development,m.address,c.id as cid,m.type,c.minpeople,c.maxpeople FROM myrecruitment m
-   	LEFT JOIN company c
-   	ON m.cid = c.id
-	
-    where  (m.position = "1")
-   	<if test="companyandjob!=null and companyandjob!=''">
-   		 and 
-       	<foreach collection="companyandjob" item="id" open="(" close=")" separator="OR ">
-       		 m.companyname LIKE "%${id}%" OR  m.jobname LIKE "%${id}%"
-       		<!-- 预编译之前，不认识这个变量 -->
-       		<!-- m.companyname LIKE "%#{id}%" -->
-       	</foreach>
-   	</if>
-   	
-   	<if test="xueli!=null and xueli!=''">
-   		 and m.xueli = #{xueli} 	 
-   	</if>
-   	
-   	
-   	<if test="workexperience!=null and workexperience!=''">
-   		 and m.workexperience = #{workexperience} 	 
-   	</if>
-   	
-   	<if test="address!=null and address!=''">
-   		 and m.address like CONCAT('%', #{address}, '%') 	 
-   	</if>
-   	
-   	<if test="development!=null and development!=''">
-   		 and c.development =   #{development} 	 
-   	</if>
-   	
-   	<if test="type!=null and type!=''">
-   		 and m.type =  #{type} 	 
-   	</if>
-   
 
-   	
-   	<if test="moneyrange!=null and moneyrange!=''">
-   		 and m.minwage  &gt;  #{moneyrange} 
-   	</if> 
-   	
-   	<if test="moneyrangeend!=null and moneyrangeend!=''">
-   		 and m.maxwage  &lt;  #{moneyrangeend}   
-   	</if> 
-   	
-   	<if test="minpeople!=null and minpeople!=''">
-   		 and c.minpeople &gt;  #{minpeople}   
-   	</if> 
-   	
-   	<if test="starttime!=null and starttime!=''">
-   		 and m.publictime between #{starttime} and #{endtime} 
-   	</if> 
+    <!-- 以下是我自己写的方法 -->
+    <select id="selectLatest" resultType="java.util.Map" parameterType="java.lang.String">
+        SELECT m.id as id,m.jobname,m.publictime,m.minwage,m.maxwage,m.workexperience,m.xueli,
+        m.jobkey,m.attract,c.companyname,c.industry,c.industry,m.address,c.id as cid,m.type FROM myrecruitment m
+        LEFT JOIN company c
+        ON m.cid = c.id
+        where m.position = "1"
+        <if test="_parameter != null">
+            and type = #{_parameter}
+        </if>
+        ORDER BY m.publictime DESC
+        LIMIT 6
+    </select>
 
-   	ORDER BY m.publictime DESC
-   	
-   	limit #{pageSize},#{number}
-  </select>
-  
+    <!-- 一共是 12个条件  -->
+    <select id="selectByMoreCondition" resultType="java.util.Map"
+            parameterType="com.wys.recruitment.pojo.MoreCondition">
+        SELECT m.id as id,m.jobname,m.publictime,m.minwage,m.maxwage,m.workexperience,m.xueli,
+        m.jobkey,m.attract,c.companyname,c.industry,c.development,m.address,c.id as cid,m.type,c.minpeople,c.maxpeople
+        FROM myrecruitment m
+        LEFT JOIN company c
+        ON m.cid = c.id
+
+        where (m.position = "1")
+        <if test="companyandjob!=null and companyandjob!=''">
+            and
+            <foreach collection="companyandjob" item="id" open="(" close=")" separator="OR ">
+                m.companyname LIKE "%${id}%" OR m.jobname LIKE "%${id}%"
+                <!-- 预编译之前，不认识这个变量 -->
+                <!-- m.companyname LIKE "%#{id}%" -->
+            </foreach>
+        </if>
+
+        <if test="xueli!=null and xueli!=''">
+            and m.xueli = #{xueli}
+        </if>
+
+
+        <if test="workexperience!=null and workexperience!=''">
+            and m.workexperience = #{workexperience}
+        </if>
+
+        <if test="address!=null and address!=''">
+            and m.address like "%${address}%"
+        </if>
+
+        <if test="development!=null and development!=''">
+            and c.development = #{development}
+        </if>
+
+        <if test="type!=null and type!=''">
+            and m.type = #{type}
+        </if>
+
+
+        <if test="moneyrange!=null and moneyrange!=''">
+            and m.minwage &gt; #{moneyrange}
+        </if>
+
+        <if test="moneyrangeend!=null and moneyrangeend!=''">
+            and m.maxwage &lt; #{moneyrangeend}
+        </if>
+
+        <if test="minpeople!=null and minpeople!=''">
+            and c.minpeople &gt; #{minpeople}
+        </if>
+
+        <if test="starttime!=null and starttime!=''">
+            and m.publictime between #{starttime} and #{endtime}
+        </if>
+
+        ORDER BY m.publictime DESC
+
+        limit #{pageSize},#{number}
+    </select>
+
     <!-- 统计可以查询到多少条数据  -->
     <select id="countNumber" resultType="java.lang.Integer" parameterType="com.wys.recruitment.pojo.MoreCondition">
-    SELECT count(m.id) as count FROM myrecruitment m
-   	LEFT JOIN company c
-   	ON m.cid = c.id
-	
-    where  (m.position = "1")
-   	<if test="companyandjob!=null and companyandjob!=''">
-   		 and 
-       	<foreach collection="companyandjob" item="id" open="(" close=")" separator="OR ">
-       		 m.companyname LIKE "%${id}%" OR  m.jobname LIKE "%${id}%"
-       		<!-- 预编译之前，不认识这个变量 -->
-       		<!-- m.companyname LIKE "%#{id}%" -->
-       	</foreach>
-   	</if>
-   	
-   	<if test="xueli!=null and xueli!=''">
-   		 and m.xueli = #{xueli} 	 
-   	</if>
-   	
-   	
-   	<if test="workexperience!=null and workexperience!=''">
-   		 and m.workexperience = #{workexperience} 	 
-   	</if>
-   	
-   	<if test="address!=null and address!=''">
-   		 and m.address like CONCAT('%', #{address}, '%') 	 
-   	</if>
-   	
-   	<if test="development!=null and development!=''">
-   		 and c.development =   #{development} 	 
-   	</if>
-   	
-   	<if test="type!=null and type!=''">
-   		 and m.type =  #{type} 	 
-   	</if>
-   
+        SELECT count(m.id) as count FROM myrecruitment m
+        LEFT JOIN company c
+        ON m.cid = c.id
 
-   	
-   	<if test="moneyrange!=null and moneyrange!=''">
-   		 and m.minwage  &gt;  #{moneyrange} 
-   	</if> 
-   	
-   	<if test="moneyrangeend!=null and moneyrangeend!=''">
-   		 and m.maxwage  &lt;  #{moneyrangeend}   
-   	</if> 
-   	
-   	<if test="minpeople!=null and minpeople!=''">
-   		 and c.minpeople &gt;  #{minpeople}   
-   	</if> 
-   	
-   	<if test="starttime!=null and starttime!=''">
-   		 and m.publictime between #{starttime} and #{endtime} 
-   	</if> 
-  </select>
-  
-  <select id="findJobnameByUid" resultType="java.util.Map" parameterType="java.util.Map">
+        where (m.position = "1")
+        <if test="companyandjob!=null and companyandjob!=''">
+            and
+            <foreach collection="companyandjob" item="id" open="(" close=")" separator="OR ">
+                m.companyname LIKE "%${id}%" OR m.jobname LIKE "%${id}%"
+                <!-- 预编译之前，不认识这个变量 -->
+                <!-- m.companyname LIKE "%#{id}%" -->
+            </foreach>
+        </if>
+
+        <if test="xueli!=null and xueli!=''">
+            and m.xueli = #{xueli}
+        </if>
+
+
+        <if test="workexperience!=null and workexperience!=''">
+            and m.workexperience = #{workexperience}
+        </if>
+
+        <if test="address!=null and address!=''">
+            and m.address like "%${address}%"
+        </if>
+
+        <if test="development!=null and development!=''">
+            and c.development = #{development}
+        </if>
+
+        <if test="type!=null and type!=''">
+            and m.type = #{type}
+        </if>
+
+
+        <if test="moneyrange!=null and moneyrange!=''">
+            and m.minwage &gt; #{moneyrange}
+        </if>
+
+        <if test="moneyrangeend!=null and moneyrangeend!=''">
+            and m.maxwage &lt; #{moneyrangeend}
+        </if>
+
+        <if test="minpeople!=null and minpeople!=''">
+            and c.minpeople &gt; #{minpeople}
+        </if>
+
+        <if test="starttime!=null and starttime!=''">
+            and m.publictime between #{starttime} and #{endtime}
+        </if>
+    </select>
+
+    <select id="findJobnameByUid" resultType="java.util.Map" parameterType="java.util.Map">
 	   	SELECT m.jobname FROM myrecruitment m WHERE m.cid = 
 		(SELECT c.id FROM company c WHERE c.uid = #{uid}) 
 		AND m.position = ${position}
   </select>
-  
+
 </mapper>
