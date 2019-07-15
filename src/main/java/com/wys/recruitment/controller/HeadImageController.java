@@ -18,7 +18,7 @@ public class HeadImageController {
     @ResponseBody
     public void getHeadImg(HttpServletRequest request, HttpServletResponse response, String img) throws IOException {
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("image/jpeg");
+        response.setContentType("image/*");
         String path = request.getServletContext().getRealPath("/WEB-INF/upload/");
         OutputStream out = response.getOutputStream();
         InputStream in = null;
