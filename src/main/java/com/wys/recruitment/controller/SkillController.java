@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.*;
 
 @Controller
@@ -107,40 +108,41 @@ public class SkillController {
     @RequestMapping("/insertskill")
     public String insertArticle(HttpServletRequest request,
                                 @RequestParam("logo") MultipartFile logo,
-                                Articles articles
-    ) throws Exception {
-        if(!isLogin(request)) {
+                                Articles articles) throws Exception {
+        if (!isLogin(request)) {
             return "admin/tologin";
         }
         articles.setArticleimg(null);
-        if(!logo.isEmpty()){
+        if (!logo.isEmpty()) {
             //2.0 保存图片
-            String articleimg= IOUtil.saveImage(logo);
+            String path = request.getServletContext().getRealPath("WEB-INF" +
+                    File.separator + "upload" + File.separator);
+            String articleimg = IOUtil.saveImage(path, logo);
             articles.setArticleimg(articleimg);
         }
         Sysadmin sa = (Sysadmin) request.getSession().getAttribute("adminUser");
 
-        if(articles.getArticleid()!=null) {
+        if (articles.getArticleid() != null) {
             //表示修改数据
             articles.setStaffid(sa.getId());
             int j = skillService.updateArticle(articles);
-            if(j>0) {
+            if (j > 0) {
                 //表示修改成功
-                return  "redirect:/skill/skillList";
-            }else {
+                return "redirect:/skill/skillList";
+            } else {
                 //表示修改失败
                 request.setAttribute("error", "ArticlesController修改数据失败，请联系管理员");
                 return "system/error";
             }
-        }else {
+        } else {
             //表示新增数据
             articles.setStaffid(sa.getId());
             articles.setCreatetime(new Date());
             articles.setIsshow((byte) 1);
             int i = skillService.insertArticle(articles);
-            if(i>0) {
-                return  "redirect:/skill/skillList";
-            }else {
+            if (i > 0) {
+                return "redirect:/skill/skillList";
+            } else {
                 //表示修改失败
                 request.setAttribute("error", "ArticlesController修改数据失败，请联系管理员");
                 return "system/error";

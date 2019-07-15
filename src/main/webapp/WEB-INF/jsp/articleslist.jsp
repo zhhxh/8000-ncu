@@ -133,9 +133,6 @@
 	  		#leftJob{
 	  			width: 100%;
 	  			float:left;
-	  			
-	  			
-	  		
 	  		}
 			.publiTime{
 				color:#999999;
@@ -144,15 +141,7 @@
 			}
 			
 	</style>
-	
-									
-								
-         
-         
-         
-      
-         
-             
+
         </tbody>
        </table> 
        

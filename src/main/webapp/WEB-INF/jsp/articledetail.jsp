@@ -97,7 +97,7 @@
                 </li>
                 <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"
                        class="current">最新资讯</a></li>
-                <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">求职技巧</a></li>
+                <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany">求职技巧</a></li>
                 <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a></li>
             </ul>
         </div>
