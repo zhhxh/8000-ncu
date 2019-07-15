@@ -6,18 +6,18 @@
 %>
 <html>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-  <title>我的简历</title> 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>我的简历</title>
   <!-- 头部展览工具栏的css样式，一般不可以少，头部的菜单栏是需要的  start -->
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/frontmodule.css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_style.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/frontmodule.css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_style.css?v=0.0.0.9" front="css" />
   <!-- 头部展览工具栏的css样式，一般不可以少，头部的菜单栏是需要的  end -->
 
-  <!--左边菜单--右边的画板的样式 start--> 
-  <link href="<%=path %>css/main.css" rel="stylesheet" type="text/css" /> 
-  <!--左边菜单--右边的画板的样式 start--> 
-  
+  <!--左边菜单--右边的画板的样式 start-->
+  <link href="<%=path %>css/main.css" rel="stylesheet" type="text/css" />
+  <!--左边菜单--右边的画板的样式 start-->
+
   <!-- windows start -->
   <style type="text/css">
 	.XYTipsWindow .boxLoading { position: absolute; display: block; width: 90px; height: 30px; line-height: 30px; margin-left: -45px; margin-top: -15px; left: 50%; top: 50%; color: #f00; }
@@ -40,28 +40,28 @@
 	 <script src="${pageContext.request.contextPath}/static/boostrap/js/jquery.min.js"></script>
 	 <script type="text/javascript" src="${pageContext.request.contextPath}/static/window/js/jquery-1.4.4.min.js"></script>
 	 <script type="text/javascript" src="${pageContext.request.contextPath}/static/window/js/jquery.XYTipsWindow.2.8.js"></script>
-	
-	 
+
+
   <!-- windows end -->
-  
-  
-  
+
+
+
 </head>
-<body> 
+<body>
 
   <!-- 动态包含头部导航 -->
   <jsp:include page="../../company/common/header.jsp" flush="true" />
-	
+
   <!-- 展示一张图片 -->
-  <img style="width:100%;margin:0 auto;height:100px;" src="${pageContext.request.contextPath}/static/company/images/baseMessage.jpg" />
-  
- 
-   <div class="dl_content dl_gray_bg"> 
-    <!----> 
-    <!--申请职位 s--> 
-    <!--申请职位 e--> 
-    <!--我的简历 s--> 
-    <!--简历内容 s--> 
+  <img style="width:100%;margin:0 auto;height:130px;" src="${pageContext.request.contextPath}/static/company/images/baseMessagetest.png" />
+
+
+  <div class="dl_content dl_gray_bg">
+    <!---->
+    <!--申请职位 s-->
+    <!--申请职位 e-->
+    <!--我的简历 s-->
+    <!--简历内容 s-->
     <style type="text/css">
        .area-title {
 	        height:20px;
@@ -158,20 +158,20 @@
             -webkit-box-shadow: none;
             -o-box-shadow: none;
         }
-    </style> 
+    </style>
     <style type="text/css">
         .pop-container{box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-moz-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-webkit-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-o-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);background-color:#fff;-webkit-border-radius:8px}.pop-header{background-color:#4290C1;color:#fff;border-top-left-radius:8px;border-top-right-radius:8px;padding:7px}.pop-content{height:70px;border-bottom:solid 1px #ccc;text-align:center;vertical-align:middle}.pop-text{margin-top:33px}.pop-bottom{text-align:right;padding:7px 10px 7px 10px}.pop-cancel,.pop-submit{padding:5px 13px 5px 13px;background-color:#CCC;margin-left:10px;margin-right:12px;cursor:pointer}.simplemodal-overlay{background-color:#000}
-    </style> 
-    
-    <div class="dl_bigwrap dl_gray_bg clearfix"> 
-     <div class="leftmenu"> 
-      <div class="dl_greyline_bg"> 
-       <span class="dl_menutit">账户设置</span> 
-      </div> 
-      <ul class="dl_menulist clearfix" id="myMenu"> 
+    </style>
+
+    <div class="dl_bigwrap dl_gray_bg clearfix">
+     <div class="leftmenu">
+      <div class="dl_greyline_bg">
+       <span class="dl_menutit">账户设置</span>
+      </div>
+      <ul class="dl_menulist clearfix" id="myMenu">
         <li> <a href="${pageContext.request.contextPath}/companyUser/index" class="profile">HR信息</a> </li>
-        <li> <a href="${pageContext.request.contextPath}/company/companyInfo" class="apply">公司信息</a> </li> 
-        <li class="selected settingchoose"> <span class="dl_menuchose">审核进度</span> </li> 
+        <li> <a href="${pageContext.request.contextPath}/company/companyInfo" class="apply">公司信息</a> </li>
+        <li class="selected settingchoose"> <span class="dl_menuchose">审核进度</span> </li>
 
        <style>
        	#myMenu li span{
@@ -181,33 +181,33 @@
        		font-size:18px;
        	}
        </style>
-      </ul> 
-     </div> 
-     
+      </ul>
+     </div>
+
      <!-- 头部信息 start -->
-	 <div class="rightcontent dl_height1 dl_new_error_wrap"> 
-	      <h3 class="dl_bigtit"><span class="dl_postit">审核进度查看</span></h3> 
-	      <div class="dl_importprofile"> 
-	       <a class="import dl_import" href="javascript:void(0)"></a> 
-	       <a id="previewBtn" class="look" target="_self" href="#" style=""></a> 
-	       <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span> 
-	      </div> 
-	     
-	  <div class="dl_basicinfo"> 
+	 <div class="rightcontent dl_height1 dl_new_error_wrap">
+	      <h3 class="dl_bigtit"><span class="dl_postit">审核进度查看</span></h3>
+	      <div class="dl_importprofile">
+	       <a class="import dl_import" href="javascript:void(0)"></a>
+	       <a id="previewBtn" class="look" target="_self" href="#" style=""></a>
+	       <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
+	      </div>
+
+	  <div class="dl_basicinfo">
 	       <div class="dl_greyline_bg">
 	        <span class="dl_menutit "></span>
-	       </div> 
-       
+	       </div>
+
       <!-- 头部信息 end -->
-   
+
         	<!-- 填写个人的账户信息 start -->
         	<!-- <button type="button" style="background-color: #5097CB;border:1px solid white">发布简历!</button>
        		 -->
-       		 
-       		
+
+
 		   <!-- <button id="releaseResume">发布简历</button> -->
 		   <p style="font-size:20px;color:#3CB7F6;margin-top:25px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;等待管理员审核，管理员审核成功之后将会以邮件的信息通知您，并且可以进入企业版中心</p>
-		 	
+
    			<style>
    				#releaseResume{
    					background-color: #03A9F4;
@@ -222,39 +222,39 @@
    					font-size:16px;
    					line-height: 40px;
    					border:1px solid black;
-   					
-   				}
-   			
-   			</style>
-   			
-        	<script type="text/javascript">
-        		
-        	
-        	
-        	</script>
-        	
-        	
-        	<!-- 填写个人的账户信息 end -->
-			
-	
-     		 
-	
-		
-      </div> 
-   
-    
 
-     </div> 
-     
-    </div> 
-    
-    <!--简历内容 e--> 
+   				}
+
+   			</style>
+
+        	<script type="text/javascript">
+
+
+
+        	</script>
+
+
+        	<!-- 填写个人的账户信息 end -->
+
+
+
+
+
+      </div>
+
+
+
+     </div>
+
+    </div>
+
+    <!--简历内容 e-->
     <div style="height:10px;"></div>
-   </div> 
+   </div>
    <div class="dl_footer">
        <span> &copy;2018&nbsp;&nbsp;zkhl.huilan.com&nbsp;&nbsp;北京市海淀区东北旺西路8号9号楼二区305 &nbsp;联系电话&nbsp;010-82826258</span>
-   </div> 
-  </div>  
+   </div>
+  </div>
   <!-- 弹窗插件 -->
    <script type="text/javascript" src="${pageContext.request.contextPath}/static/dialog/easydialog.min.js"></script>
  </body>

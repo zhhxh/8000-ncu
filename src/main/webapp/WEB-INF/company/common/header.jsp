@@ -7,46 +7,46 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
-<body>   
-    
-<div class="header"> 
-   <div class="headercontain"> 
-    <div class="logo"> 
+<body>
+
+<div class="header">
+   <div class="headercontain">
+    <div class="logo">
     <!--    <img src="${pageContext.request.contextPath}/static/basePage/images/1.jpg" /> -->
-     <div style="font-size:16px;margin-top:20px;float:left;color:#F66D39;">招聘企业版</div>
-    </div> 
-    <!--module:login begin--> 
-    <div class="bs-module"> 
-     <div class="login-link "> 
-      <div class="login-hearder"> 
-      
-       
-      
+     <div style="font-size:23px;margin-top:14px;float:left;color:#0A4065;">Offer100 企业版</div>
+    </div>
+    <!--module:login begin-->
+    <div class="bs-module" style="margin-top:24px;">
+     <div class="login-link ">
+      <div class="login-hearder">
+
+
+
        <c:choose>
-		   <c:when test="${sessionScope.user.username!=null}">  
-		            <ul class="header-login" style=""> 
-				        <li class="LogoutUrl">${sessionScope.user.username }，欢迎您</li> 
-				        <li class="PortalIndex"><a href="${pageContext.request.contextPath}/system/index"><span>系统首页</span></a></li> 
-				        <li class="LogoutUrl"><span onclick="layout()">退出</span></li> 
+		   <c:when test="${sessionScope.user.username!=null}">
+		            <ul class="header-login" style="">
+				        <li class="LogoutUrl">${sessionScope.user.username }，欢迎您</li>
+				        <li class="PortalIndex"><a href="${pageContext.request.contextPath}/system/index"><span>系统首页</span></a></li>
+				        <li class="LogoutUrl"><span onclick="layout()">退出</span></li>
 				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span>企业中心</span></a></li>
-				    </ul> 
+				    </ul>
 		   </c:when>
-		   <c:otherwise> 
-		    		<ul class="header-unLogin" style=""> 
-				        <li><a class="loginlink" href="${pageContext.request.contextPath}/system/login"> <span>用户登录</span> </a></li> 
-				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span>进入企业版</span> </a></li> 
-				     </ul> 
+		   <c:otherwise>
+		    		<ul class="header-unLogin" style="">
+				        <li><a class="loginlink" href="${pageContext.request.contextPath}/system/login"> <span>用户登录</span> </a></li>
+				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span>进入企业版</span> </a></li>
+				     </ul>
 		   </c:otherwise>
 		</c:choose>
-       
-       
-      </div> 
-  	
-     </div> 
-    </div> 
+
+
+      </div>
+
+     </div>
+    </div>
     <!--module:login end-->
-   </div> 
-  </div> 
+   </div>
+  </div>
   <script type="text/javascript">
   	function layout(){
   		//alert("退出");
@@ -70,7 +70,7 @@
 			}
 		});
   	}
-  
+
   </script>
 </body>
 </html>
