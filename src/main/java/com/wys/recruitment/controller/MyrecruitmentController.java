@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -162,13 +161,60 @@ public class MyrecruitmentController {
      * 	多条件查询
      */
     @RequestMapping("/joblist")
-    public String joblist(MoreCondition moreCondition, String datalist, HttpServletRequest request, Integer page1, String wys) throws UnsupportedEncodingException {
+    public String joblist(MoreCondition moreCondition,
+                          String datalist, String address,
+                          String workexperience, String xueli,
+                          String type, String development,
+                          String moneyrange,
+                          HttpServletRequest request,
+                          Integer page1, String wys) {
         //1.0 处理公司+职位的文本框查询数据
         String companyandjobstring = null;
+        //设置 职位和公司
         if (datalist != null) {
-            companyandjobstring = new String(datalist.getBytes("ISO8859-1"), "UTF-8");
+            companyandjobstring = datalist;
+            System.out.println(companyandjobstring);
             String[] str = companyandjobstring.split(" ");
             moreCondition.setCompanyandjob(str);
+        }
+        //设置地区
+        if (address != null) {
+            System.out.println(address);
+            moreCondition.setAddress(address);
+        }
+        //设置工作经验
+        if (workexperience != null) {
+            System.out.println(workexperience);
+            moreCondition.setWorkexperience(workexperience);
+        }
+        //设置学历
+        if (xueli != null) {
+            System.out.println(xueli);
+            moreCondition.setXueli(xueli);
+        }
+        //设置类别
+        if (type != null) {
+            System.out.println(type);
+            moreCondition.setType(type);
+        }
+        //设置融资阶段
+        if (development != null) {
+            System.out.println(development);
+            moreCondition.setDevelopment(development);
+        }
+        if (moneyrange != null) {
+            System.out.println(moneyrange);
+            String[] ranges = moneyrange.split("-");
+            Double endRange = null;
+            Double startRange = null;
+            if (ranges.length > 1) {
+                startRange = Double.parseDouble(ranges[0].trim());
+                endRange = Double.parseDouble(ranges[1].trim());
+                moreCondition.setMoneyrangeend(endRange);
+            } else {
+                startRange = Double.parseDouble(ranges[0].trim());
+            }
+            moreCondition.setMoneyrange(startRange);
         }
         //2.0 处理当前的页数
         if (page1 != null) {
@@ -178,7 +224,7 @@ public class MyrecruitmentController {
         }
         //3.0 根据当前传入的参数，去数据库查询数据
         List<Map<String, Object>> lists = myRecruitmentServiceImpl.selectByMoreCondition(moreCondition);
-        List<Map<String, Object>> returnlists = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> returnlists = new ArrayList<>();
         //4.0 处理时间转化成良好的格式
         for (Map<String, Object> map : lists) {
             map.put("publictime", map.get("publictime").toString().substring(0, 10));
