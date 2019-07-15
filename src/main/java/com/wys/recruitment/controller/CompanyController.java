@@ -1,12 +1,11 @@
 package com.wys.recruitment.controller;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.wys.recruitment.pojo.Company;
+import com.wys.recruitment.pojo.Myrecruitment;
+import com.wys.recruitment.pojo.User;
+import com.wys.recruitment.service.impl.CompanyServiceImpl;
+import com.wys.recruitment.service.impl.MyRecruitmentServiceImpl;
+import com.wys.recruitment.utils.IOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.wys.recruitment.pojo.Company;
-import com.wys.recruitment.pojo.Myrecruitment;
-import com.wys.recruitment.pojo.User;
-import com.wys.recruitment.service.impl.CompanyServiceImpl;
-import com.wys.recruitment.service.impl.MyRecruitmentServiceImpl;
-import com.wys.recruitment.utils.IOUtil;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -43,13 +42,16 @@ public class CompanyController {
                            @RequestParam("myfile2") MultipartFile myfile2,
                            Company company,
                            HttpServletRequest request) throws Exception {
+
+        String path = request.getServletContext().getRealPath("WEB-INF" +
+                File.separator + "upload" + File.separator);
         //myfile == logo
         //myfile1 == 身份证 idcardimage
         //myfile2 == 身份证 companyimage
 
-        String logo = IOUtil.saveImage(myfile);
-        String idcardimage = IOUtil.saveImage(myfile1);
-        String companyimage = IOUtil.saveImage(myfile2);
+        String logo = IOUtil.saveImage(path, myfile);
+        String idcardimage = IOUtil.saveImage(path, myfile1);
+        String companyimage = IOUtil.saveImage(path, myfile2);
         if (logo.equals("error")) {
             //返回错误页面
             return "system/error";
@@ -115,10 +117,12 @@ public class CompanyController {
     public String edit(@RequestParam("picture") MultipartFile picture,
                        Company company,
                        HttpServletRequest request) throws Exception {
+        String path = request.getServletContext().getRealPath("WEB-INF" +
+                File.separator + "upload" + File.separator);
         //表示上传了图片
         if (!picture.isEmpty()) {
             //2.0 保存图片
-            String image = IOUtil.saveImage(picture);
+            String image = IOUtil.saveImage(path, picture);
             company.setLogo(image);
         }
         //3.0 进行更新数据操作
@@ -232,7 +236,5 @@ public class CompanyController {
     public String jindu() {
         return "company/jindu";
     }
-
-
 }
 
