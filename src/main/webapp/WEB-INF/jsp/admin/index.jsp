@@ -21,10 +21,10 @@
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <span><img alt="image" class="img-circle" src="${pageContext.request.contextPath}/static/boostrap/img/profile_small.jpg" /></span>
+                            <span><img alt="image" class="img-circle" src="${pageContext.request.contextPath}/static/window/images/touxiang.jpg" /></span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                               <span class="block m-t-xs"><strong class="font-bold">祝大杰</strong></span>
                                 <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
                                 </span>
                             </a>
@@ -50,7 +50,7 @@
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/basePage"> <i class="fa fa-home"></i>主页</a>
                      </li>
                      <li>
-                        <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/companylist" data-index="0"><i class="fa fa-columns"></i> <span class="nav-label">公司管理</span></a>
+                        <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/companylist" data-index="0"><i class="fa fa-columns"></i> <span class="nav-label">企业管理</span></a>
                     </li>
                       <li>
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/userlist"> <i class="fa fa-home"></i>用户管理</a>
@@ -59,7 +59,10 @@
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/digitManage"> <i class="fa fa-home"></i>数据管理</a>
                      </li>
                     <li>
-                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>通告管理</a>
+                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>资讯管理</a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>求职技巧文章管理</a>
                     </li>
                     </li>
                 </ul>
@@ -119,7 +122,7 @@
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${pageContext.request.contextPath}/sysadmin/basePage" frameborder="0" data-id="${pageContext.request.contextPath}/sysadmin/basePage" seamless></iframe>
             </div>
             <div class="footer">
-                <div class="pull-right">&copy; 2014-2019 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+                <div class="pull-right">&copy; 2017-2019 <a href="http://soft.ncu.edu.cn/" target="_blank">南昌大学软件学院</a>
                 </div>
             </div>s
         </div>
