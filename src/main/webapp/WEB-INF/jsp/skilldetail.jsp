@@ -75,8 +75,8 @@
                    <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
                    <!-- <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li>  -->
                    <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
-                   <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"  class="current">最新资讯</a> </li>
-                   <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany">求职技巧</a> </li>
+                   <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"  >最新资讯</a> </li>
+                   <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany" class="current">求职技巧</a> </li>
                    <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a> </li>
                </ul>
            </div>
@@ -119,17 +119,17 @@
      
 	        <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;" >${articles.articlekey }</li> 
 		   
-       </ul> 
-  <img src="http://localhost:8080/pic/${articles.articleimg }" style="width:60%;" id="aaaa"> 
-       
-       <script type="text/javascript">
+       </ul>
+          <img src="${pageContext.request.contextPath}/pic?img=${articles.articleimg}" style="width:20%;height: 40%"
+          id="aaaa">
+          <script type="text/javascript">
           var img = "${articles.articleimg }";
- 
-       	  if(img == null || img == ""){
-       		 var img=document.getElementById("aaaa");
-   		 	 img.style.display="none";
-          
-       	  }
+          if (img == null || img == "") {
+          var img = document.getElementById("aaaa");
+          img.src = "${pageContext.request.contextPath}/static/window/images/roll_1.jpg"
+          //img.style.display = "none";
+          }
+          </script>
     	  
        </script>
        <%--<ul class="xiangqinglist clearfix"> --%>

@@ -140,7 +140,7 @@
                         <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;">${articles.articlekey }</li>
 
                     </ul>
-                    <img src="${pageContext.request.contextPath}/pic?img=${articles.articleimg}" style="width:60%;"
+                    <img src="${pageContext.request.contextPath}/pic?img=${articles.articleimg}" style="width:20%;height: 30%"
                          id="aaaa">
 
                     <script type="text/javascript">
