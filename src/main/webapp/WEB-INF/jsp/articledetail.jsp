@@ -141,9 +141,9 @@
 
                     </ul>
                     <img src="${pageContext.request.contextPath}/pic?img=${articles.articleimg}" style="width:20%;height: 30%"
-                         id="aaaa">
+                        id="aaaa">
 
-                    <script type="text/javascript">
+                            <script type="text/javascript">
                         var img = "${articles.articleimg }";
 
                         if (img == null || img == "") {

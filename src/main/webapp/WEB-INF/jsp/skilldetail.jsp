@@ -99,7 +99,6 @@
        <div class="xiangqingline"></div>
         <ul class="xiangqinglist clearfix"> 
             <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;text-align: center">发布时间：</li>
-           
 	        <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;" id="publictime1"> </li> 
 	        <script type="text/javascript">
 		    			//处理当前时间，转化成良好的格式
@@ -114,11 +113,8 @@
 		    			 var jiezi = document.getElementById("publictime1");  //传递的参数是标签里面的id的值
 		    			  jiezi.innerHTML = publictime;
 		    </script>
-		    
-		    <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;" >文章关键字:</li> 
-     
-	        <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;" >${articles.articlekey }</li> 
-		   
+		    <li class="ntitle td-HasSalaries" style="width:15%;font-size:16px;" >文章关键字:</li>
+	        <li class="nvalue" style="width:75%;font-size:16px;color: #3CB7F6;" >${articles.articlekey }</li>
        </ul>
           <img src="${pageContext.request.contextPath}/pic?img=${articles.articleimg}" style="width:20%;height: 40%"
           id="aaaa">
@@ -130,8 +126,6 @@
           //img.style.display = "none";
           }
           </script>
-    	  
-       </script>
        <%--<ul class="xiangqinglist clearfix"> --%>
         <%--<div class="xiangqingtext"> --%>
         <%--&lt;%&ndash;  <p>工作地点: ${myrecruitment.address }</p>  &ndash;%&gt;--%>
