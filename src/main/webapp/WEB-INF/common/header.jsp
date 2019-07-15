@@ -7,45 +7,45 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
-<body>   
-    
-<div class="header"> 
-   <div class="headercontain"> 
-    <div class="logo"> 
-   
-    </div> 
-    <!--module:login begin--> 
-    <div class="bs-module"> 
-     <div class="login-link "> 
-      <div class="login-hearder"> 
-      
-       
-      
+<body>
+
+<div class="header">
+   <div class="headercontain">
+    <div class="logo">
+
+    </div>
+    <!--module:login begin-->
+    <div class="bs-module">
+     <div class="login-link ">
+      <div class="login-hearder">
+
+
+
        <c:choose>
-		   <c:when test="${sessionScope.user.username!=null}">  
-		            <ul class="header-login" style=""> 
+		   <c:when test="${sessionScope.user.username!=null}">
+		            <ul class="header-login" style="">
 				        <li class="LogoutUrl"><span class="userName" style="float:none;color:black">${sessionScope.user.username }，欢迎您！</span></li>
 						<li class="PortalIndex"><div style="margin-top: -3px"><a href="${pageContext.request.contextPath}/user/userInfo"><span style="float:none;color:#5BC0DE;">个人中心</span></a></div></li>
-				        <li class="LogoutUrl"><span onclick="layout()" style="color:black;">退出</span></li> 
+				        <li class="LogoutUrl"><span onclick="layout()" style="color:black;">退出</span></li>
 				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span style="color:#5BC0DE;">进入企业版</span> </a></li>
-				    </ul> 
+				    </ul>
 		   </c:when>
-		   <c:otherwise> 
-		    		<ul class="header-unLogin" style=""> 
-				        <li><a class="loginlink" href="${pageContext.request.contextPath}/system/login"> <span>用户登录</span> </a></li> 
-				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span>进入企业版</span> </a></li> 
-				     </ul> 
+		   <c:otherwise>
+		    		<ul class="header-unLogin" style="">
+				        <li><a class="loginlink" href="${pageContext.request.contextPath}/system/login"> <span>用户登录</span> </a></li>
+				        <li><a class="loginlink" href="${pageContext.request.contextPath}/companyUser/index"> <span>进入企业版</span> </a></li>
+				     </ul>
 		   </c:otherwise>
 		</c:choose>
-       
-       
-      </div> 
-  	
-     </div> 
-    </div> 
+
+
+      </div>
+
+     </div>
+    </div>
     <!--module:login end-->
-   </div> 
-  </div> 
+   </div>
+  </div>
   <script type="text/javascript">
   	function layout(){
   		//alert("退出");
@@ -69,7 +69,6 @@
 			}
 		});
   	}
-  
   </script>
 </body>
 </html>

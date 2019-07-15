@@ -1,6 +1,6 @@
 html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font,
-img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, 
+img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var,
 center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
 tbody, tfoot, thead, tr, th,input, td, button {
     font-size: 12px;
@@ -63,7 +63,7 @@ td, th {
 	content: "";
 }
 a{
-	color:#404040; 
+	color:#404040;
 	text-decoration: none;
 }
 a:hover{
@@ -193,7 +193,7 @@ overflow: hidden;
 }
 .zhiweiliebiao{
 	float: left;
-	
+
 	width: 598px;
 	min-height: 203px;
 	background: #f9f9f9;
@@ -250,7 +250,7 @@ overflow: hidden;
         margin-top:16px;
 	font-size: 16px;
 	/*margin-left: 40px;*/
-      
+
 }
 .listtitle{
 	width: 60px;
@@ -437,7 +437,7 @@ top: 3px;
 
 /*职位检索页面*/
 .containsidebar{
-	width: 13%;
+	width: 243px;
 	float: left;
 	margin-right: 19px;
 }
@@ -446,7 +446,7 @@ top: 3px;
 }
 .containsidebar .zhaopindongtai{
 	margin:0px 19px 19px 0px;
-	padding-bottom:15px; 
+	padding-bottom:15px;
 }
 .joblist .zhiweisousuo{
 	margin-bottom: 0px;
@@ -469,7 +469,7 @@ padding: 5px 20px 15px 5px;
     padding-top: 20px;
 }
 .tablecontain{
-	background: #eff0f4;
+	background: #f9f9f9;
 }
 .listtable .tabletitle{
 
@@ -612,7 +612,7 @@ padding:0px 10px;
 	line-height: 35px;
 }
 .fenxiang{
-	margin-top:20px; 
+	margin-top:20px;
 }
 .fenxiang a{
 	float: left;
@@ -645,7 +645,7 @@ text-align: left;
 .titlelinks li{
 	font-size: 24px;
 	list-style:disc;
-	color: #FFD233;	
+	color: #FFD233;
 }
 .titlelinks li a{
 	font-size: 16px;
@@ -672,7 +672,7 @@ margin-right: 0px;
 display: inline-block;
 margin-top: 1px;}
 .tablefooter .pager .gobtn input{
- margin-left: 0px; 
+ margin-left: 0px;
 }
 
 .s_detail{
@@ -770,8 +770,8 @@ margin-left: 19px;
 }
 .containsidebarr .zhaopindongtai{
 	margin:0px 19px 19px 0px;
-	padding-bottom:15px; 
-}	
+	padding-bottom:15px;
+}
 .containsidebarr .bs-module{
 overflow:hidden;
 }
@@ -824,7 +824,6 @@ padding-right: 4px;
 }
 ul.xiangqinglist {
 	margin: 10px 0px;
-	/*text-align: center;*/
 }
 div.st {
 	text-indent:2em;
