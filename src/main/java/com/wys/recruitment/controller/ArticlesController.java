@@ -1,9 +1,6 @@
 package com.wys.recruitment.controller;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -27,19 +24,6 @@ import com.wys.recruitment.utils.Response;
 public class ArticlesController {
 	@Autowired
 	private IArticlesService articlesService;
-	/**
-	 * 数据列表
-	 */
-	@RequestMapping("/digitManage")
-	public 	String digitManage(HttpServletRequest request, UserCondition userCondition) {
-		if (!isLogin(request)) {
-			return "admin/tologin";
-		}
-		//查看出当前所有的通告记录
-		List<Map<String,Object>> map = articlesService.listAll();
-		request.setAttribute("articleslist", map);
-		return "admin/digitManage";
-	}
 
 	@RequestMapping("/articlesList")
 	public String articlesList(HttpServletRequest request) {
@@ -180,7 +164,7 @@ public class ArticlesController {
 	
 	/**
 	 * 上线通告
-	 * @param request
+	 * @param
 	 * @param id
 	 * @return
 	 */
@@ -207,7 +191,7 @@ public class ArticlesController {
 	
 	/**
 	 * 下线通告
-	 * @param request
+	 * @param
 	 * @param id
 	 * @return
 	 */

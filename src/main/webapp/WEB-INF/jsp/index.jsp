@@ -101,7 +101,7 @@
              <!-- <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li>  -->
              <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
 	      <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList" class="">最新资讯</a> </li>
-	      <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">求职技巧</a> </li>
+	      <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany" class="">求职技巧</a> </li>
 	      <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="">联系我们</a> </li>
 	     </ul> 
 	    </div> 
