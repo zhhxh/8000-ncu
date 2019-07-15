@@ -88,7 +88,7 @@
      <div class="positionsearch-smallfresh "> 
       <a name="jlt"></a> 
       <form name="searchForm" id="searchForm" action="${pageContext.request.contextPath}/myrecruitment/joblist" method="get"> 
-       <div class="zhiweisousuo bodertop selectmod" style="width:100%;margin-left: 0">
+       <div class="zhiweisousuo bodertop selectmod" style="width:100%;margin-left: 0;">
         <div class="parttitleline"></div> 
         <div class="parttitle">
          <span class="serchico"></span>
@@ -97,6 +97,7 @@
          </div>
         </div> 
         <div class="serchcontain">
+			<div style="width: 90%;float: left;margin-left: 5%;margin-top: -10px">
 			<div class="d4">
           <select class="dropdown" id="address" name="address" tableindex="12" style="" >
           		<option value="">工作城市</option> 
@@ -167,14 +168,6 @@
           </select> 
 			</div>
 			<div class="d4">
-         <select class="dropdown" id="type" name="type" tableindex="12">
-          		<option value="" >招聘类别</option> 
-          		<option ${requestScope.moreCondition.type eq '社招'?"selected=\"selected\"":""} >社招</option> 
-          		<option ${requestScope.moreCondition.type eq '校招'?"selected=\"selected\"":""} >校招</option> 
-          		
-          </select>
-			</div>
-			<div class="d4">
           <select class="dropdown" id="development" name="development" tableindex="12">
         		 <option value="" >融资阶段</option> 
           		 <option ${requestScope.moreCondition.development eq '未融资'?"selected=\"selected\"":""} >未融资</option>
@@ -210,16 +203,8 @@
         		
           </select>
 			</div>
-			<div class="d4">
-          <select class="dropdown" id="datenumber" name="datenumber" tableindex="12">
-          		 <option value="" >发布时间</option>
-        		 <option value="1" ${requestScope.moreCondition.datenumber eq '1'?"selected=\"selected\"":""}>24小时内</option> 
-        		 <option value="3" ${requestScope.moreCondition.datenumber eq '3'?"selected=\"selected\"":""}>近三天</option> 
-        		 <option value="7" ${requestScope.moreCondition.datenumber eq '7'?"selected=\"selected\"":""}>近一周</option> 
-        		 <option value="30" ${requestScope.moreCondition.datenumber eq '30'?"selected=\"selected\"":""}>近一个月</option> 
-        		 <option value="1500" ${requestScope.moreCondition.datenumber eq '1500'?"selected=\"selected\"":""}>不限要求</option> 
-          </select>
 			</div>
+
 			<div style="width: 80%;margin-left: 10%" >
           <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" value="${requestScope.datalist }" style="height:40px;line-heitht:35px;width:83%;font-size:15px;border-right:1px solid #D3D3D3;" placeholder="搜索职位 公司 （多个关键字，建议空格分隔） 例如 java "/>
           <input type="submit" value="搜索" class="button  subButton" style="width: 10%;float:left;background-color:#22cade;height:40px;font-size:16px;color:white;margin-left: 0">

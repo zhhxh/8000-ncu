@@ -78,8 +78,8 @@ public class SystemController {
         List<Map<String, Object>> returnArticles = new ArrayList<>();
         for (Map<String, Object> aa : articlesListTow) {
             Map<String, Object> mm = new HashMap<>();
-            if (aa.get("articletitle").toString().length() > 10) {
-                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 9) + "....");
+            if (aa.get("articletitle").toString().length() > 20) {
+                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 21) + "....");
             } else {
                 mm.put("articletitle", aa.get("articletitle"));
             }
@@ -111,8 +111,8 @@ public class SystemController {
         List<Map<String, Object>> returnArticles = new ArrayList<Map<String, Object>>();
         for (Map<String, Object> aa : articlesListTow) {
             Map<String, Object> mm = new HashMap<String, Object>();
-            if (aa.get("articletitle").toString().length() > 10) {
-                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 9) + "....");
+            if (aa.get("articletitle").toString().length() > 20) {
+                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 21) + "....");
             } else {
                 mm.put("articletitle", aa.get("articletitle"));
             }
@@ -136,8 +136,8 @@ public class SystemController {
         List<Map<String, Object>> returnArticles = new ArrayList<Map<String, Object>>();
         for (Map<String, Object> aa : articlesListTow) {
             Map<String, Object> mm = new HashMap<String, Object>();
-            if (aa.get("articletitle").toString().length() > 10) {
-                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 9) + "....");
+            if (aa.get("articletitle").toString().length() > 20) {
+                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 21) + "....");
             } else {
                 mm.put("articletitle", aa.get("articletitle"));
             }
