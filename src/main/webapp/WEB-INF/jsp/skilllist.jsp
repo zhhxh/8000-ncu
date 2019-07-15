@@ -97,7 +97,17 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail" style="height: 180px">
                             <a href="#" class="thumbnail">
-                                <img src="${pageContext.request.contextPath}/static/window/images/roll_1.jpg">
+                                <img src="${pageContext.request.contextPath}/static/window/images/roll_1.jpg" style="width:100%;"--%>
+                               <%--<img src="${pageContext.request.contextPath}/pic?img=${articleslist.articleimg}" style="width:60%;"--%>
+                                     <%--id="aaaa">--%>
+                                <%--<script type="text/javascript">--%>
+                                    <%--var img = "${articleslist.articleimg }";--%>
+                                    <%--if (img == null || img == "") {--%>
+                                        <%--var img = document.getElementById("aaaa");--%>
+                                        <%--img.src = "${pageContext.request.contextPath}/static/window/images/roll_1.jpg"--%>
+                                        <%--//img.style.display = "none";--%>
+                                    <%--}--%>
+                                <%--</script>--%>
                             </a>
                             <div class="caption">
                                 <span class="title">  <a href="${pageContext.request.contextPath}/articles/detail?id=${data.articleid}" style="font-size:17px;" target="_blank">${data.articletitle }</a>   </span>

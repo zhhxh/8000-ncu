@@ -65,7 +65,7 @@
 			  <div class="listtitle" style="float: left;width: 25%">
 				  <img src="${pageContext.request.contextPath}/static/window/images/logo.png" alt="index_logo" style="width: 100%">
 			  </div>
-			  <div style="float: right;width: 74%;height: 88px"> <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" style="height:55px;line-heitht:35px;font-size:18px;"/>
+			  <div style="float: right;width: 74%;height: 88px"> <input type="text" class="serchinput" maxlength="50" id="datalist" name="datalist" style="height:55px;line-heitht:35px;font-size:16px;font-weight: initial" placeholder="&nbsp;&nbsp;搜索职位 公司 （多个关键字，建议空格分隔） 例如 java "/>
 				  <span class="serchbtn">
 	           			  <input type="submit" value="搜索" class="button  subButton" style="width:90px;float:left;background-color:#22cade;height:55px;font-size:16px;color:white;margin-top:10px;">
 	           		</span>
