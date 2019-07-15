@@ -38,7 +38,7 @@
 			     <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
 	      <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
 			      <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList"  >最新资讯</a> </li>
-			      <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany" class="">求职技巧</a> </li>
+			      <li><a target="_self" href="${pageContext.request.contextPath}/skill/showOurCompany" class="">求职技巧</a> </li>
 			      <li><a target="_self" href="${pageContext.request.contextPath}/system/contact" class="current">联系我们</a> </li>
 
 			     </ul> 
