@@ -721,8 +721,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 
 .btn-primary {
-    background-color: #1ab394;
-    border-color: #1ab394;
+    background-color: #72a3bf;
+    border-color: #72a3bf;
     color: #FFFFFF;
 }
 
@@ -731,8 +731,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-color: #18a689;
-    border-color: #18a689;
+    background-color: #468fbf;
+    border-color: #468fbf;
     color: #FFFFFF;
 }
 
@@ -3734,7 +3734,7 @@ nav.page-tabs .page-tabs-content {
 /* TABLES */
 
 .table-bordered {
-    border: 1px solid #EBEBEB;
+    border: 1px solid #72a3bf;
 }
 
 .table-bordered > thead > tr > th,
@@ -3749,7 +3749,7 @@ nav.page-tabs .page-tabs-content {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-    border: 1px solid #e7e7e7;
+    border: 1px solid #72a3bf;
 }
 
 .table > thead > tr > th {
@@ -7793,16 +7793,16 @@ body.skin-3 {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #F5F5F5;
+    background-color: #97b9cd;
 }
 
 ::-webkit-scrollbar {
     width: 6px;
-    background-color: #F5F5F5;
+    background-color: #97b9cd;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #999;
+    background-color: #97b9cd;
 }
 
 
