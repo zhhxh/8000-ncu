@@ -931,7 +931,8 @@ body {
 
 .bs_deliver {
   width: 960px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: #e3edf5;
 }
 
 .no_border_right {
@@ -1419,7 +1420,6 @@ body {
   margin: 0 auto;
   width: 960px;
   height: auto;
-  background-color: #eaeef2
 }
 /*background: url(../images/collectbac.jpg) repeat #fff*/
 /*border: 1px solid #d1d1d1;*/

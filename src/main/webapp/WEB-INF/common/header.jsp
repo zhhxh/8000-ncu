@@ -6,10 +6,15 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript"s src="http://api.map.baidu.com/api?v=2.0&ak=FXcjHySD37i5jomfuwLqxoinxMWWnabd"></script>
 </head>
 <body>
 
 <div class="header">
+    <div style="float:left; padding-left:100px;width: 200px;height: 20px; margin-top:15px;">
+        <img src="${pageContext.request.contextPath}/static/window/images/loc_1.png" style="height: 15px; width: 15px;"/>
+        <input type="button" value="定位中.."  id="loc" style="width: auto; padding-left: 3px;  background-color: white; color: #3f4954; font-size: medium"/>
+    </div>
    <div class="headercontain">
     <div class="logo">
 
@@ -69,6 +74,19 @@
 			}
 		});
   	}
+    // 百度地图API功能
+    var map = new BMap.Map("bdMapBox");
+    var nowCity = new BMap.LocalCity();
+    // var total= document.getElementById("atCity2").innerHTML();
+    nowCity.get(bdGetPosition);
+
+    function bdGetPosition(result) {
+      var cityName = result.name; //当前的城市名
+      /*自定义代码*/
+      $("#loc").attr("value", cityName);
+      // alert(cityName);
+
+    }
   </script>
 </body>
 </html>

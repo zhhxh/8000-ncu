@@ -113,7 +113,7 @@
   <!-- 展示一张图片 -->
   <img style="width:100%;margin:0 auto;height:130px;" src="${pageContext.request.contextPath}/static/company/images/baseMessagetest.png" />
 
-  <div class="bs_deliver">
+  <%--<div class="bs_deliver">--%>
    <div class="dl_content dl_gray_bg">
     <!---->
     <!--申请职位 s-->

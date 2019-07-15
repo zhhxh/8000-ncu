@@ -56,7 +56,8 @@
 
     <!-- 引入弹窗插件 start -->
   <title>招聘信息列表</title>
-
+    <%--地图--%>
+    <script type="text/javascript"s src="http://api.map.baidu.com/api?v=2.0&ak=FXcjHySD37i5jomfuwLqxoinxMWWnabd"></script>
  </head>
 <body>
 
@@ -234,6 +235,101 @@
     <!--module:positiondetail end-->
    </div>
   </div>
+   <%--地图--%>
+   <div style=" background-color: #f9f9f9; padding-left: 40px; "align="center"  >
+
+       <div id="allmap" style="width:80%; height: 400px;  " align="center"></div>
+   </div>
+   <script>
+
+
+     function getLoc()
+     {
+       var address="${myrecruitment.address}";
+       //  alert(address+"three");
+       var map = new BMap.Map("allmap");
+
+       var point_2 = new BMap.Point(116.709684,39.89778);
+       map.centerAndZoom(point_2, 16);
+       map.enableScrollWheelZoom();
+       // 创建地址解析器实例
+       var myGeo = new BMap.Geocoder();
+       // 将地址解析结果显示在地图上,并调整地图视野
+       // alert(address);
+       myGeo.getPoint(address, function (point) {
+         if (point) {
+           map.centerAndZoom(point, 16);
+           //在point位置添加标注
+           var myIcon = new BMap.Icon("${pageContext.request.contextPath}/static/window/images/loc_1.png", new BMap.Size(30, 30), {
+             anchor: new BMap.Size(10, 10)
+           });
+           var address1= address;
+           var marker = new BMap.Marker(point, {icon: myIcon}); //添加标注
+           map.addOverlay(marker);  //将标注添加到地
+           // alert('您的目的地：' + point.lat+','+point.lng);
+           var licontent = "<b>地址："+address1+"</b><br>";
+           var opts = {
+             width: 30,
+             height: 20,
+
+           };
+           var latDes = point.lat;
+           var lngDes = point.lng;
+           var infoWindow = new BMap.InfoWindow(licontent, opts);
+           marker.openInfoWindow(infoWindow);
+           marker.addEventListener('click', function () {
+
+
+             //定位
+             var geolocation = new BMap.Geolocation();
+             geolocation.getCurrentPosition(function(r) {
+               if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                 //  var mk = new BMap.Marker(r.point);
+                 //  map.addOverlay(mk);
+                 //map.panTo(r.point);//地图中心点移到当前位置
+                 var latCurrent = r.point.lat;
+                 var lngCurrent = r.point.lng;
+                 // alert('我的位置：' + latCurrent + ',' + lngCurrent);
+
+
+                 //  根据维度纬度显示城市
+                 var point_1 = new BMap.Point(lngCurrent, latCurrent);
+                 var geoc = new BMap.Geocoder();
+                 geoc.getLocation(point_1, function (rs) {
+                   var addComp = rs.addressComponents;
+                   var localCity= addComp.city;
+                   //   alert('您所在城市：' + addComp.city);
+
+                   //路线
+                   //location.href="http://api.map.baidu.com/direction?origin="+latCurrent+","+lngCurrent+"&destination="+latDes+","+lngDes+"&mode=driving&region="+localCity+"&output=html";
+                 });
+               }else {
+                 alert('failed' + this.getStatus());
+               }
+             }, {enableHighAccuracy: true})
+
+
+
+           });
+
+
+         } else {
+           alert("您选择地址没有解析到结果!");
+
+         }
+       }, "中国");
+
+
+
+     }
+
+     window.onload = function(address)
+     {
+       getLoc();
+     }
+
+
+   </script>
    <!-- 静态包含 -->
   <%@include file="../common/footer.jsp"%>
   <!-- 弹窗插件 -->
