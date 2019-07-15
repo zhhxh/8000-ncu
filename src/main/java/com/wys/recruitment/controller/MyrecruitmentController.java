@@ -171,38 +171,38 @@ public class MyrecruitmentController {
         //1.0 处理公司+职位的文本框查询数据
         String companyandjobstring = null;
         //设置 职位和公司
-        if (datalist != null) {
+        if (datalist != null && !"".equals(datalist)) {
             companyandjobstring = datalist;
             System.out.println(companyandjobstring);
             String[] str = companyandjobstring.split(" ");
             moreCondition.setCompanyandjob(str);
         }
         //设置地区
-        if (address != null) {
+        if (address != null && !"".equals(address)) {
             System.out.println(address);
             moreCondition.setAddress(address);
         }
         //设置工作经验
-        if (workexperience != null) {
+        if (workexperience != null && !"".equals(workexperience)) {
             System.out.println(workexperience);
             moreCondition.setWorkexperience(workexperience);
         }
         //设置学历
-        if (xueli != null) {
+        if (xueli != null && !"".equals(xueli)) {
             System.out.println(xueli);
             moreCondition.setXueli(xueli);
         }
         //设置类别
-        if (type != null) {
+        if (type != null && !"".equals(type)) {
             System.out.println(type);
             moreCondition.setType(type);
         }
         //设置融资阶段
-        if (development != null) {
+        if (development != null && !"".equals(development)) {
             System.out.println(development);
             moreCondition.setDevelopment(development);
         }
-        if (moneyrange != null) {
+        if (moneyrange != null && !"".equals(moneyrange)) {
             System.out.println(moneyrange);
             String[] ranges = moneyrange.split("-");
             Double endRange = null;
@@ -262,7 +262,7 @@ public class MyrecruitmentController {
     @RequestMapping("/xiaochengxu/detail")
     @ResponseBody
     public Map<String, Object> xiaochengxuDetail(String id, Integer uid) {
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         if (id != null && uid != null) {
             //1.0 查询出招聘的具体信息，内容
             Myrecruitment myrecruitment = myRecruitmentServiceImpl.selectById(id);

@@ -341,7 +341,7 @@
 	   				<input type="hidden" name="id" id="id" value="${requestScope.companyUser.id}">
                     <%--TODO:修改头像功能未完善--%>
                     <div class="applyline">
-                    <span class="key">头像：</span><img style="width:50px;height:50px;padding-right:30%;border-radius: 10px;" src="${pageContext.request.contextPath}/${requestScope.companyUser.image}">
+                    <span class="key">头像：</span><img style="width:50px;height:50px;padding-right:30%;border-radius: 10px;" src="${pageContext.request.contextPath}/pic?img=${requestScope.companyUser.image}">
 					<input type="file" id="picture" value="3" readonly="true" name="picture" style="display: none;">
                     </div>
                         <%--<span class="edit" onclick="toEdit()">编辑</span>--%>
