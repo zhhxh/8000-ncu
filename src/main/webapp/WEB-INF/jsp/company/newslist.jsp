@@ -119,7 +119,7 @@
   <!-- 展示一张图片 -->
   <img style="width:100%;margin:0 auto;height:130px;" src="${pageContext.request.contextPath}/static/company/images/baseMessagetest.png" />
 
-  <div class="bs_deliver">
+  <%--<div class="bs_deliver">--%>
    <div class="dl_content dl_gray_bg">
     <!---->
     <!--申请职位 s-->
@@ -128,7 +128,7 @@
     <!--简历内容 s-->
 
     <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
-     <div class="leftmenu" style="width:16%;">
+     <div class="leftmenu" style="width: 16.5%;height: 425px;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">个人中心</span>
       </div>
@@ -147,7 +147,7 @@
       		 <li> <a href="${pageContext.request.contextPath}/company/releaseResume" class="profile">发布招聘</a> </li>
       		 <li> <a href="${pageContext.request.contextPath}/myrecruitment/recruitmentlist" class="shoucang">招聘列表</a> </li>
       		 <li> <a href="${pageContext.request.contextPath}/applay/applaylist" class="cominfo">申请中心</a> </li>
-      		 <li class="selected settingchoose"> <span class="dl_menuchose" style="position: absolute;margin-top: -8px;">消息中心</span> </li>
+      		 <li class="selected settingchoose" style="padding-bottom: 32px; padding-top: 9px;"> <span class="dl_menuchose">消息中心</span> </li>
    		 <style>
        	#myMenu li span{
        		font-size:18px;
@@ -320,14 +320,14 @@
                         name: 'title',
                         index: 'title',
                         editable: true,
-                        width: 40,
+                        width: 50,
 
                     },
                     {
                         name: 'content',
                         index: 'content',
                         editable: true,
-                        width: 160,
+                        width: 180,
 
                     },
                      {
@@ -344,7 +344,7 @@
                         name: 'operation',
                         index: 'operation',
                         editable: true,
-                        width: 120,
+                        width: 60,
                         align: "left"
 
                     }

@@ -2,10 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <%
-	String path = request.getContextPath()+"/static/basePage/";
+    String path = request.getContextPath()+"/static/basePage/";
 %>
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,9 +38,6 @@
 	.XYTipsWindow .dialogBtn.hover { background-position: 0 -65px; }
 	.XYTipsWindow.shadow { box-shadow:2px 2px 5px #C0BBB5; -moz-box-shadow: 2px 2px 5px #C0BBB5; -webkit-box-shadow:2px 2px 5px #C0BBB5; }
 	</style>
-
-
-
 
   <!-- windows end -->
 
@@ -75,8 +72,6 @@
 	</script> -->
     <script src="${pageContext.request.contextPath}/static/boostrap/js/bootstrap.min.js?v=3.3.6"></script>
 
-
-
     <!-- Peity -->
     <script src="${pageContext.request.contextPath}/static/boostrap/js/plugins/peity/jquery.peity.min.js"></script>
 
@@ -86,8 +81,6 @@
 
     <!-- 自定义js -->
     <script src="${pageContext.request.contextPath}/static/boostrap/js/content.js?v=1.0.0"></script>
-
-
 
 
   <%--  ${pageContext.request.contextPath}/static/boostrap/ --%>
@@ -101,9 +94,6 @@
     <link href="${pageContext.request.contextPath}/static/boostrap/css/animate.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/boostrap/css/style.css?v=4.1.0" rel="stylesheet">
   <!-- 引入boostrap的样式 end -->
-
-
-
 
  </head>
 <body>
@@ -120,9 +110,109 @@
     <!--申请职位 e-->
     <!--我的简历 s-->
     <!--简历内容 s-->
+       <style type="text/css">
+           .area-title {
+               height:20px;
+               border-bottom:solid 1px #D3DAE2
+           }
+           .area-title .label {
+               display:inline-block;
+               border-bottom:solid 1px #3887BC;
+               padding:0 3px 0 3px
+           }
+           .account-settings .area {
+               padding:10px 10px 10px 10px
+           }
+           .base-info,.we-chat-bind {
+               margin:10px 20px 10px 30px;
+               padding:10px;
+               position:relative
+           }
+           .release-relation-weChat {
+               display:inline-block;
+               float:right
+           }
+           .text {
+               padding:10px 0 5px 10px
+           }
+           .relation-user {
+               color:#879900;
+               display:inline-block;
+               margin-left:10px
+           }
+           .td1 {
+               width:15%;
+               text-align:right;
+               padding-right:20px
+           }
+           .td2 {
+               width:59%
+           }
+           .td3 {
+               width:25%;
+               text-align:right
+           }
+           .btn {
+               color:#06C;
+               margin-left:15px;
+               cursor:pointer;
+               z-index:99;
+           }
+           .base-info .btn {
+               float:right;
+           }
+           .user-name-label {
+               margin-right:20px
+           }
+           input.user-name {
+               width:260px;
+               height:20px;
+               line-height:20px;
+           }
+           table.user-info-table td {
+               padding-top:5px;
+               padding-bottom:5px
+           }
+           input.confirm-password,input.new-password,input.original-password {
+               width:200px;
+               height:20px;
+               line-height:20px;
+           }
+           .err-msg {
+               color:#F17F7F;
+               margin-left:10px;
+               position:absolute;
+           }
+           .err-msg.err-message-name {
+               white-space:nowrap;
+               position:absolute
+           }
+           .password-pattern-note {
+               color:#AAA;
+           }
+           .is-not-null {
+               color:#F17F7F;
+               width:10px;
+               display:inline-flex;
+           }
+           .we-chart-img {
+               height:200px
+           }
+           .dl_dialog1 {
+               -moz-border-radius: none;
+               -webkit-border-radius: none;
+               -o-border-radius: none;
+               -moz-box-shadow: none;
+               -webkit-box-shadow: none;
+               -o-box-shadow: none;
+           }
+       </style>
+       <style type="text/css">
+           .pop-container{box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-moz-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-webkit-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);-o-box-shadow:4px 3px 10px rgba(0,0,0,.3),-4px -3px 10px rgba(0,0,0,.3);background-color:#fff;-webkit-border-radius:8px}.pop-header{background-color:#4290C1;color:#fff;border-top-left-radius:8px;border-top-right-radius:8px;padding:7px}.pop-content{height:70px;border-bottom:solid 1px #ccc;text-align:center;vertical-align:middle}.pop-text{margin-top:33px}.pop-bottom{text-align:right;padding:7px 10px 7px 10px}.pop-cancel,.pop-submit{padding:5px 13px 5px 13px;background-color:#CCC;margin-left:10px;margin-right:12px;cursor:pointer}.simplemodal-overlay{background-color:#000}
+       </style>
 
-    <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
-     <div class="leftmenu" style="width:16%;">
+    <div class="dl_bigwrap dl_gray_bg clearfix">
+     <div class="leftmenu" style="width: 16.5%;height: 425px;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">个人中心</span>
       </div>
@@ -138,8 +228,8 @@
    		 --%>
    		 	 <li> <a href="${pageContext.request.contextPath}/companyUser/index" class="profile">HR信息</a> </li>
        		 <li> <a href="${pageContext.request.contextPath}/company/companyInfo" class="apply">公司信息</a> </li>
-      		 <li> <a href="${pageContext.request.contextPath}/company/releaseResume" class="shoucang">发布招聘</a> </li>
-      		  <li class="selected settingchoose"> <span class="dl_menuchose" style="position: absolute;margin-top: -8px;">招聘列表</span> </li>
+      		 <li> <a href="${pageContext.request.contextPath}/company/releaseResume" class="profile">发布招聘</a> </li>
+      		  <li class="selected settingchoose" style="padding-bottom: 32px; padding-top: 9px;"> <span class="dl_menuchose">招聘列表</span> </li>
    			<li> <a href="${pageContext.request.contextPath}/applay/applaylist" class="cominfo">申请中心</a> </li>
    			<li> <a href="${pageContext.request.contextPath}/news/newslist" class="messagecenter">消息中心</a> </li>
    		 <style>

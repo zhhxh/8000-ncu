@@ -1429,7 +1429,7 @@ body {
   margin: 13px;
   border-radius: 2px;
   display: inline;
-  height: 200px;
+  height: 320px;
   padding: 17px 20px 90px;
   background: white;
 }
@@ -1623,25 +1623,25 @@ body {
 .dl_menulist li.selected span {
   padding-left: 44px
 }
-
+/*background: url(../images/applychoose.gif) no-repeat*/
 .dl_menulist li.applychoose {
-  background: url(../images/applychoose.gif) no-repeat
+  background-color: #a1c4df;
 }
-
+/*background: url(../images/profilechoose.gif) no-repeat*/
 .dl_menulist li.profilechoose {
-  background: url(../images/profilechoose.gif) no-repeat
+  background-color: #a1c4df;
 }
-
+/*background: url(../images/choose.gif) no-repeat*/
 .dl_menulist li.collectedpos {
-  background: url(../images/choose.gif) no-repeat
+  background-color: #a1c4df;
 }
-
+/*background: url(../images/shoucangchoose.gif) no-repeat*/
 .dl_menulist li.shoucangchoose {
-  background: url(../images/shoucangchoose.gif) no-repeat
+  background-color: #a1c4df;
 }
-
+/*background: url(../images/changepwdchoose.gif) no-repeat*/
 .dl_menulist li.changepwdchoose {
-  background: url(../images/changepwdchoose.gif) no-repeat
+  background-color: #a1c4df;
 }
 
 .dl_profilewrap {
@@ -2159,14 +2159,12 @@ input.new_pop_error {
   background-color: #a1c4df;
 
 }
-
+/*background: url(../images/dl_leftmenu.gif) no-repeat;*/
 .accountSettings {
-  background: url(../images/dl_leftmenu.gif) no-repeat;
   background-position: 0 -75px
 }
-
+/*background: url(../images/dl_hover_leftmenu.gif) no-repeat;*/
 .accountSettings:hover {
-  background: url(../images/dl_hover_leftmenu.gif) no-repeat;
   background-position: 0 -74px
 }
 
