@@ -55,7 +55,6 @@ public class IOUtil {
                     fos.write(b, 0, a);
                 }
             }
-
         }
     }
 
@@ -79,9 +78,12 @@ public class IOUtil {
             String str = myfile.getOriginalFilename();
             String[] arr = str.split("\\.");
 
+            System.out.println(arr.length);
+
             String realName = qianZhui + "." + arr[1];
+
             //transferTo的函数，就是保存函数的方法
-            File moviesFile = new File(path);
+            File moviesFile = new File(filePath);
             if (moviesFile.exists()) {
                 myfile.transferTo(new File(filePath + realName));
             } else {
