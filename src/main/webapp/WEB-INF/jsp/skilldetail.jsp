@@ -130,8 +130,6 @@
           //img.style.display = "none";
           }
           </script>
-    	  
-       </script>
        <%--<ul class="xiangqinglist clearfix"> --%>
         <%--<div class="xiangqingtext"> --%>
         <%--&lt;%&ndash;  <p>工作地点: ${myrecruitment.address }</p>  &ndash;%&gt;--%>

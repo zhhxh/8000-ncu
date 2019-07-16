@@ -189,8 +189,16 @@
         <div class="wordtitle" style="color:black;">
          求职技巧
         </div> 
-       </div> 
-       <div class="serchcontain">
+       </div>
+          <a href="${pageContext.request.contextPath}/skill/showOurCompany" class="morelinks">更多&gt;&gt;</a>
+          <div class="dongtailinks">
+              <ul>
+                  <c:forEach items="${returnskill }" var="article">
+                      <li><a href="${pageContext.request.contextPath}/skill/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li>
+                  </c:forEach>
+
+              </ul>
+              <div class="serchcontain">
        </div> 
       </div> 
       <script type="text/javascript">
@@ -297,10 +305,10 @@
          求职资讯
         </div>
        </div> 
-       <a href="${pageContext.request.contextPath}/articles/user/articlesList" class="morelinks">更多&gt;&gt;</a> 
+       <a href="${pageContext.request.contextPath}/articles/user/articlesList" class="morelinks">更多&gt;&gt;</a>
        <div class="dongtailinks"> 
-        <ul> 
-       
+        <ul>
+
         <c:forEach items="${returnArticles }" var="article">
          	<li><a href="${pageContext.request.contextPath}/articles/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li>
         </c:forEach>

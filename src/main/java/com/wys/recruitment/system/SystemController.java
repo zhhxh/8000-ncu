@@ -3,6 +3,7 @@ package com.wys.recruitment.system;
 import com.wys.recruitment.pojo.Company;
 import com.wys.recruitment.pojo.MoreCondition;
 import com.wys.recruitment.service.IArticlesService;
+import com.wys.recruitment.service.ISkillService;
 import com.wys.recruitment.service.impl.CompanyServiceImpl;
 import com.wys.recruitment.service.impl.MyRecruitmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class SystemController {
     private MyRecruitmentServiceImpl myRecruitmentServiceImpl;
     @Autowired
     private IArticlesService articlesService;
+    @Autowired
+    private ISkillService skillService;
 
     @Autowired
     private CompanyServiceImpl companyServiceImpl;
@@ -146,6 +149,21 @@ public class SystemController {
             returnArticles.add(mm);
         }
         request.setAttribute("returnArticles", returnArticles);
+
+        //8.0 检索出当前最近的公告信息
+        List<Map<String, Object>> skillListTow = skillService.listTwo();
+        List<Map<String, Object>> returnskill = new ArrayList<Map<String, Object>>();
+        for (Map<String, Object> aa : skillListTow) {
+            Map<String, Object> mm = new HashMap<String, Object>();
+            if (aa.get("articletitle").toString().length() > 20) {
+                mm.put("articletitle", aa.get("articletitle").toString().subSequence(0, 21) + "....");
+            } else {
+                mm.put("articletitle", aa.get("articletitle"));
+            }
+            mm.put("articleid", aa.get("articleid"));
+            returnskill.add(mm);
+        }
+        request.setAttribute("returnskill", returnskill);
         return "contact";
     }
 

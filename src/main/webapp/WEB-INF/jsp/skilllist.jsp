@@ -95,11 +95,11 @@
                     <tbody>
                     <c:forEach items="${ articleslist}" var="data">
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail" style="height: 180px">
+                        <div class="thumbnail" style="height: 230px">
                             <a href="#" class="thumbnail">
-                                <img src="${pageContext.request.contextPath}/static/window/images/roll_1.jpg" style="width:100%;"--%>
-                               <%--<img src="${pageContext.request.contextPath}/pic?img=${articleslist.articleimg}" style="width:60%;"--%>
-                                     <%--id="aaaa">--%>
+                               <%--<img src="${pageContext.request.contextPath}/static/window/images/roll_1.jpg" style="width:100%;"&ndash;%&gt;--%>
+                               <img src="${pageContext.request.contextPath}/pic?img=${data.articleimg}" style="width:100%; height: 150px"
+                                     id="aaaa">
                                 <%--<script type="text/javascript">--%>
                                     <%--var img = "${articleslist.articleimg }";--%>
                                     <%--if (img == null || img == "") {--%>
@@ -109,8 +109,8 @@
                                     <%--}--%>
                                 <%--</script>--%>
                             </a>
-                            <div class="caption">
-                                <span class="title">  <a href="${pageContext.request.contextPath}/articles/detail?id=${data.articleid}" style="font-size:17px;" target="_blank">${data.articletitle }</a>   </span>
+                            <div class="caption" style="margin-top: -20px">
+                                <span class="title">  <a href="${pageContext.request.contextPath}/skill/detail?id=${data.articleid}" style="font-size:17px;" target="_blank">${data.articletitle }</a>   </span>
 
                                 <%--<span class="publiTime">[  ${data.createtime }  发布]</span>--%>
                             </div>

@@ -27,16 +27,16 @@ public class SkillController {
     /**
      * 数据列表
      */
-    @RequestMapping("/digitManage")
-    public 	String digitManage(HttpServletRequest request, UserCondition userCondition) {
-        if (!isLogin(request)) {
-            return "admin/tologin";
-        }
-        //查看出当前所有的通告记录
-        List<Map<String,Object>> map = skillService.listAll();
-        request.setAttribute("articleslist", map);
-        return "admin/digitManage";
-    }
+//    @RequestMapping("/digitManage")
+//    public 	String digitManage(HttpServletRequest request, UserCondition userCondition) {
+//        if (!isLogin(request)) {
+//            return "admin/tologin";
+//        }
+//        //查看出当前所有的通告记录
+//        List<Map<String,Object>> map = skillService.listAll();
+//        request.setAttribute("articleslist", map);
+//        return "admin/digitManage";
+//    }
 
     @RequestMapping("/skillList")
     public String articlesList(HttpServletRequest request) {

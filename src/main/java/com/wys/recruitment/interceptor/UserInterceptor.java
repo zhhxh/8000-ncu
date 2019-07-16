@@ -37,7 +37,7 @@ public class UserInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        if (url.contains("admin") || url.contains("articles")) {
+        if (url.contains("admin") || url.contains("articles") || url.contains("skill")) {
             //这三个是未登录可以访问的资源，放行呗
             return true;
         }
