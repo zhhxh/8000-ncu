@@ -22,6 +22,7 @@ public class UserInterceptor implements HandlerInterceptor {
                 url.equals("/Offer100/system/login") ||
                 url.equals("/Offer100/user/toLogin") ||
                 url.equals("/Offer100/user/register")) {
+
             //这三个是未登录可以访问的资源，放行呗
             return true;
         }
@@ -37,7 +38,7 @@ public class UserInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        if (url.contains("admin") || url.contains("articles")) {
+        if (url.contains("admin") || url.contains("articles") || url.contains("skill")) {
             //这三个是未登录可以访问的资源，放行呗
             return true;
         }
