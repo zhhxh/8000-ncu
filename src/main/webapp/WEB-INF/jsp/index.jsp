@@ -193,13 +193,13 @@
           <a href="${pageContext.request.contextPath}/skill/showOurCompany" class="morelinks">更多&gt;&gt;</a>
           <div class="dongtailinks">
               <ul>
-                  <c:forEach items="${returnskill }" var="article">
+                  <c:forEach items="${returnskill}" var="article">
                       <li><a href="${pageContext.request.contextPath}/skill/detail?id=${article.articleid}"  target="_blank">${article.articletitle}</a></li>
                   </c:forEach>
 
               </ul>
-              <div class="serchcontain">
-       </div> 
+              <%--<div class="serchcontain">--%>
+       <%--</div> --%>
       </div> 
       <script type="text/javascript">
     function GetParam(key) {

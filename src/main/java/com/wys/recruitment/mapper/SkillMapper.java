@@ -23,13 +23,13 @@ public interface SkillMapper {
 
     List<Map<String, Object>> listAll(Map<String, Object> map);
 
-    @Update("update articles a set a.isshow = #{i} where a.articleid = #{id}")
+    @Update("update skill_articles a set a.isshow = #{i} where a.articleid = #{id}")
     int pass(@Param("id") Integer id, @Param("i") int i);
 
     List<Map<String, Object>> userlistAll(Map<String, Object> map);
 
     int countNumber(Map<String, Object> map);
 
-    @Select("select * from articles a order by a.createtime desc limit 0,4")
+    @Select("select * from skill_articles a order by a.createtime desc limit 0,4")
     List<Map<String, Object>> listTwo();
 }
