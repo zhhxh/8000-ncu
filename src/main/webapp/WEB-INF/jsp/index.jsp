@@ -318,15 +318,16 @@
      </div> 
      <!--module:newslist end--> 
     </div> 
-   </div> 
+   </div>
+   </div>
    <!--module:jobstab begin--> 
    <div class="bs-module" > 
-    <div class="jobstab-default"> 
+       <div class="jobstab-default" style="margin-top: 15px"></div>
      <div class="zhiweiliebiao" style="width:100%;"> 
       <div class="listnav"> 
        <ul> 
         <li><a href="javascript:void(0)" class="listchooseon" id="hotjob">最新职位</a></li> 
-        <li><a href="javascript:void(0)" id="longjob">校园招聘</a></li> 
+        <li><a href="javascript:void(0)" id="longjob">实习招聘</a></li>
         <!-- <li><a href="javascript:void(0)" id="company">热门公司</a></li>  -->
        </ul> 
        
@@ -343,11 +344,7 @@
                   <!-- 卡片 start -->
                   <div  class="container">
                       <div  class="row" >
-
-
-
-
-                                  <div class="col-md-4 col-sm-6 myCard">
+                          <div class="col-md-4 col-sm-6 myCard">
                               <div class="serviceBox">
                                   <!-- <div class="service-icon">
                                       <i class="fa fa-mobile"></i>
@@ -422,7 +419,7 @@
 
 		  <ul id="ullongjob">
 			  <c:forEach items="${schoolJob }" var="school">
-				  <li>
+				  <li style="list-style: none">
 					  <!-- 卡片 -->
 					  <div class="container">
 						  <div class="row" >
@@ -473,9 +470,9 @@
 
 			  </c:forEach>
 
-			  <li style="text-align:center;width:100%;">
+			  <li style="text-align:center;width:100%;list-style: none">
 				  <!-- Indicates a successful or positive action -->
-				  <a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success" >查看更多</button></a>
+				  <a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success"  style="background-color: #22cade;border: 0">查看更多</button></a>
 			  </li>
 
 		  </ul>
