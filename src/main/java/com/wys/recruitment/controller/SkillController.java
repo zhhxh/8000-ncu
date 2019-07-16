@@ -73,13 +73,13 @@ public class SkillController {
     public String showOurCompany(HttpServletRequest request,Integer page1) {
         //5.0 封装好当前的分页信息
         PageAble pageAble = new PageAble();
-        pageAble.setNumberOfPages(12);
+        pageAble.setNumberOfPages(6);
 
         Map<String, Object>  map = new HashMap<String, Object>();
         map.put("isshow", 1);
-        map.put("number", 12);
+        map.put("number", 6);
         if(page1!=null) {
-            map.put("pageSize",( page1 - 1 ) * 12);
+            map.put("pageSize",( page1 - 1 ) * 6);
             pageAble.setCurrentPage(page1);
         }else {
             map.put("pageSize",0);
@@ -88,10 +88,10 @@ public class SkillController {
 
         //统计所有的条数
         int i = skillService.countNumber();
-        if(i%12==0) {
-            pageAble.setTotalPages(i / 12);
+        if(i%6==0) {
+            pageAble.setTotalPages(i / 6);
         }else {
-            pageAble.setTotalPages(i / 12 + 1);
+            pageAble.setTotalPages(i / 6 + 1);
         }
 
         List<Map<String,Object>> articleslist = skillService.userlistAll(map);
