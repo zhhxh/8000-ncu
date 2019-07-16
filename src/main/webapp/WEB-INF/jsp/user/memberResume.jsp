@@ -967,11 +967,13 @@
    </div>
   </div>
   <%--地图--%>
-      <div style="left: 90%;margin-left: -26px;position: fixed; bottom:-100px;width: 200px;height: 600px;z-index: 891208; margin-top: 500px">
-          <input type="button" value="简历咨询" style="background-color:#74a7d0ad; text-align: center ; width: 90px; height: 40px; border-radius: 3px;"/>
+      <div style="left: 90%;margin-left: -26px;position: fixed; bottom:-100px;width: 90px;height: 600px;z-index: 891208; margin-top: 500px">
+          <img src="${pageContext.request.contextPath}/static/window/images/person.jpg" style="width: 90px; height: 90px;">
+          <input type="button" value="简历咨询" style="background-color:#1296db; text-align: center ; width: 90px; height: 40px; border-radius: 3px;"/>
 
       </div>
-  <script type="text/javascript">
+
+      <script type="text/javascript">
 
         $(document).ready(function () {
 

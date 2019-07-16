@@ -11,10 +11,12 @@
 <body>
 
 <div class="header">
-    <div style="float:left; padding-left:100px;width: 200px;height: 20px; margin-top:15px;">
-        <img src="${pageContext.request.contextPath}/static/window/images/loc_1.png" style="height: 15px; width: 15px;"/>
-        <input type="button" value="定位中.."  id="loc" style="width: auto; padding-left: 3px;  background-color: white; color: #3f4954; font-size: medium"/>
+    <div style="float:left; padding-left:100px;width: 200px;height: 20px; margin-top:15px; font-size: 12px;" onclick="getLoc()">
+        <img src="${pageContext.request.contextPath}/static/window/images/loc_1.png" style="height: 12px; width: 12px;"/>
+        <input type="button" value="定位中.."  id="loc" style="width: auto; padding-left: 3px;  background-color: white; color: #3f4954; font-size: 12px"/>
+
     </div>
+
    <div class="headercontain">
     <div class="logo">
 
