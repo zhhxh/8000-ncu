@@ -104,7 +104,7 @@
   <!-- 静态包含 -->
   <%@include file="../../common/nav.jsp"%>
 
-  <div class="bs_deliver">
+  <%--<div class="bs_deliver">--%>
    <div class="dl_content dl_gray_bg">
     <!---->
     <!--申请职位 s-->
@@ -530,9 +530,8 @@
    			<br/>
       </div>
       <style type="text/css">
-
       .btn-lightBlue{
-      	background-color: #a1c3df;
+      	background-color: #03A9F4;
       	border-radius: 1px;
       	box-shadow: 1px 1px 1px #888888;
       	color:white;

@@ -406,6 +406,17 @@ public class SysadminController {
         }
     }
 
+    /**
+     * 新增数据管理页面跳转
+     */
+    @RequestMapping("/dataManager")
+    public String dataManager(HttpServletRequest request) {
+        if (!isLogin(request)) {
+            return "admin/tologin";
+        }
+        return "admin/dataManager";
+    }
+
 
     /**
      * 检查是否登录

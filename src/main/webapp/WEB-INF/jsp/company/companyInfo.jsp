@@ -391,7 +391,7 @@ String now= template.format(request.getAttribute("registerTime"));%>
 	   				<input type="hidden" name="id" id="id" value="${requestScope.company.id}">
                     <%--TODO:修改头像功能未完善--%>
                     <div class="applyline">
-                    <span class="key">公司logo：</span><img style="width:50px;height:50px;padding-right:30%;border-radius: 10px;" src="http://localhost:8080/pic/${requestScope.company.logo}">
+                    <span class="key">公司logo：</span><img style="width:50px;height:50px;padding-right:30%;border-radius: 10px;" src="${pageContext.request.contextPath}/pic?img=${requestScope.company.logo}">
 					<input type="file" id="picture" value="3" readonly="true" name="picture">
                     </div>
 					<!--  普通字段：companyname,simplename,industry,minpeople，maxpeople，companyurl,remark、address-->

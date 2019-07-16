@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
     <title>主页</title>
-    
+
     <%@include file="../../common/admin/header.jsp" %>
 </head>
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -42,10 +42,10 @@
                                 </li>
                             </ul>
                         </div>
-                    
+
                     </li>
                     <li>
-                     
+
                      <li>
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/basePage"> <i class="fa fa-home"></i>主页</a>
                      </li>
@@ -56,13 +56,15 @@
                          <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/userlist"> <i class="fa fa-home"></i>用户管理</a>
                      </li>
                      <li>
-                         <a class="J_menuItem" href="${pageContext.request.contextPath}/skill/skillList"> <i class="fa fa-home"></i>求职技巧文章管理</a>
+                         <a class="J_menuItem" href="${pageContext.request.contextPath}/skill/digitManage"> <i class="fa fa-home"></i>求职技巧文章管理</a>
                      </li>
                     <li>
                         <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>资讯管理</a>
                     </li>
                     <li>
-                        <a class="J_menuItem" href="${pageContext.request.contextPath}/articles/articlesList"> <i class="fa fa-home"></i>数据管理</a>
+                        <a class="J_menuItem" href="${pageContext.request.contextPath}/sysadmin/dataManager"> <i class="fa fa-home"></i>数据</a>
+
+                    </li>
                     </li>
                 </ul>
             </div>
@@ -84,10 +86,10 @@
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
                             </a>
-                           
+
                         </li>
-                      
-                 
+
+
                     </ul>
                 </nav>
             </div>
@@ -99,7 +101,7 @@
                         <a href="javascript:;" class="active J_menuTab" data-id="${pageContext.request.contextPath}/sysadmin/basePage">首页</a>
                     </div>
                 </nav>
-                
+
                 <div class="btn-group roll-nav roll-right">
                     <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
 
@@ -115,7 +117,7 @@
                     </ul>
                 </div>
                 <a href="#" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i>本系统</a>
-      
+
             </div>
             <div class="row J_mainContent" id="content-main">
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${pageContext.request.contextPath}/sysadmin/basePage" frameborder="0" data-id="${pageContext.request.contextPath}/sysadmin/basePage" seamless></iframe>
@@ -137,16 +139,16 @@
                             <i class="fa fa-gear"></i> 主题
                         </a>
                     </li>
-                 
-                 
+
+
                 </ul>
 
-               
+
 
             </div>
         </div>
         <!--右侧边栏结束-->
-       
+
     </div>
 
     <%@include file="../../common/admin/footer.jsp" %>
