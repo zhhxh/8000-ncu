@@ -1,6 +1,5 @@
 package com.wys.recruitment.service.impl;
 
-import com.wys.recruitment.mapper.ArticlesMapper;
 import com.wys.recruitment.mapper.SkillMapper;
 import com.wys.recruitment.pojo.Articles;
 import com.wys.recruitment.service.ISkillService;

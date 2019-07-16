@@ -38,18 +38,6 @@ public class SkillController {
         return "admin/digitManage";
     }
 
-    @RequestMapping("/skillList")
-    public String articlesList(HttpServletRequest request) {
-        if(!isLogin(request)) {
-            return "admin/tologin";
-        }
-        //查看出当前所有的通告记录
-        List<Map<String,Object>> map = skillService.listAll();
-        request.setAttribute("articleslist", map);
-        return "admin/digitManage";
-    }
-
-
     /**
      * 公告信息详情
      */

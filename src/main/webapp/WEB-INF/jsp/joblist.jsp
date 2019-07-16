@@ -339,15 +339,6 @@
                             margin-top:30px;
                         }
                     </style>
-
-
-
-
-
-
-
-
-
                     </tbody>
                 </table>
 

@@ -91,7 +91,7 @@ public class SystemController {
         }
         request.setAttribute("returnArticles", returnArticles);
 
-        //8.0 检索出当前最近的公告信息
+        //8.0 检索出当前最近的求职技巧
         List<Map<String, Object>> skillListTow = skillService.listTwo();
         List<Map<String, Object>> returnskill = new ArrayList<>();
         for (Map<String, Object> aa : skillListTow) {
