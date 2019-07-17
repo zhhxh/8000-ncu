@@ -328,7 +328,7 @@
                 <div class="listnav">
                     <ul>
                         <li><a href="javascript:void(0)" class="listchooseon" id="hotjob">最新职位</a></li>
-                        <li><a href="javascript:void(0)" id="longjob">校园招聘</a></li>
+                        <li><a href="javascript:void(0)" id="longjob">实习招聘</a></li>
                         <!-- <li><a href="javascript:void(0)" id="company">热门公司</a></li>  -->
                     </ul>
 
@@ -424,7 +424,7 @@
 
                     <ul id="ullongjob">
                         <c:forEach items="${schoolJob }" var="school">
-                            <li>
+                            <li style="list-style: none">
                                 <!-- 卡片 -->
                                 <div class="container">
                                     <div class="row" >
@@ -475,9 +475,9 @@
 
                         </c:forEach>
 
-                        <li style="text-align:center;width:100%;">
+                        <li style="text-align:center;width:100%;list-style: none">
                             <!-- Indicates a successful or positive action -->
-                            <a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success" >查看更多</button></a>
+                            <a href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招"><button type="button" class="btn btn-success" style="background-color: #22cade;border: 0">查看更多</button></a>
                         </li>
 
                     </ul>
