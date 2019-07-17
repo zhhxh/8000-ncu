@@ -105,7 +105,7 @@
   <%@include file="../../common/nav.jsp"%>
 
   <%--<div class="bs_deliver">--%>
-   <div class="dl_content dl_gray_bg">
+   <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
     <!---->
     <!--申请职位 s-->
     <!--申请职位 e-->
@@ -123,7 +123,7 @@
         })
     </script>
     <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
-     <div class="leftmenu">
+     <div class="leftmenu" style="border: 2px solid #096aa1;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">个人中心</span>
       </div>
@@ -133,7 +133,7 @@
        <ul class="dl_menulist clearfix" id="myMenu">
         <li> <a href="${pageContext.request.contextPath}/user/userInfo" class="accountSettings">账户设置</a> </li>
         <li> <a href="${pageContext.request.contextPath}/applay/applayRecord?state=100" class="apply">我的申请</a> </li>
-        <li class="selected profilechoose"> <span class="dl_menuchose">我的简历</span> </li>
+        <li class="selected profilechoose" style="padding-top: 9px;background-color: #096aa1;"> <span class="dl_menuchose">我的简历</span> </li>
          <li> <a href="${pageContext.request.contextPath}/news/user/newslist" class="shoucang">消息中心</a> </li>
 
    		 <style>
@@ -149,13 +149,14 @@
 
      </div>
 
-     <div class="rightcontent dl_height1 dl_new_error_wrap">
-      <h3 class="dl_bigtit"><span class="dl_postit">我的简历</span></h3>
+     <div class="rightcontent dl_height1 dl_new_error_wrap" style="border: 2px solid #096aa1;">
+      <h3 class="dl_bigtit" style="background-color: #096aa1;"><span class="dl_postit">我的简历</span></h3>
       <div class="dl_importprofile">
           <button class="edit" onclick="toEdit()" style="background-color: #ffffff;width: 60px;
-              border-radius: 5px;height: 25px;margin-top: -3px;color: #74a7d0;">编辑</button>
-<%--       <a class="import dl_import" href="javascript:void(0)"></a>--%>
-       <a id="previewBtn" class="look" target="_self" href="#" style=""></a>
+              border-radius: 5px;height: 21px;margin-top: -3px;color: #74a7d0;margin-right: 40px;">编辑</button>
+<%--       <a look class="import dl_import" href="javascript:void(0)"></a>--%>
+       <button class="edit" href="#" style="background-color: #ffffff;width: 60px;
+              border-radius: 5px;height: 21px;color: #74a7d0;margin-right: 40px;margin-right: 7px;margin-left: -29px;">打印</button>
        <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
       </div>
       <style type="text/css">
@@ -521,10 +522,10 @@
                 </div>
    				<div></div>
    				<div class="saveButton">
-			        <button id="saveButton" class="rkmd-btn btn-lightBlue" onclick="toSave()">保存</button>
+			        <button id="saveButton" class="rkmd-btn btn-lightBlue" onclick="toSave()" style="background-color: #096aa1;">保存</button>
 			    </div>
 			    <div class="cancleButton">
-			    	<button id="cancleButton" class="rkmd-btn btn-lightBlue" onclick="toCancle()">取消</button>
+			    	<button id="cancleButton" class="rkmd-btn btn-lightBlue" onclick="toCancle()" style="background-color: #096aa1;">取消</button>
 			    </div>
    			</div>
    			<br/>
@@ -644,7 +645,7 @@
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">求职意向</span>
            <button class="edit" onclick="toEditIntention()" style="
-                   background-color: #74a7d0;
+                   background-color: #096aa1;
                    width: 60px;
                    border-radius: 5px;
                    height: 21px;
@@ -826,10 +827,10 @@
                     <span class="key">最高薪资：</span><input type="text" id="intention_high_money" value="${requestScope.userResume.highmoney}" readonly="true" >
             </div>
    				<div class="saveButton">
-			        <button id="intentionSaveButton" class="rkmd-btn btn-lightBlue" onclick="toSaveIntention()">保存</button>
+			        <button id="intentionSaveButton" class="rkmd-btn btn-lightBlue" onclick="toSaveIntention()" style="background-color: rgb(9, 106, 161);">保存</button>
 			    </div>
 			    <div class="cancleButton">
-			    	<button id="intentionCancleButton" class="rkmd-btn btn-lightBlue" onclick="toCancleIntention()">取消</button>
+			    	<button id="intentionCancleButton" class="rkmd-btn btn-lightBlue" onclick="toCancleIntention()" style="background-color: rgb(9, 106, 161);">取消</button>
 			    </div>
    		 </div>
    		<br/>
@@ -841,7 +842,7 @@
 	<div class="dl_basicinfo">
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">工作经验</span>
-        <span class="dl_menutit " style="float:right;color:#a1c3df;font-size:15px;" onclick="test()">添加工作经验</span>
+        <span class="dl_menutit " style="float:right;color:#096aa1;font-size:15px;" onclick="test()">添加工作经验</span>
       	<script type="text/javascript">
       		function test(){
 
@@ -867,11 +868,13 @@
         </style>
         <c:forEach items="${requestScope.workexperienceLists }" var="workexperience">
      	<div class="jianliUl">
+                    <button class="edit" onclick="update(${workexperience.id})"  style="background-color: #096aa1;width: 60px;
+              border-radius: 5px;height: 25px;margin-top: -3px;color: #ffffff;margin-left: 509px;">修改</button>
+                    <button class="edit" href="${pageContext.request.contextPath}/workexperience/delete?id=${workexperience.id}" style="background-color: #096aa1;width: 60px;
+              border-radius: 5px;height: 25px;margin-top: -3px;color: #ffffff;"  onclick="if(confirm('确认要删除该工作经历吗？')==false) return false;">删除</button>
    				<div class="myline">
    					<span class="companyname" >公司名称：</span><span class="mydata" style="color:#00B38A;">${workexperience.companyname }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-   					<a href="${pageContext.request.contextPath}/workexperience/delete?id=${workexperience.id}" style="font-size:16px;text-decoration:blink ;"  onclick="if(confirm('确认要删除该工作经历吗？')==false) return false;">删除</a>
 
-   					<span onclick="update(${workexperience.id})"  style="font-size:16px;text-decoration:blink;color:#64A8DC;">修改</span>
    			    </div>
    			    <div class="myline">
    					<span class="companyname">部门名称：</span><span class="mydata" style="color:#00B38A;">${workexperience.department }</span>

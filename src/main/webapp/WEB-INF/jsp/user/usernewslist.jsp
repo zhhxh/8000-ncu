@@ -120,7 +120,7 @@
   <%@include file="../../common/nav.jsp"%>
 
   <%--<div class="bs_deliver"> --%>
-   <div class="dl_content dl_gray_bg">
+   <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
     <!---->
     <!--申请职位 s-->
     <!--申请职位 e-->
@@ -128,7 +128,7 @@
     <!--简历内容 s-->
 
     <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
-     <div class="leftmenu" style="width: 16.5%;height: 425px;">
+     <div class="leftmenu" style="width: 16.5%;height: 425px;border: 2px solid #096aa1;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">个人中心</span>
       </div>
@@ -145,7 +145,7 @@
    		   <li> <a href="${pageContext.request.contextPath}/user/userInfo" class="accountSettings">账户设置</a> </li>
             <li> <a href="${pageContext.request.contextPath}/applay/applayRecord?state=100" class="apply">我的申请</a> </li>
             <li> <a href="${pageContext.request.contextPath}/user/memberResume" class="profile">我的简历</a> </li>
-            <li class="selected settingchoose" style="padding-bottom: 32px; padding-top: 9px;"> <span class="dl_menuchose">消息中心</span> </li>
+            <li class="selected settingchoose" style="padding-bottom: 32px; padding-top: 9px; background-color: #096aa1;"> <span class="dl_menuchose">消息中心</span> </li>
    		 <style>
        	#myMenu li span{
        		font-size:18px;
@@ -159,11 +159,13 @@
 
      </div>
 
-     <div class="rightcontent dl_height1 dl_new_error_wrap" style="width:79%;">
-      <h3 class="dl_bigtit"><span class="dl_postit">消息列表</span></h3>
+     <div class="rightcontent dl_height1 dl_new_error_wrap" style="width:79%;border: 2px solid #096aa1;">
+      <h3 class="dl_bigtit" style="background-color: #096aa1;"><span class="dl_postit">消息列表</span></h3>
       <div class="dl_importprofile">
-       <a class="import dl_import" href="javascript:void(0)"></a>
-       <a id="previewBtn" class="look" target="_self" href="#" style=""></a>
+          <button class="edit" onclick="toEdit()" style="background-color: #ffffff;width: 60px;
+              border-radius: 5px;height: 21px;margin-top: -10px;color: #74a7d0;margin-right: 40px;">编辑</button>
+       <%--<a class="import dl_import" href="javascript:void(0)"></a>--%>
+       <%--<a id="previewBtn" class="look" target="_self" href="#" style=""></a>--%>
        <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
       </div>
 

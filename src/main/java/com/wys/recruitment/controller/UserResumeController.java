@@ -23,7 +23,7 @@ import com.wys.recruitment.utils.Response;
 public class UserResumeController {
 	@Autowired
 	private UserResumeServiceImpl userResumeServiceImpl;
-	
+
 	@Autowired
 	private IWorkExperienceService workExperienceService;
 	/**
@@ -48,10 +48,10 @@ public class UserResumeController {
 			User user  = (User) request.getSession().getAttribute("user");
 			userResume.setUserid(user.getId());
 			userResumeServiceImpl.saveBaseMessage(userResume);
-			
-			
+
+
 		}
-		
+
 		   return rep;
 	}
 	/**
@@ -67,7 +67,7 @@ public class UserResumeController {
 		rep.setMsg("保存成功");
 		if(userResume.getId()!=null) {
 			//表示之前已经存在了数据，现在是修改
-			
+
 			userResumeServiceImpl.saveIntention(userResume);
 		}else {
 			//表示之前已经不存在了数据，现在是新增
@@ -77,13 +77,13 @@ public class UserResumeController {
 		}
 		return rep;
 	}
-	
-	
+
+
 	@RequestMapping("/index3")
 	public String index3() {
 		return "index3";
 	}
-	
+
 	/**
 	 * 以下是小程序的代码
 	 */
@@ -106,8 +106,8 @@ public class UserResumeController {
 			return map;
 		}
 	}
-	
 
-	
-	
+//ce测试
+
+
 }

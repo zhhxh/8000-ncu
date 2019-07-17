@@ -100,7 +100,7 @@
   </div>
 
 
-   <div class="dl_content dl_gray_bg">
+   <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
     <!---->
     <!--申请职位 s-->
     <!--申请职位 e-->
@@ -208,12 +208,12 @@
     </style>
 
     <div class="dl_bigwrap dl_gray_bg clearfix">
-     <div class="leftmenu">
+     <div class="leftmenu" style="border: 2px solid #096aa1;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">账户设置</span>
       </div>
       <ul class="dl_menulist clearfix" id="myMenu">
-       <li class="selected settingchoose"> <span class="dl_menuchose">账户设置</span> </li>
+       <li class="selected settingchoose" style="background-color: #096aa1;"> <span class="dl_menuchose">账户设置</span> </li>
        <li> <a href="${pageContext.request.contextPath}/applay/applayRecord?state=100" class="apply">我的申请</a> </li>
        <li> <a href="${pageContext.request.contextPath}/user/memberResume" class="profile">我的简历</a> </li>
        <li> <a href="${pageContext.request.contextPath}/news/user/newslist" class="shoucang">消息中心</a> </li>
@@ -233,8 +233,8 @@
        </style>
       </ul>
      </div>
-     <div class="rightcontent">
-      <h3 class="dl_bigtit"> <span class="dl_postit">账户设置</span> </h3>
+     <div class="rightcontent" style="border: 2px solid #096aa1;">
+      <h3 class="dl_bigtit" style="background-color: #096aa1;"> <span class="dl_postit">账户设置</span> </h3>
       <div class="account-settings">
        <div class="area">
         <div class="area-title"  style="font-size:16px;">
@@ -418,17 +418,17 @@
 
         		<div></div>
    				<div class="saveButton" id="qqSaveButton">
-			        <button  class="rkmd-btn btn-lightBlue" onclick="toSaveIntention()">保存</button>
+			        <button  class="rkmd-btn btn-lightBlue" onclick="toSaveIntention()" style="background-color: #096aa1;">保存</button>
 			    </div>
 			    <div class="cancleButton"  id="qqCancleButton" >
-			    	<button class="rkmd-btn btn-lightBlue" onclick="toCancleIntention()">取消</button>
+			    	<button class="rkmd-btn btn-lightBlue" onclick="toCancleIntention()" style="background-color: #096aa1;">取消</button>
 			    </div>
 
 			    <div class="saveButton" id="weixinSaveButton">
-			        <button  class="rkmd-btn btn-lightBlue" onclick="toSaveIntentionWeixin()">保存</button>
+			        <button  class="rkmd-btn btn-lightBlue" onclick="toSaveIntentionWeixin()" style="background-color: #096aa1;">保存</button>
 			    </div>
 			    <div class="cancleButton"  id="weixinCancleButton" >
-			    	<button class="rkmd-btn btn-lightBlue" onclick="toCancleIntentionWeixin()">取消</button>
+			    	<button class="rkmd-btn btn-lightBlue" onclick="toCancleIntentionWeixin()" style="background-color: #096aa1;">取消</button>
 			    </div>
 
 
@@ -528,7 +528,7 @@
    				    	<input type="text" id="shuruPassword" value="" style="border:1px solid #ADADAD;border-radius: 10px;">
 
 					<div id="updatePassword" >
-			    		<button class="rkmd-btn" onclick="updatePassword()">保存密码</button>
+			    		<button class="rkmd-btn" onclick="updatePassword()" style="background-color: #096aa1;">保存密码</button>
 			   		</div>
 			   		<script type="text/javascript">
 			   			function updatePassword(){

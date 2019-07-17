@@ -1,7 +1,7 @@
 /*Grid*/
 .ui-jqgrid {
 	position: relative;
-	border: 2px solid #72a3bf;
+	border: 2px solid #e3e3e4;
 	overflow: hidden;
 }
 .ui-jqgrid .ui-jqgrid-view {

@@ -66,7 +66,7 @@
   <%@include file="../common/nav.jsp"%>
 
   <%--<div class="bs_deliver"> --%>
-   <div class="dl_content dl_gray_bg">
+   <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
     <!---->
     <!--申请职位 s-->
     <!--申请职位 e-->
@@ -74,7 +74,7 @@
     <!--简历内容 s-->
 
     <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
-     <div class="leftmenu" style="width: 16.5%;height: 425px;">
+     <div class="leftmenu" style="width: 16.5%;height: 425px;border: 2px solid #096aa1;">
       <div class="dl_greyline_bg">
        <span class="dl_menutit">个人中心</span>
       </div>
@@ -83,7 +83,7 @@
 
        <ul class="dl_menulist clearfix" id="myMenu">
        <li> <a href="${pageContext.request.contextPath}/user/userInfo" class="accountSettings">账户设置</a> </li>
-               <li class="selected profilechoose" style="padding-bottom: 32px; padding-top: 9px;"> <span class="dl_menuchose">我的申请</span> </li>
+               <li class="selected profilechoose" style="padding-bottom: 32px; padding-top: 9px;background-color: #096aa1;"> <span class="dl_menuchose">我的申请</span> </li>
         <li> <a href="${pageContext.request.contextPath}/user/memberResume" class="apply">我的简历</a> </li>
 
           <li> <a href="${pageContext.request.contextPath}/news/user/newslist" class="shoucang">消息中心</a> </li>
@@ -101,7 +101,7 @@
 
      </div>
 
-     <div class="rightcontent dl_height1 dl_new_error_wrap" style="width:79%;">
+     <div class="rightcontent dl_height1 dl_new_error_wrap" style="width:79%;border: 2px solid #096aa1;">
 
 
  	 <div class="dl_basicinfo">
@@ -154,7 +154,7 @@
 																<br/>
 
 																<span class="required">
-																	<a href="${pageContext.request.contextPath}/company/companyDetail?id=${applay.cid}" target="_blank" style="font-size:16px;color:#999999;">${applay.companyname}</a>
+																	<a href="${pageContext.request.contextPath}/company/companyDetail?id=${applay.cid}" target="_blank" style="font-size:16px;">${applay.companyname}</a>
 
 																&nbsp;&nbsp;&nbsp;&nbsp;</span>
 																<br/>

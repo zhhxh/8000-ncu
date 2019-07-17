@@ -3734,7 +3734,7 @@ nav.page-tabs .page-tabs-content {
 /* TABLES */
 
 .table-bordered {
-    border: 1px solid #72a3bf;
+    border: 1px solid #d3d5d6;
 }
 
 .table-bordered > thead > tr > th,
@@ -3749,7 +3749,7 @@ nav.page-tabs .page-tabs-content {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-    border: 1px solid #72a3bf;
+    border: 1px solid #d3d5d6;
 }
 
 .table > thead > tr > th {

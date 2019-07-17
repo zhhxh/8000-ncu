@@ -6,10 +6,10 @@
 	String path = request.getContextPath()+"/static/basePage/";
 %>
 <html>
-<head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-  <title>消息中心</title> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>消息中心</title>
   <!-- windows start -->
   <style type="text/css">
 	.XYTipsWindow .boxLoading { position: absolute; display: block; width: 90px; height: 30px; line-height: 30px; margin-left: -45px; margin-top: -15px; left: 50%; top: 50%; color: #f00; }
@@ -32,40 +32,40 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/window/js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript">
         var $144 = $;
-    </script>	
+    </script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/static/window/js/jquery.XYTipsWindow.2.9.xiaozheng.js"></script>
-    
-	
 
-	 
+
+
+
   <!-- windows end -->
-  
-  
-  
-  <!-- 可能会重复引入，引入了index的样式 start -->
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/frontmodule.css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_style.css?v=0.0.0.9" front="css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_flexslider.css?v=0.0.0.9" front="css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuicore.css?v=0.0.0.9" front="css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuiselectmenu.css?v=0.0.0.9" front="css" /> 
-  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuitheme.css?v=0.0.0.9" front="css" /> 
 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jquery191.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryflexslidermin.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuicore1.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiposition.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiwidget.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiselectmenu1.js?v=0.0.0.9"></script> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_demo.js?v=0.0.0.9"></script> 
-  <!--引用静态文件:requirejs--> 
-  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/require.js"></script> 
-  
+
+
+  <!-- 可能会重复引入，引入了index的样式 start -->
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/frontmodule.css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_style.css?v=0.0.0.9" front="css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_flexslider.css?v=0.0.0.9" front="css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuicore.css?v=0.0.0.9" front="css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuiselectmenu.css?v=0.0.0.9" front="css" />
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/basePage/css/5_themes_default_jqueryuitheme.css?v=0.0.0.9" front="css" />
+
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jquery191.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryflexslidermin.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuicore1.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiposition.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiwidget.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_jqueryuiselectmenu1.js?v=0.0.0.9"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/5_themes_default_demo.js?v=0.0.0.9"></script>
+  <!--引用静态文件:requirejs-->
+  <script type="text/javascript" src="${pageContext.request.contextPath}/static/basePage/js/require.js"></script>
+
  <!-- 可能会重复引入，引入了index的样式 end -->
-  
-  
-  <!--引用静态文件:requirejs--> 
-  <script type="text/javascript" src="<%=path %>js/require.js"></script> 
-  <!--引用静态文件:skin_default--> 
+
+
+  <!--引用静态文件:requirejs-->
+  <script type="text/javascript" src="<%=path %>js/require.js"></script>
+  <!--引用静态文件:skin_default-->
   <link href="<%=path %>css/common.css" rel="stylesheet" type="text/css" />
   <link href="<%=path %>css/templateform.css" rel="stylesheet" type="text/css" />
   <link href="<%=path %>css/controls.css" rel="stylesheet" type="text/css" />
@@ -78,44 +78,44 @@
   <script type="text/javascript" src="<%=path %>js/controls.js"></script>
   <script type="text/javascript" src="<%=path %>js/underscore.js"></script>
   <script type="text/javascript" src="<%=path %>js/school-select-v2.js?v=6"></script>
-  <link href="<%=path %>css/school-select-v2.css" rel="stylesheet" type="text/css" /> 
-  <!--引用静态文件:skin_new_css--> 
-  <link href="<%=path %>css/main.css" rel="stylesheet" type="text/css" /> 
-  <!--引用静态文件:new_dialog_js--> 
-  <script type="text/javascript" src="<%=path %>js/dialog_js.js"></script> 
-  <!--产品头部CSS和脚本--> 
-  <script src="<%=path %>js/WdatePicker.js"></script> 
-  
-  <!--引用静态文件:front_css--> 
-  <link href="<%=path %>css/front.css" rel="stylesheet" type="text/css" />  
- 
+  <link href="<%=path %>css/school-select-v2.css" rel="stylesheet" type="text/css" />
+  <!--引用静态文件:skin_new_css-->
+  <link href="<%=path %>css/main.css" rel="stylesheet" type="text/css" />
+  <!--引用静态文件:new_dialog_js-->
+  <script type="text/javascript" src="<%=path %>js/dialog_js.js"></script>
+  <!--产品头部CSS和脚本-->
+  <script src="<%=path %>js/WdatePicker.js"></script>
+
+  <!--引用静态文件:front_css-->
+  <link href="<%=path %>css/front.css" rel="stylesheet" type="text/css" />
+
   <!-- 引入弹窗插件 start -->
   	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jQuery.md5.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.tips.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.cookie.js"></script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/easydialog.css" />
-  
-  <!-- 引入弹窗插件 start -->
- </head> 
-<body> 
 
-  <div class="bs_deliver"> 
-   <div class="dl_content dl_gray_bg"> 
-    <!----> 
-    <!--申请职位 s--> 
-    <!--申请职位 e--> 
-    <!--我的简历 s--> 
-    <!--简历内容 s--> 
-  
-    <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc"> 
-    
-     <div class="rightcontent dl_height1 dl_new_error_wrap" style="width:890px;"> 
-      <h3 class="dl_bigtit"><span class="dl_postit">消息内容</span></h3> 
-      <div class="dl_importprofile"> 
-       <a class="import dl_import" href="javascript:void(0)"></a> 
-       <a id="previewBtn" class="look" target="_self" href="#" style=""></a> 
-       <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span> 
-      </div> 
+  <!-- 引入弹窗插件 start -->
+ </head>
+<body>
+
+  <%--<div class="bs_deliver"> --%>
+   <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
+    <!---->
+    <!--申请职位 s-->
+    <!--申请职位 e-->
+    <!--我的简历 s-->
+    <!--简历内容 s-->
+
+    <div class="dl_bigwrap dl_heightagain clearfix dl_grey_bc">
+
+     <div class="rightcontent dl_height1 dl_new_error_wrap" style="border: 2px solid #096aa1;width:890px;">
+      <h3 class="dl_bigtit" style="background-color: #096aa1;"><span class="dl_postit">消息内容</span></h3>
+      <div class="dl_importprofile">
+       <%--<a class="import dl_import" href="javascript:void(0)"></a>--%>
+       <%--<a id="previewBtn" class="look" target="_self" href="#" style=""></a>--%>
+       <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
+      </div>
       <style type="text/css">
 	    *html .dl_myleftform .form_container {
 	        width: 490px;
@@ -145,13 +145,13 @@
         padding: 3px;
         width: 300px;
     }
-</style> 
-  <div class="dl_basicinfo"> 
+</style>
+  <div class="dl_basicinfo">
        <div class="dl_greyline_bg">
-       
-       </div> 
-   					
-      </div> 
+
+       </div>
+
+      </div>
       <style type="text/css">
       .btn-lightBlue{
       	background-color: #03A9F4;
@@ -160,17 +160,17 @@
       	color:white;
       	font-size:16px;
       }
-      
+
       .edit{
       	color:#64A8DC;
       	font-size:12px;
       	margin-left:25px;
-      	
+
       }
       .jianliUl{
       	padding-top:30px;
       }
-      
+
       .key{
      		display:block;
      		float:left;
@@ -179,16 +179,16 @@
 	      	letter-spacing:4px;
 	      	font-size:16px;
       		padding-left:35px;
-      		
-      }      
-      
+
+      }
+
       .jianliUl  input{
-      	width:60%;   
+      	width:60%;
         font-size:16px;
         line-height:30px;
         font-size:14px;
         padding-left:10px;
-       
+
       }
       .myselect{
     	  width:200px;
@@ -202,32 +202,32 @@
      	 float:left;
      	 padding-left:35px;
      	 margin-top:30px;
-      
+
       }
-      
+
       .saveButton button{
      	 width:100px;
      	 height:25px;
      	 line-height:25px;
      	 display:none;
       }
-      
+
       .cancleButton{
      	 float:left;
      	 padding-left:35px;
      	 margin-top:30px;
-      
+
       }
-      
+
       .cancleButton button{
      	 width:100px;
      	 height:25px;
      	 line-height:25px;
-     	 
+
      	 display:none;
       }
-      
-      
+
+
     *html .dl_myleftform .form_container {
         width: 490px;
         overflow: hidden;
@@ -256,48 +256,48 @@
         padding: 3px;
         width: 300px;
     }
-</style> 
-	
-		
+</style>
+
+
 	  <!-- 求职意向 stary -->
-	<div class="dl_basicinfo"> 
+	<div class="dl_basicinfo">
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">消息详情</span>
 
-      
-       </div> 
+
+       </div>
        <script type="text/javascript">
-       		
-       
+
+
        </script>
-        <style type="text/css"> 	 
+        <style type="text/css">
         </style>
-        
+
      	<div class="jianliUl">
-   				
+
    			    <div class="myline">
    					<span class="companyname">消息标题：</span>
-   			    </div>	
-   				<div class="myline1">	
+   			    </div>
+   				<div class="myline1">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${news.title }
-   				
-   				
+
+
    				</div>
    				<div class="myline">
    					<span class="companyname">消息内容：</span>
-   			    </div>	
-   				<div class="myline1">	
+   			    </div>
+   				<div class="myline1">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${news.content }
-   				
-   				
+
+
    				</div>
-   				
+
 			    <div style="color:#ccc;background-color: #D1D1D1;border:1px solid #D1D1D1;float:left;width:100%;margin-top:10px;margin-bottom:30px;"></div>
    		 </div>
-   		 
-     
-   		 
-   		 
+
+
+
+
    		 <style>
    		 	.myline{
 		     		display:block;
@@ -307,8 +307,8 @@
 			      	letter-spacing:4px;
 			      	font-size:16px;
 		      		padding-left:35px;
-		      		
-		      } 
+
+		      }
 		      .myline1{
 		     		display:block;
 		     		float:left;
@@ -317,8 +317,8 @@
 			      	letter-spacing:4px;
 			      	font-size:14px;
 		      		padding-left:35px;
-		      		
-		      } 
+
+		      }
    		 	.companyname{
    		 		width:500px;
    		 		font-size:16px;
@@ -326,30 +326,30 @@
    		 	.mydata{
    		 		font-size:15px;
    		 	}
-   		 
+
    		 </style>
-   		<br/>   	
-      </div> 	
+   		<br/>
+      </div>
       <!-- 求职意向 end -->
-		
-		
-		
+
+
+
 
 
    		</div>
-    <!--简历内容 e--> 
-   </div> 
-   <div class="dl_footer"> 
+    <!--简历内容 e-->
+   </div>
+   <div class="dl_footer">
     <!-- 静态包含 -->
        <span> &copy;2018&nbsp;&nbsp;zkhl.huilan.com&nbsp;&nbsp; &nbsp;联系电话&nbsp;010-82826258</span>
-   </div> 
-  </div>  
-  
+   </div>
+  </div>
+
   <script type="text/javascript">
 
         $(document).ready(function () {
 
-            
+
             if (window.location.host.toLowerCase() == 'pecc.zhiye.com') {
 
                 var certificateType = $("#RecruitmentPortalPersonProfile_CertificateType");
@@ -373,12 +373,12 @@
             }
         });
 
-    </script> 
-  <!--引用静态文件:dataInitFunc,HangYe,AreaJson,NewAreaJson--> 
-  <script type="text/javascript"> function setAJson(data){ window.Ajson=data; } function setNewAJson(data){ window.NewAjson=data; } function setMJson(data){ window.Mjson=data; } </script> 
+    </script>
+  <!--引用静态文件:dataInitFunc,HangYe,AreaJson,NewAreaJson-->
+  <script type="text/javascript"> function setAJson(data){ window.Ajson=data; } function setNewAJson(data){ window.NewAjson=data; } function setMJson(data){ window.Mjson=data; } </script>
   <script type="text/javascript" src="http://const.tms.beisen.com/ConstData.svc/Const/hangye?callback=setMJson"></script>
   <script type="text/javascript" src="http://const.tms.beisen.com/ConstData.svc/Const/Areas?callback=setAJson"></script>
-  <script type="text/javascript" src="http://const.tms.beisen.com/Api/Defination/AreaFormat?callback=setNewAJson"></script> 
+  <script type="text/javascript" src="http://const.tms.beisen.com/Api/Defination/AreaFormat?callback=setNewAJson"></script>
   <script language="javascript" type="text/javascript">
 
         function SetCss() {
@@ -405,13 +405,13 @@
             }, 100);
         });
 
-        
-    </script>  
-  <!--引用静态文件:dataInitFunc,HangYe,AreaJson,NewAreaJson--> 
-  <script type="text/javascript"> function setAJson(data){ window.Ajson=data; } function setNewAJson(data){ window.NewAjson=data; } function setMJson(data){ window.Mjson=data; } </script> 
- 	
+
+    </script>
+  <!--引用静态文件:dataInitFunc,HangYe,AreaJson,NewAreaJson-->
+  <script type="text/javascript"> function setAJson(data){ window.Ajson=data; } function setNewAJson(data){ window.NewAjson=data; } function setMJson(data){ window.Mjson=data; } </script>
+
    <!-- 弹窗插件 -->
    <script type="text/javascript" src="${pageContext.request.contextPath}/static/dialog/easydialog.min.js"></script>
- 
+
  </body>
 </html>
