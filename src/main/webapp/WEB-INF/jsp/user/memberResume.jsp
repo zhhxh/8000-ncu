@@ -96,13 +96,32 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dialog/easydialog.css" />
 
   <!-- 引入弹窗插件 start -->
+
+
  </head>
 <body>
   <!-- 动态包含头部导航 -->
   <jsp:include page="../../common/header.jsp" flush="true" />
 
   <!-- 静态包含 -->
-  <%@include file="../../common/nav.jsp"%>
+  <div class="nav">
+      <!--module:menu begin-->
+      <div class="bs-module">
+          <div class="menu-simple ">
+              <ul id="portalmenu" style="">
+
+                  <li><a target="_self" href="${pageContext.request.contextPath}/system/index"  >返回首页</a> </li>
+                  <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
+                  <!-- <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li>  -->
+                  <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
+                  <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList" class="">最新资讯</a> </li>
+                  <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">求职技巧</a> </li>
+                  <li><a target="_self" href="${pageContext.request.contextPath}/user/userInfo" class="current">个人中心</a> </li>
+              </ul>
+          </div>
+      </div>
+      <!--module:menu end-->
+  </div>
 
   <%--<div class="bs_deliver">--%>
    <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
@@ -155,7 +174,7 @@
           <button class="edit" onclick="toEdit()" style="background-color: #ffffff;width: 60px;
               border-radius: 5px;height: 21px;margin-top: -3px;color: #74a7d0;margin-right: 40px;">编辑</button>
 <%--       <a look class="import dl_import" href="javascript:void(0)"></a>--%>
-       <button class="edit" href="#" style="background-color: #ffffff;width: 60px;
+       <button class="edit" onclick="javascript:testword();" style="background-color: #ffffff;width: 60px;
               border-radius: 5px;height: 21px;color: #74a7d0;margin-right: 40px;margin-right: 7px;margin-left: -29px;">打印</button>
        <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
       </div>
@@ -189,6 +208,7 @@
         width: 300px;
     }
 </style>
+         <%--导出为word--%>
   <div class="dl_basicinfo">
        <div class="dl_greyline_bg">
         <span class="dl_menutit ">个人信息*（以下信息都必填）</span>

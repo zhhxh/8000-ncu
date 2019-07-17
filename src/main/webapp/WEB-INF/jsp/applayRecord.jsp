@@ -63,7 +63,24 @@
   <jsp:include page="../common/header.jsp" flush="true" />
 
   <!-- 静态包含 -->
-  <%@include file="../common/nav.jsp"%>
+  <div class="nav">
+	  <!--module:menu begin-->
+	  <div class="bs-module">
+		  <div class="menu-simple ">
+			  <ul id="portalmenu" style="">
+
+				  <li><a target="_self" href="${pageContext.request.contextPath}/system/index"  >返回首页</a> </li>
+				  <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?xiaozheng=all" ${requestScope.all eq 'all' ? 'class="current"':'' }>职位搜索</a> </li>
+				  <!-- <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=社招" ${requestScope.moreCondition.type eq '社招' ? 'class="current"':'' }>社会招聘</a> </li>  -->
+				  <li><a target="_self" href="${pageContext.request.contextPath}/myrecruitment/joblist?type=校招" ${requestScope.moreCondition.type eq '校招' ? 'class="current"':'' }>实习专区</a> </li>
+				  <li><a target="_self" href="${pageContext.request.contextPath}/articles/user/articlesList" class="">最新资讯</a> </li>
+				  <li><a target="_self" href="${pageContext.request.contextPath}/system/showOurCompany">求职技巧</a> </li>
+				  <li><a target="_self" href="${pageContext.request.contextPath}/user/userInfo" class="current">个人中心</a> </li>
+			  </ul>
+		  </div>
+	  </div>
+	  <!--module:menu end-->
+  </div>
 
   <%--<div class="bs_deliver"> --%>
    <div class="dl_content dl_gray_bg" style="background-color: #ffffff;">
