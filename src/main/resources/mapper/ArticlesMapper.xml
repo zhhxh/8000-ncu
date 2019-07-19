@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.ArticlesMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Articles" >
+<mapper namespace="com.offer.recruitment.mapper.ArticlesMapper" >
+  <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.Articles" >
     <id column="articleid" property="articleid" jdbcType="INTEGER" />
     <result column="articletitle" property="articletitle" jdbcType="VARCHAR" />
     <result column="articleimg" property="articleimg" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
     delete from articles
     where articleid = #{articleid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.Articles" >
+  <insert id="insert" parameterType="com.offer.recruitment.pojo.Articles" >
     insert into articles (articleid, articletitle, articleimg, 
       isshow, articlecontent, articlekey, 
       staffid, createtime)
@@ -33,7 +33,7 @@
       #{isshow,jdbcType=TINYINT}, #{articlecontent,jdbcType=VARCHAR}, #{articlekey,jdbcType=VARCHAR}, 
       #{staffid,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Articles" >
+  <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.Articles" >
     insert into articles
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="articleid != null" >
@@ -88,7 +88,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Articles" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.Articles" >
     update articles
     <set >
       <if test="articletitle != null" >
@@ -115,7 +115,7 @@
     </set>
     where articleid = #{articleid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Articles" >
+  <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.Articles" >
     update articles
     set articletitle = #{articletitle,jdbcType=VARCHAR},
       articleimg = #{articleimg,jdbcType=VARCHAR},

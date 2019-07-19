@@ -154,7 +154,7 @@
         <li> <a href="${pageContext.request.contextPath}/applay/applayRecord?state=100" class="apply">我的申请</a> </li>
         <li class="selected profilechoose" style="padding-top: 9px;background-color: #096aa1;"> <span class="dl_menuchose">我的简历</span> </li>
          <li> <a href="${pageContext.request.contextPath}/news/user/newslist" class="shoucang">消息中心</a> </li>
-
+           <a href="${pageContext.request.contextPath}/word/download" class="shoucang"></a>
    		 <style>
        	#myMenu li span{
        		font-size:18px;
@@ -176,6 +176,24 @@
 <%--       <a look class="import dl_import" href="javascript:void(0)"></a>--%>
        <button class="edit" onclick="javascript:testword();" style="background-color: #ffffff;width: 60px;
               border-radius: 5px;height: 21px;color: #74a7d0;margin-right: 40px;margin-right: 7px;margin-left: -29px;">打印</button>
+          <script type="text/javascript">
+              function testword(){
+                  // show_name show_email show_phone show_age show_sex show_address show_xueLi show_school show_professional show_description
+                  var show_name = $("#show_name").val();
+                  var show_email = $("#show_email").val();
+                  var show_phone = $("#show_phone").val();
+                  var show_age = $("#show_age").val();
+                  var show_sex = $("#show_sex").val();
+                  var show_address = $("#show_address").val();
+                  var show_xueLi = $("#show_xueLi").val();
+                  var show_school = $("#show_school").val();
+                  var show_professional = $("#show_professional").val();
+                  var show_description = $("#show_description").val();
+                  window.location.href = "${pageContext.request.contextPath}/word/download?show_name="+show_name+"&show_email="+show_email
+                      +"&show_phone="+show_phone+"&show_age="+show_age+"&show_sex="+show_sex+"&show_address="+show_address +"&show_xueLi="+show_xueLi
+                      +"&show_school="+show_school+"&show_professional="+show_professional+"&show_description="+show_description;
+              }
+          </script>
        <span id="previewBtnDisable" class="look" style="color:#666;display:none;"></span>
       </div>
       <style type="text/css">
@@ -512,33 +530,33 @@
    			<div class="jianliUl">
    				<input type="hidden" name="id" id="id" value="${requestScope.userResume.id}">
                 <div class="applyline">
-                <span class="key">姓名：</span><input type="text" id="show_name" value="${requestScope.userResume.name}" readonly="true">
+                <span class="key">姓名：</span><input type="text" id="show_name" name="show_name" value="${requestScope.userResume.name}" readonly="true">
 <%--                    <span class="edit" onclick="toEdit()">编辑</span>--%>
                 </div>
                 <div class="applyline">
-                    <span class="key">邮箱：</span><input type="text" id="show_email" value="${requestScope.userResume.email}" readonly="true">
+                    <span class="key">邮箱：</span><input type="text" id="show_email" name="show_email" value="${requestScope.userResume.email}" readonly="true">
                 </div>
                 <div class="applyline">
-                    <span class="key">手机号：</span><input type="text" id="show_phone" value="${requestScope.userResume.phone}" readonly="true">
+                    <span class="key">手机号：</span><input type="text" id="show_phone" name="show_phone" value="${requestScope.userResume.phone}" readonly="true">
                 </div>
                 <div class="applyline">
-                    <span class="key">年龄：</span><input type="text" id="show_age" value="${requestScope.userResume.age}" readonly="true" >
+                    <span class="key">年龄：</span><input type="text" id="show_age" name="show_age" value="${requestScope.userResume.age}" readonly="true" >
                 </div>
                 <div class="applyline">
-                    <span class="key">性别：</span><input type="text" id="show_sex" value="${requestScope.userResume.sex}" readonly="true" >
+                    <span class="key">性别：</span><input type="text" id="show_sex" name="show_sex" value="${requestScope.userResume.sex}" readonly="true" >
                 </div>
                 <div class="applyline">
-                <span class="key">现居住地：</span><input type="text" id="show_address" value="${requestScope.userResume.address}" readonly="true" >
+                <span class="key">现居住地：</span><input type="text" id="show_address" name="show_address" value="${requestScope.userResume.address}" readonly="true" >
                 </div>
                 <div class="applyline">
-                <span class="key">最高学历：</span><input type="text" id="show_xueLi" value="${requestScope.userResume.xueli}" readonly="true">
+                <span class="key">最高学历：</span><input type="text" id="show_xueLi" name="show_xueLi" value="${requestScope.userResume.xueli}" readonly="true">
                 </div>
-                <span class="key">学校：</span><input type="text" id="show_school" value="${requestScope.userResume.school}" readonly="true">
+                <span class="key">学校：</span><input type="text" id="show_school" name="show_school" value="${requestScope.userResume.school}" readonly="true">
                 <div class="applyline">
-                <span class="key">专业：</span><input type="text" id="show_professional" value="${requestScope.userResume.professional}" readonly="true">
+                <span class="key">专业：</span><input type="text" id="show_professional" name="show_professional" value="${requestScope.userResume.professional}" readonly="true">
                 </div>
                 <div class="applyline">
-                <span class="key">自我评价：</span><input type="text" id="show_description" style="" value="${requestScope.userResume.description}" readonly="true" >
+                <span class="key">自我评价：</span><input type="text" id="show_description" name="show_description" style="" value="${requestScope.userResume.description}" readonly="true" >
                 </div>
    				<div></div>
    				<div class="saveButton">
@@ -991,7 +1009,7 @@
   <%--地图--%>
       <div style="left: 90%;margin-left: -26px;position: fixed; bottom:-100px;width: 90px;height: 600px;z-index: 891208; margin-top: 500px">
           <img src="${pageContext.request.contextPath}/static/window/images/person.jpg" style="width: 90px; height: 90px;">
-          <input type="button" value="简历咨询" style="background-color:#1296db; text-align: center ; width: 90px; height: 40px; border-radius: 3px;"/>
+          <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=853897597&site=qq&menu=yes"><input type="button" value="简历咨询" style="background-color:#1296db; text-align: center ; width: 90px; height: 40px; border-radius: 3px;"/></a>
 
       </div>
 

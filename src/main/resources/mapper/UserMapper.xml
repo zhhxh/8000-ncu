@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.UserMapper">
-    <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.User">
+<mapper namespace="com.offer.recruitment.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.User">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="username" property="username" jdbcType="VARCHAR"/>
         <result column="password" property="password" jdbcType="VARCHAR"/>
@@ -24,7 +24,7 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.wys.recruitment.pojo.User">
+    <insert id="insert" parameterType="com.offer.recruitment.pojo.User">
     insert into user (id, username, password, 
       isAudit, register, qq, 
       weixin, other)
@@ -32,7 +32,7 @@
       #{isaudit,jdbcType=INTEGER}, #{register,jdbcType=TIMESTAMP}, #{qq,jdbcType=VARCHAR}, 
       #{weixin,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.User">
+    <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -87,7 +87,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.User">
         update user
         <set>
             <if test="username != null">
@@ -114,7 +114,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.User">
+    <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.User">
     update user
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
@@ -128,7 +128,7 @@
 
     <!-- 以下是我自己写的方法 -->
     <select id="listAllByCondition" resultType="java.util.Map"
-            parameterType="com.wys.recruitment.pojo.query.UserCondition">
+            parameterType="com.offer.recruitment.pojo.query.UserCondition">
         SELECT u.id,u.username,u.weixin,u.qq,u.isaudit,u.register
         FROM user u
         <where>

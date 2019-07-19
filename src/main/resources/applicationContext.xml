@@ -8,7 +8,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <context:component-scan base-package="com.wys.recruitment"/>
+    <context:component-scan base-package="com.offer.recruitment"/>
 
     <!-- 启动aop注解 -->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
@@ -62,7 +62,7 @@
     <!-- Mapper动态代理开发   扫描 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 基本包 -->
-        <property name="basePackage" value="com.wys.recruitment.mapper"/>
+        <property name="basePackage" value="com.offer.recruitment.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
@@ -101,7 +101,7 @@
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="com.wys.recruitment.interceptor.UserInterceptor"/>
+            <bean class="com.offer.recruitment.interceptor.UserInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

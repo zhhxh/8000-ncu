@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.UserResumeMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.UserResume" >
+<mapper namespace="com.offer.recruitment.mapper.UserResumeMapper" >
+  <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.UserResume" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
@@ -34,7 +34,7 @@
     delete from userresume
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.UserResume" >
+  <insert id="insert" parameterType="com.offer.recruitment.pojo.UserResume" >
     insert into userresume (id, name, email, 
       phone, sex, address, xueli, 
       school, professional, description, 
@@ -48,7 +48,7 @@
       #{highmoney,jdbcType=DOUBLE}, #{userid,jdbcType=INTEGER}, #{writetime,jdbcType=TIMESTAMP}, 
       #{age,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.UserResume" >
+  <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.UserResume" >
     insert into userresume
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -157,7 +157,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.UserResume" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.UserResume" >
     update userresume
     <set >
       <if test="name != null" >
@@ -211,7 +211,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.UserResume" >
+  <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.UserResume" >
     update userresume
     set name = #{name,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},

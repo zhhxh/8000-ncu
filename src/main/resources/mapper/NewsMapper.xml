@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.NewsMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.News" >
+<mapper namespace="com.offer.recruitment.mapper.NewsMapper" >
+  <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.News" >
     <id column="nid" property="nid" jdbcType="INTEGER" />
     <result column="uid" property="uid" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
@@ -28,7 +28,7 @@
     delete from news
     where nid = #{nid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.News" >
+  <insert id="insert" parameterType="com.offer.recruitment.pojo.News" >
     insert into news (nid, uid, title, 
       content, createtime, receivetime, 
       state, classify, isread, 
@@ -38,7 +38,7 @@
       #{state,jdbcType=INTEGER}, #{classify,jdbcType=VARCHAR}, #{isread,jdbcType=INTEGER}, 
       #{mid,jdbcType=VARCHAR}, #{cid,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.News" >
+  <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.News" >
     insert into news
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="nid != null" >
@@ -111,7 +111,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.News" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.News" >
     update news
     <set >
       <if test="uid != null" >
@@ -147,7 +147,7 @@
     </set>
     where nid = #{nid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.News" >
+  <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.News" >
     update news
     set uid = #{uid,jdbcType=INTEGER},
       title = #{title,jdbcType=VARCHAR},

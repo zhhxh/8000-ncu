@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.SysadminMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Sysadmin" >
+<mapper namespace="com.offer.recruitment.mapper.SysadminMapper" >
+  <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.Sysadmin" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -23,7 +23,7 @@
     delete from sysadmin
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.Sysadmin" >
+  <insert id="insert" parameterType="com.offer.recruitment.pojo.Sysadmin" >
     insert into sysadmin (id, username, password, 
       mobilephone, email, registertime, 
       name)
@@ -31,7 +31,7 @@
       #{mobilephone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{registertime,jdbcType=TIMESTAMP}, 
       #{name,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Sysadmin" >
+  <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.Sysadmin" >
     insert into sysadmin
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -80,7 +80,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Sysadmin" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.Sysadmin" >
     update sysadmin
     <set >
       <if test="username != null" >
@@ -104,7 +104,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Sysadmin" >
+  <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.Sysadmin" >
     update sysadmin
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

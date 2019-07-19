@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wys.recruitment.mapper.SysadviceMapper" >
-  <resultMap id="BaseResultMap" type="com.wys.recruitment.pojo.Sysadvice" >
+<mapper namespace="com.offer.recruitment.mapper.SysadviceMapper" >
+  <resultMap id="BaseResultMap" type="com.offer.recruitment.pojo.Sysadvice" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="uid" property="uid" jdbcType="INTEGER" />
     <result column="content" property="content" jdbcType="VARCHAR" />
@@ -23,7 +23,7 @@
     delete from sysadvice
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wys.recruitment.pojo.Sysadvice" >
+  <insert id="insert" parameterType="com.offer.recruitment.pojo.Sysadvice" >
     insert into sysadvice (id, uid, content, 
       advicetime, isnew, classify, 
       remark)
@@ -31,7 +31,7 @@
       #{advicetime,jdbcType=TIMESTAMP}, #{isnew,jdbcType=INTEGER}, #{classify,jdbcType=VARCHAR}, 
       #{remark,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wys.recruitment.pojo.Sysadvice" >
+  <insert id="insertSelective" parameterType="com.offer.recruitment.pojo.Sysadvice" >
     insert into sysadvice
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -80,7 +80,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wys.recruitment.pojo.Sysadvice" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.offer.recruitment.pojo.Sysadvice" >
     update sysadvice
     <set >
       <if test="uid != null" >
@@ -104,7 +104,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wys.recruitment.pojo.Sysadvice" >
+  <update id="updateByPrimaryKey" parameterType="com.offer.recruitment.pojo.Sysadvice" >
     update sysadvice
     set uid = #{uid,jdbcType=INTEGER},
       content = #{content,jdbcType=VARCHAR},
