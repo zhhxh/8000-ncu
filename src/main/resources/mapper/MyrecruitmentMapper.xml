@@ -330,7 +330,7 @@
 
         ORDER BY m.publictime DESC
 
-        limit #{pageSize},#{number}
+        limit #{pageSize} ,#{number}
     </select>
 
     <!-- 统计可以查询到多少条数据  -->

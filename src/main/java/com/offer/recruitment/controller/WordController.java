@@ -1,16 +1,5 @@
 package com.offer.recruitment.controller;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.offer.recruitment.pojo.WordBean;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -19,6 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/word")
@@ -29,17 +23,30 @@ public class WordController {
         configuration = new Configuration();
         configuration.setDefaultEncoding("utf-8");
     }
+
     @RequestMapping("/download")
-    public void createDoc(HttpServletRequest request) throws IOException {
+    public String createDoc(HttpServletRequest request, String show_name,
+                            String show_email, String show_phone,
+                            String show_age, String show_address,
+                            String show_xueLi, String show_school,
+                            String show_professional, String show_description) throws IOException {
 
         // 要填入模本的数据文件
         Map dataMap = new HashMap();
-        getData(dataMap);
-
+        //getData(dataMap);
+        dataMap.put("show_name", show_name);
+        dataMap.put("show_email", show_email);
+        dataMap.put("show_phone", show_phone);
+        dataMap.put("show_age", show_age);
+        dataMap.put("show_address", show_address);
+        dataMap.put("show_xueLi", show_xueLi);
+        dataMap.put("show_school", show_school);
+        dataMap.put("show_professional", show_professional);
+        dataMap.put("show_description", show_description);
         // 设置模本装置方法和路径,FreeMarker支持多种模板装载方法。可以重servlet，classpath，数据库装载，
         // ftl文件存放路径
-        String path = getClass().getResource("/").toString();
-        configuration.setClassForTemplateLoading(this.getClass(), path);
+        //String path = getClass().getResource("/").toString();
+        configuration.setClassForTemplateLoading(this.getClass(), "../");
 
         Template t = null;
         try {
@@ -53,7 +60,7 @@ public class WordController {
         // 输出文档路径及名称
         File outFile = new File("E:/test.doc");
         Writer out = null;
-        if(!outFile.exists()){
+        if (!outFile.exists()) {
             outFile.createNewFile();
         }
         try {
@@ -70,12 +77,12 @@ public class WordController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return "user/memberResume";
     }
 
     /**
-     *
      * 注意dataMap里存放的数据Key值要与模板中的参数相对应
+     *
      * @param dataMap
      */
     private void getData(Map dataMap) {

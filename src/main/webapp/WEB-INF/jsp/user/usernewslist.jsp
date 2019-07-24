@@ -16,7 +16,7 @@
   <!-- 头部展览工具栏的css样式，一般不可以少，头部的菜单栏是需要的  end -->
 
   <!--左边菜单--右边的画板的样式 start-->
-  <link href="<%=path %>css/main.css" rel="stylesheet" type="text/css" />
+  <link href="${pageContext.request.contextPath}/static/basePage/css/main.css" rel="stylesheet" type="text/css" />
 
   <!--左边菜单--右边的画板的样式 end-->
     <!-- windows start -->
@@ -76,7 +76,7 @@
 
 	    // 可以通过$jq访问1.11版本的jQuery了
 	</script> -->
-    <script src="${pageContext.request.contextPath}/static/boostrap/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="${pageContext.request.contextPath}/static/boostrap/js/bootstrap.min.js"></script>
 
 
 

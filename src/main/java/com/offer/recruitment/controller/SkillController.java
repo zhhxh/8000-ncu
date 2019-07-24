@@ -74,7 +74,7 @@ public class SkillController {
         PageAble pageAble = new PageAble();
         pageAble.setNumberOfPages(6);
 
-        Map<String, Object>  map = new HashMap<String, Object>();
+        Map<String, Object>  map = new HashMap<>();
         map.put("isshow", 1);
         map.put("number", 6);
         if(page1!=null) {

@@ -263,7 +263,6 @@ public class MoreCondition {
     public void setPage(Integer page) {
         this.page = page;
         this.pageSize = (page - 1) * this.number;
-
     }
 
     public static void main(String[] args) {
